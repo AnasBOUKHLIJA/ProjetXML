@@ -1,9 +1,10 @@
 <?php
 require_once 'autoload.php';
 
+$home = new HomeController();
 
 $pages = array('connexion');
-
+$anasBk="brahim852";
 if (isset($_GET['page'])) {
     if (in_array($_GET['page'], $pages)) {
         $home->index($_GET['page']);
