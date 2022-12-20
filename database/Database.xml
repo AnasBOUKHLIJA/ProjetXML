@@ -135,6 +135,8 @@
                 <Addabscence>0</Addabscence>
                 <Removeabscence>0</Removeabscence>
                 <Editabscence>0</Editabscence>
+
+            
             </Permission>
             <Permission Code="S1">
                 <Addsupperadmin>0</Addsupperadmin>
@@ -259,4 +261,3 @@
         </Permissions>
     </Etablissement>
 </CadiAyyad>
-

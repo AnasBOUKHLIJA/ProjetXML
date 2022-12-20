@@ -38,6 +38,6 @@
             <button type="submit" name="submit">Se connecter</button>
         </form>
     </div>
-    <!-- <img src="views/ourAssets/images/wave.svg" id="wave" />-->
+    <img src="views/ourAssets/images/wave.svg" id="wave" />
     </body>
     </html>

@@ -6,8 +6,7 @@ class AuthentificationController
         if($data['username'] && $data['password']){
             $personne = Personne::get($data['username'],$data['password']);
             if($personne){
-                $personne = $personne[0];
-                $code = $personne->attributes()->Code;
+                $code = $personne['Code'];
                 $personneCategorieArray = array(
                     'A'=>'SuperAdmin',
                     'D'=>'Directeur',
@@ -19,12 +18,14 @@ class AuthentificationController
                 $data = array('data'=>$personne);
                 $data['personneCategorie'] =  $personneCategorieArray[$personneCategorie];
                 if(strtolower($personneCategorie) != strtolower('A')){
-                    $permission = Permission::get($personne->attributes()->Code);
+                    $permission = Permission::get($code);
                     $data['permission'] = $permission;
                 }else {
                     $data['permission'] = 'SuperAdmin';
                 }
-                print_r($data);
+
+                $_SESSION = $data;
+                header('location: /ProjetXML/accueil');
             }else{}
 
         }
