@@ -1,3 +1,8 @@
+<?php
+    if(isset($_POST['submit'])){
+        AuthentificationController::Authenticate($_POST);
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,24 +20,24 @@
     <div id="container-form">
     <!-- bienvenue dans votre espace de gestion des absences -->
     <div id="container-user-img"><img src="views/ourAssets/images/icon-unlock.png" alt=""></div>
-        <form>
+        <form method="POST" action="">
             <div class="group-input-field">
                 <label>Username</label>
                 <div class="input-field">
                     <i class="fa-solid fa-user"></i>
-                    <input placeholder="Entrer votre username">
+                    <input name="username" placeholder="Entrer votre username">
                 </div>
             </div>
             <div class="group-input-field">
                 <label>Password</label>
                 <div class="input-field">
                     <i class="fa-solid fa-lock"></i>
-                    <input placeholder="Entere votre password">
+                    <input name="password" placeholder="Entere votre password">
                 </div>
             </div>
-            <button>Se connecter</button>
+            <button type="submit" name="submit">Se connecter</button>
         </form>
     </div>
-<img src="views/ourAssets/images/wave.svg" id="wave" />
-</body>
-</html>
+    <!-- <img src="views/ourAssets/images/wave.svg" id="wave" />-->
+    </body>
+    </html>

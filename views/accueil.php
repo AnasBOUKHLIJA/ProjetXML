@@ -2,7 +2,7 @@
 $scolarite = new DOMDocument;
 
 $scolarite->preserveWhiteSpace = false;
-$scolarite->load('../database/TP04.xml');
+$scolarite->load('database/TP04.xml');
 $xpath = new DOMXPath($scolarite);
 $query = '//Enseignants/Enseignant';
 $Enseignants = $xpath->query($query);
@@ -10,7 +10,7 @@ $Enseignants = $xpath->query($query);
 
 if (isset($_POST['enseignant'])) {
     print_r($_POST);
-    $file = '../database/TP04.xml';
+    $file = 'database/TP04.xml';
     $xml = simplexml_load_file($file);
     $Enseignants = $xml->Enseignants;
     $Enseignant = $Enseignants->addChild('Enseignant');
@@ -29,10 +29,10 @@ if (isset($_POST['enseignant'])) {
     $dom->preserveWhiteSpace = false;
     $dom->formatOutput = true;
     $dom->loadXML($xml->asXML());
-    $dom->save('../database/TP04.xml');
+    $dom->save('database/TP04.xml');
     header('location: index.php');
 } elseif (isset($_GET['numsomme'])) {
-    $xml = simplexml_load_file('../database/TP04.xml');
+    $xml = simplexml_load_file('database/TP04.xml');
     $target = $xml->xpath('//Enseignants/Enseignant[NumSomme="' . $_GET['numsomme'] . '"]');
     if ($target) {
         $domRef = dom_import_simplexml($target[0]);
@@ -41,7 +41,7 @@ if (isset($_POST['enseignant'])) {
         $dom->preserveWhiteSpace = false;
         $dom->formatOutput = true;
         $dom->loadXML($xml->asXML());
-        $dom->save('../database/TP04.xml');
+        $dom->save('database/TP04.xml');
     }
     header('location: index.php');
 }
