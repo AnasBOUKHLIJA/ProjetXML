@@ -1,2 +1,2 @@
 <?php
-$rich="gay";
+$rich="Chef de projet";
