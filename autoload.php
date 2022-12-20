@@ -6,7 +6,7 @@ function autoload($className)
         'controllers/',
         'database/',
         'models/',
-        'views/'
+       'views/'
     );
 
     foreach ($array_paths as $path) {

@@ -42,6 +42,16 @@
       <specialite>DB Avance</specialite>
       <dept>Informatique</dept>
     </Enseignant>
+    <Enseignant Sexe="M">
+      <NumSomme>111</NumSomme>
+      <Cin>111</Cin>
+      <Prenom>111</Prenom>
+      <Nom>111</Nom>
+      <Email type="personnel">111</Email>
+      <Telephone type="portable">111</Telephone>
+      <specialite>111</specialite>
+      <dept>11</dept>
+    </Enseignant>
   </Enseignants>
   <Etudiants>
     <Etudaint Sexe="M" NumInscrip="k13000">
