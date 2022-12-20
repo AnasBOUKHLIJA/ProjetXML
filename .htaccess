@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteBase /PHP_MVC/
+RewriteRule ^([a-zA-Z0-9]+)$ index.php?page=$1
