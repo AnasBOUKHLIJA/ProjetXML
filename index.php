@@ -1,7 +1,6 @@
 <?php
 require_once 'autoload.php';
 
-$home = new HomeController();
 
 $pages = array('accueil', 'ajouter', 'modifier', 'supprimer');
 $anasBk="brahim852";
