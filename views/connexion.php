@@ -8,13 +8,13 @@
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <!-- box icons link -->
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="ourAssets/CSS/style.css">
     <title>Connexion</title>
 </head>
 <body id="body-connexion">
     <div id="container-form">
     <!-- bienvenue dans votre espace de gestion des absences -->
-    <div id="container-user-img"><img src="images/icon-unlock.png" alt=""></div>
+    <div id="container-user-img"><img src="ourAssets/images/icon-unlock.png" alt=""></div>
         <form>
             <div class="group-input-field">
                 <label>Username</label>
@@ -33,6 +33,6 @@
             <button>Se connecter</button>
         </form>
     </div>
-<img src="images/wave.svg" id="wave" />
+<img src="./ourAssets/images/wave.svg" id="wave" />
 </body>
 </html>
