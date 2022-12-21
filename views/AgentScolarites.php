@@ -32,8 +32,38 @@ if($_SESSION['personneCategorie'] == 'Etudiant') {
         <div id="content">
             <?php include_once 'views/includes/header.php' ?>
             <div class="container-fluid">
-                <div class="d-sm-flex justify-content-between align-items-center mb-4">
-                    <h3 class="text-dark mb-0">AgentScolarites</h3>
+                <h3 class="text-dark mb-4">Liste des Agents de scolarite</h3>
+                <div class="card shadow">
+                    <div class="card-header py-3">
+                        <p class="text-primary m-0 fw-bold">Agent de scolarite Info</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive table mt-2" id="dataTable" role="grid" aria-describedby="dataTable_info">
+                            <table class="table my-0" id="dataTable">
+                                <thead>
+                                <tr>
+                                    <th>Nom et prenom</th>
+                                    <th>Cin</th>
+                                    <th>Email</th>
+                                    <th>Telephone</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <?php foreach (AgentScolariteController::getAll() as $agentScolarite){ ?>
+                                    <tr>
+                                        <td>
+                                            <img class="rounded-circle me-2" width="30" height="30" src="views/ourAssets/images/etudiant.png">
+                                            <?php echo $agentScolarite['Nom'].' '.$agentScolarite['Prenom'] ?>
+                                        </td>
+                                        <td><?php echo $agentScolarite['Cin'] ?></td>
+                                        <td><?php echo $agentScolarite['Email'] ?></td>
+                                        <td><?php echo $agentScolarite['Telephone'] ?></td>
+                                    </tr>
+                                <?php } ?>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

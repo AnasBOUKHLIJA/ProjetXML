@@ -1,16 +1,27 @@
 <?php
-$data = null;
-if($_SESSION['personneCategorie'] == 'Etudiant') {
-    $data = EtudiantController::get($_SESSION['code']);
-}elseif($_SESSION['personneCategorie'] == 'Directeur') {
-    $data = DirecteurController::get($_SESSION['code']);
-}elseif($_SESSION['personneCategorie'] == 'AgentScolarite') {
-    $data = AgentScolariteController::get($_SESSION['code']);
-}elseif($_SESSION['personneCategorie'] == 'Professeur') {
-    $data = ProfesseurController::get($_SESSION['code']);
-}elseif($_SESSION['personneCategorie'] == 'SuperAdmin') {
-    $data = SuperAdminController::get($_SESSION['code']);
-}
+        $data = null;
+        if($_SESSION['personneCategorie'] == 'Etudiant') {
+            $data = EtudiantController::get($_SESSION['code']);
+            $data['defaultImage'] = 'views/ourAssets/images/etudiant.png';
+            $data['defaultImage-file'] = 'views/ourAssets/images/etudiant-file.png';
+        }elseif($_SESSION['personneCategorie'] == 'Directeur') {
+            $data = DirecteurController::get($_SESSION['code']);
+            $data['defaultImage'] = 'views/ourAssets/images/prof.png';
+            $data['defaultImage-file'] = 'views/ourAssets/images/prof-file.png';
+        }elseif($_SESSION['personneCategorie'] == 'AgentScolarite') {
+            $data = AgentScolariteController::get($_SESSION['code']);
+            $data['defaultImage'] = 'views/ourAssets/images/agent.png';
+            $data['defaultImage-file'] = 'views/ourAssets/images/agent-file.png';
+        }elseif($_SESSION['personneCategorie'] == 'Professeur') {
+            $data = ProfesseurController::get($_SESSION['code']);
+            $data['defaultImage'] = 'views/ourAssets/images/prof.png';
+            $data['defaultImage-file'] = 'views/ourAssets/images/prof-file.png';
+        }elseif($_SESSION['personneCategorie'] == 'SuperAdmin') {
+            $data = SuperAdminController::get($_SESSION['code']);
+            $data['defaultImage'] = 'views/ourAssets/images/prof.png';
+            $data['defaultImage-file'] = 'views/ourAssets/images/prof-file.png';
+        }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,8 +43,54 @@ if($_SESSION['personneCategorie'] == 'Etudiant') {
         <div id="content">
             <?php include_once 'views/includes/header.php' ?>
             <div class="container-fluid">
-                <div class="d-sm-flex justify-content-between align-items-center mb-4">
-                    <h3 class="text-dark mb-0">Profile</h3>
+                <h3 class="text-dark mb-4">Mon profil</h3>
+                <div class="card shadow flex-row flex-wrap justify-content-evenly" style="margin: 80px 0;padding-top: 100px; ">
+                    <?php if(!empty($data['Photo']) && is_file($data['Photo'])){ ?>
+                        <img src="<?php echo $data['Photo']; ?>" class="position-absolute top-0 start-50 translate-middle" style="width: 200px;height: 200px"/>
+                    <?php }elseif($data['Sexe'] == 'M'){?>
+                        <img src="<?php echo $data['defaultImage'] ?>" class="position-absolute top-0 start-50 translate-middle" style="width: 200px;height: 200px"/>
+                    <?php }else{ ?>
+                        <img src="<?php echo $data['defaultImage-file'] ?>" class="position-absolute top-0 start-50 translate-middle" style="width: 200px;height: 200px"/>
+                    <?php }?>
+                    <?php if($_SESSION['personneCategorie'] == 'Professeur'){ ?>
+                        <div class="m-3" style="width: 44%;">
+                            <label for="NumeroSomme" class="text-dark">Numero de Somme</label>
+                            <input class="form-control" id="NumeroSomme" disabled value="<?php echo $data['NumeroSomme']?>">
+                        </div>
+                        <div class="m-3" style="width: 44%;">
+                            <label for="Departement" class="text-dark">Departement</label>
+                            <input class="form-control" id="Departement"  value="<?php echo DepartementController::get($data['Departement']) ?>" disabled>
+                        </div>
+                    <?php }elseif ($_SESSION['personneCategorie'] == 'Etudiant'){ ?>
+                        <div class="m-3" style="width: 44%;">
+                            <label for="Cne" class="text-dark">Cne</label>
+                            <input class="form-control" id="Cne" disabled value="<?php echo $data['Cne']?>">
+                        </div>
+                        <div class="m-3" style="width: 44%;">
+                            <label for="Filiere" class="text-dark">Filiere</label>
+                            <input class="form-control" id="Filiere"  value="<?php echo FiliereController::get($data['Filiere']) ?>" disabled>
+                        </div>
+                    <?php } ?>
+                        <div class="m-3" style="width: 44%;">
+                            <label for="nom" class="text-dark">Nom</label>
+                            <input class="form-control" id="nom" disabled value="<?php echo $data['Nom']?>">
+                        </div>
+                        <div class="m-3" style="width: 44%;">
+                            <label for="prenom" class="text-dark">Prenom</label>
+                            <input class="form-control" id="prenom"  value="<?php echo $data['Prenom']?>" disabled>
+                        </div>
+                        <div class="m-3" style="width: 44%;">
+                            <label for="cin" class="text-dark">Cin</label>
+                            <input class="form-control" id="cin"  value="<?php echo $data['Cin']?>" disabled>
+                        </div>
+                        <div class="m-3" style="width: 44%;">
+                            <label for="email" class="text-dark">Email</label>
+                            <input class="form-control" id="email"  value="<?php echo $data['Email']?>" disabled>
+                        </div>
+                        <div class="m-3 mb-5" style="width: 44%;">
+                            <label for="tele" class="text-dark">Telephone</label>
+                            <input class="form-control" id="tele"  value="<?php echo $data['Telephone']?>" disabled>
+                        </div>
                 </div>
             </div>
         </div>

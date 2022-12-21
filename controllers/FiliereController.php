@@ -5,6 +5,9 @@ class FiliereController
     static function getAll(){
         return Filiere::getAll();
     }
+    static function get($fil): string{
+        return (string)Filiere::get($fil)[0]->Intitule;
+    }
     static function getChefFiliere($Chef_filiere){
         $Cfiliere = Filiere::getChefFiliere($Chef_filiere);
         return $Cfiliere['Nom'].' '.$Cfiliere['Prenom'];

@@ -6,6 +6,10 @@ class Departement
         $CadiAyyad = simplexml_load_file('Database/Database.xml');
         return $CadiAyyad->xpath('//Departements/Departement');
     }
+    static function get($dept){
+        $CadiAyyad = simplexml_load_file('Database/Database.xml');
+        return $CadiAyyad->xpath('//Departements/Departement[@Code="'.$dept.'"]');
+    }
     static function getChefDepartement($Chef_departement){
        return Personne::get($Chef_departement);
     }

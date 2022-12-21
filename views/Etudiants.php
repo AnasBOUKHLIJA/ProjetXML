@@ -42,23 +42,28 @@ if($_SESSION['personneCategorie'] == 'Etudiant') {
                             <table class="table my-0" id="dataTable">
                                 <thead>
                                 <tr>
-                                    <th>Name</th>
-                                    <th>Position</th>
-                                    <th>Office</th>
-                                    <th>Age</th>
-                                    <th>Start date</th>
-                                    <th>Salary</th>
+                                    <th>Nom et prenom</th>
+                                    <th>Cin</th>
+                                    <th>Email</th>
+                                    <th>Telephone</th>
+                                    <th>Cne</th>
+                                    <th>Filiere</th>
                                 </tr>
                                 </thead>
                                 <tbody>
+                               <?php foreach (EtudiantController::getAll() as $etudiant){ ?>
                                 <tr>
-                                    <td><img class="rounded-circle me-2" width="30" height="30" src="assets/img/avatars/avatar1.jpeg">Airi Satou</td>
-                                    <td>Accountant</td>
-                                    <td>Tokyo</td>
-                                    <td>33</td>
-                                    <td>2008/11/28</td>
-                                    <td>$162,700</td>
+                                    <td>
+                                        <img class="rounded-circle me-2" width="30" height="30" src="views/ourAssets/images/etudiant.png">
+                                        <?php echo $etudiant['Nom'].' '.$etudiant['Prenom'] ?>
+                                    </td>
+                                    <td><?php echo $etudiant['Cin'] ?></td>
+                                    <td><?php echo $etudiant['Email'] ?></td>
+                                    <td><?php echo $etudiant['Telephone'] ?></td>
+                                    <td><?php echo $etudiant['Cne'] ?></td>
+                                    <td><?php echo FiliereController::get($etudiant['Filiere']) ?></td>
                                 </tr>
+                                <?php } ?>
                                 </tbody>
                             </table>
                         </div>

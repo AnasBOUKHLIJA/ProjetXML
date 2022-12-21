@@ -54,7 +54,7 @@
             </Personne>
             <Personne  Sexe="F" Code="P2">
                 <Username>KhadijaArhid</Username>
-                <Password>KhadijaAchid</Password>
+                <Password>KhadijaArhid</Password>
                 <Nom>ARHID</Nom>
                 <Prenom>Khadija</Prenom>
                 <Cin>M141213</Cin>
@@ -62,7 +62,7 @@
                 <Telephone>0620202021</Telephone>
                 <Photo></Photo>
             </Personne>
-            <Personne  Sexe="M" Code="P3">
+            <Personne  Sexe="F" Code="P3">
                 <Username>MounirIlham</Username>
                 <Password>MounirIlham</Password>
                 <Nom>Mounir</Nom>
@@ -73,8 +73,8 @@
                 <Photo></Photo>
             </Personne>
             <Personne  Sexe="M" Code="P4">
-                <Username>KhadijaArhid</Username>
-                <Password>KhadijaAchid</Password>
+                <Username>AlaouiFdiliOthmane</Username>
+                <Password>AlaouiFdiliOthmane</Password>
                 <Nom>AlaouiFdili</Nom>
                 <Prenom>Othmane</Prenom>
                 <Cin>M011</Cin>
@@ -136,11 +136,11 @@
         <Etudiants>
             <Etudiant Code="E1">
                 <Cne>K130000000</Cne>
-                <Filiere>GI-1</Filiere>
+                <Filiere>Fil1</Filiere>
             </Etudiant>
             <Etudiant Code="E2">
                 <Cne>K130000000</Cne>
-                <Filiere>GI-1</Filiere>
+                <Filiere>Fil2</Filiere>
             </Etudiant>
         </Etudiants>
         <Permissions>

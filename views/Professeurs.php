@@ -32,8 +32,41 @@ if($_SESSION['personneCategorie'] == 'Etudiant') {
         <div id="content">
             <?php include_once 'views/includes/header.php' ?>
             <div class="container-fluid">
-                <div class="d-sm-flex justify-content-between align-items-center mb-4">
-                    <h3 class="text-dark mb-0">Professeurs</h3>
+                <h3 class="text-dark mb-4">Liste des Professeurs</h3>
+                <div class="card shadow">
+                    <div class="card-header py-3">
+                        <p class="text-primary m-0 fw-bold">Professeur Info</p>
+                    </div>
+                <div class="card-body">
+                    <div class="table-responsive table mt-2" id="dataTable" role="grid" aria-describedby="dataTable_info">
+                        <table class="table my-0" id="dataTable">
+                            <thead>
+                            <tr>
+                                <th>Nom et prenom</th>
+                                <th>Cin</th>
+                                <th>Email</th>
+                                <th>Telephone</th>
+                                <th>Cne</th>
+                                <th>Departement</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <?php foreach (ProfesseurController::getAll() as $professeur){ ?>
+                                <tr>
+                                    <td>
+                                        <img class="rounded-circle me-2" width="30" height="30" src="views/ourAssets/images/etudiant.png">
+                                        <?php echo $professeur['Nom'].' '.$professeur['Prenom'] ?>
+                                    </td>
+                                    <td><?php echo $professeur['Cin'] ?></td>
+                                    <td><?php echo $professeur['Email'] ?></td>
+                                    <td><?php echo $professeur['Telephone'] ?></td>
+                                    <td><?php echo $professeur['NumeroSomme'] ?></td>
+                                    <td><?php echo DepartementController::get($professeur['Departement']) ?></td>
+                                </tr>
+                            <?php } ?>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
