@@ -96,8 +96,8 @@
         </div>
     </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
 </div>
-<script src="views/assetsAdminPanel/bootstrap/js/bootstrap.min.js"></script>
-<script src="views/assetsAdminPanel/js/theme.js"></script>
+<script src="/ProjetXML/views/assetsAdminPanel/bootstrap/js/bootstrap.min.js"></script>
+<script src="/ProjetXML/views/assetsAdminPanel/js/theme.js"></script>
 </body>
 
 </html>

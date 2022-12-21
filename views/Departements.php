@@ -55,7 +55,7 @@ if($_SESSION['personneCategorie'] == 'Etudiant') {
                                         <p class="text-muted mb-2">Chef Departement : <?php echo DepartementController::getChefDepartement($departement->attributes()->Chef_departement) ?></p>
                                         <p class="text-muted mb-2">Nombre des filiere : <?php echo DepartementController::getNombreFiliere($departement->attributes()->Code) ?></p>
                                         <p class="text-muted mb-4">Nombre des professeurs : <?php echo DepartementController::getNombreProfesseur($departement->attributes()->Code)  ?></p>
-                                        <button class="btn btn-primary shadow" type="button">Voir les details</button>
+                                        <a href="/ProjetXML/DepartementDetails/<?php echo $departement->attributes()->Code ?>" class="btn btn-primary shadow" type="button">Voir les details</a>
                                     </div>
                                 </div>
                             </div>

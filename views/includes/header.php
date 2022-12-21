@@ -14,7 +14,7 @@
                                  src="<?php echo $data['Photo'] ?>">
                         <?php }else{ ?>
                             <img class="border rounded-circle img-profile"
-                                 src="views/ourAssets/images/icon-unlock.png">
+                                 src="/ProjetXML/views/ourAssets/images/icon-unlock.png">
                         <?php } ?>
 
                     </a>

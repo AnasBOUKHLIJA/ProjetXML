@@ -136,11 +136,11 @@
         <Etudiants>
             <Etudiant Code="E1">
                 <Cne>K130000000</Cne>
-                <Filiere>Fil1</Filiere>
+                <Filiere>Dept1Fil1</Filiere>
             </Etudiant>
             <Etudiant Code="E2">
                 <Cne>K130000000</Cne>
-                <Filiere>Fil2</Filiere>
+                <Filiere>Dept1Fil2</Filiere>
             </Etudiant>
         </Etudiants>
         <Permissions>
@@ -300,87 +300,87 @@
             </Departement>
         </Departements>
         <Filieres>
-            <Filiere Chef_filiere="P1" Departement="Dept1" Code="Fil1">
+            <Filiere Chef_filiere="P1" Departement="Dept1" Code="Dept1Fil1">
                 <Intitule>DUT : Administration des systémes réseaux</Intitule>
             </Filiere>
-            <Filiere Chef_filiere="P2" Departement="Dept1" Code="Fil2">
+            <Filiere Chef_filiere="P2" Departement="Dept1" Code="Dept1Fil2">
                 <Intitule>LP : Ingénierie des systèmes d'information et réseaux</Intitule>
             </Filiere>
-            <Filiere Chef_filiere="P3" Departement="Dept2" Code="Fil3">
+            <Filiere Chef_filiere="P3" Departement="Dept2" Code="Dept2Fil1">
                 <Intitule>DUT : génie industriel et maintenance</Intitule>
             </Filiere>
-            <Filiere Chef_filiere="P4" Departement="Dept2" Code="Fil4">
+            <Filiere Chef_filiere="P4" Departement="Dept2" Code="Dept2Fil2">
                 <Intitule>LP : mécatronique</Intitule>
             </Filiere>
-            <Filiere Chef_filiere="P1" Departement="Dept3" Code="Fil5">
+            <Filiere Chef_filiere="P1" Departement="Dept3" Code="Dept3Fil1">
                 <Intitule>DUT : technique instrumentale et management de la qualité</Intitule>
             </Filiere>
-            <Filiere Chef_filiere="P2" Departement="Dept3" Code="Fil6">
+            <Filiere Chef_filiere="P2" Departement="Dept3" Code="Dept3Fil2">
                 <Intitule>LP : Métrologie, qualité, sécurité et environnement</Intitule>
             </Filiere>
-            <Filiere Chef_filiere="P3" Departement="Dept4" Code="Fil7">
+            <Filiere Chef_filiere="P3" Departement="Dept4" Code="Dept4Fil1">
                 <Intitule>DUT : technique de management</Intitule>
             </Filiere>
-            <Filiere Chef_filiere="P4" Departement="Dept4" Code="Fil8">
+            <Filiere Chef_filiere="P4" Departement="Dept4" Code="Dept4Fil2">
                 <Intitule>LP : Gestion comptable et financière</Intitule>
             </Filiere>
         </Filieres>
         <Modules>
-            <Module Coordonateur="P1" Filiere="Fil1" Code="MOD1">
+            <Module Coordonateur="P1" Filiere="Dept1Fil1" Code="Dept1Fil1MOD1">
                 <Module>Algorithmique et Bases de la Programmation</Module>
             </Module>
-            <Module Coordonateur="P2" Filiere="Fil1" Code="MOD2">
+            <Module Coordonateur="P2" Filiere="Dept1Fil1" Code="Dept1Fil1MOD2">
                 <Module>Architecture des Ordinateurs</Module>
             </Module>
-            <Module Coordonateur="P3" Filiere="Fil1" Code="MOD3">
+            <Module Coordonateur="P3" Filiere="Dept1Fil1" Code="Dept1Fil1MOD3">
                 <Module>Mathématiques</Module>
             </Module>
-            <Module Coordonateur="P4" Filiere="Fil1" Code="MOD4">
+            <Module Coordonateur="P4" Filiere="Dept1Fil1" Code="Dept1Fil1MOD4">
                 <Module>Langues et TEC</Module>
             </Module>
-            <Module Coordonateur="P1" Filiere="Fil1" Code="MOD5">
+            <Module Coordonateur="P1" Filiere="Dept1Fil1" Code="Dept1Fil1MOD5">
                 <Module>Systèmes d’Information et Bases de Données</Module>
             </Module>
-            <Module Coordonateur="P1" Filiere="Fil1" Code="MOD8">
+            <Module Coordonateur="P1" Filiere="Dept1Fil1" Code="Dept1Fil1MOD8">
                 <Module>Mathématiques Appliquées à l’Informatique</Module>
             </Module>
-            <Module Coordonateur="P1" Filiere="Fil1" Code="MOD7">
+            <Module Coordonateur="P1" Filiere="Dept1Fil1" Code="Dept1Fil1MOD7">
                 <Module>Algorithmique et Structures des Données</Module>
             </Module>
-            <Module Coordonateur="P1" Filiere="Fil1" Code="MOD8">
+            <Module Coordonateur="P1" Filiere="Dept1Fil1" Code="Dept1Fil1MOD8">
                 <Module>Communication et Gestion de l’Entreprise</Module>
             </Module>
-            <Module Coordonateur="P1" Filiere="Fil1" Code="MOD9">
+            <Module Coordonateur="P1" Filiere="Dept1Fil1" Code="Dept1Fil1MOD9">
                 <Module>Programmation Orientée Objet</Module>
             </Module>
-            <Module Coordonateur="P1" Filiere="Fil1" Code="MOD10">
+            <Module Coordonateur="P1" Filiere="Dept1Fil1" Code="Dept1Fil1MOD10">
                 <Module>Bases de Données Avancées et Technologie Web</Module>
             </Module>
-            <Module Coordonateur="P1" Filiere="Fil1" Code="MOD11">
+            <Module Coordonateur="P1" Filiere="Dept1Fil1" Code="Dept1Fil1MOD11">
                 <Module>Systèmes d’Exploitation</Module>
             </Module>
-            <Module Coordonateur="P1" Filiere="Fil1" Code="MOD12">
+            <Module Coordonateur="P1" Filiere="Dept1Fil1" Code="Dept1Fil1MOD12">
                 <Module>Réseaux et Informatiques</Module>
             </Module>
-            <Module Coordonateur="P1" Filiere="Fil1" Code="MOD13">
+            <Module Coordonateur="P1" Filiere="Dept1Fil1" Code="Dept1Fil1MOD13">
                 <Module>Administration des Systèmes de Réseaux Informatique</Module>
             </Module>
-            <Module Coordonateur="P1" Filiere="Fil1" Code="MOD14">
+            <Module Coordonateur="P1" Filiere="Dept1Fil1" Code="Dept1Fil1MOD14">
                 <Module>Communication et Management</Module>
             </Module>
-            <Module Coordonateur="P1" Filiere="Fil1" Code="MOD15">
+            <Module Coordonateur="P1" Filiere="Dept1Fil1" Code="Dept1Fil1MOD15">
                 <Module>Stages en Entreprises</Module>
             </Module>
-            <Module Coordonateur="P1" Filiere="Fil1" Code="MOD16">
+            <Module Coordonateur="P1" Filiere="Dept1Fil1" Code="Dept1Fil1MOD16">
                 <Module>Projet de Fin d’Études</Module>
             </Module>
         </Modules>
         <Elements>
-           <Element Module="MOD1" enseignant="P1" code="El1">
+           <Element Module="Dept1Fil1MOD1" Enseignant="P1" Code="El1">
                <Element>Algorithmique</Element>
                <NombreHeures>36</NombreHeures>
            </Element>
-            <Element Module="MOD1" enseignant="P1" code="El2">
+            <Element Module="Dept1Fil1MOD1" Enseignant="P1" Code="El2">
                 <Element>Langage de programmation</Element>
                 <NombreHeures>54</NombreHeures>
             </Element>
