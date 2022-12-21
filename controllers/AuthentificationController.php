@@ -23,11 +23,9 @@ class AuthentificationController
                 }else {
                     $data['permission'] = 'SuperAdmin';
                 }
-
                 $_SESSION = $data;
                 header('location: /ProjetXML/accueil');
             }else{}
-
         }
     }
 }

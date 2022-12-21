@@ -2,10 +2,10 @@
 
 class Permission
 {
-    static function get($Code){
+    static function get($Code): array {
         $CadiAyyad = simplexml_load_file('Database/Database.xml');
         $Permissions = $CadiAyyad->xpath('//Permissions/Permission[@Code="'.$Code.'"]');
-        $Permission = array(
+        return array(
             'Addsupperadmin' => (string)$Permissions[0]->Addsupperadmin,
             'Removesuperadmin' => (string)$Permissions[0]->Removesuperadmin,
             'Editsuperadmin' => (string)$Permissions[0]->Editsuperadmin,
@@ -25,6 +25,5 @@ class Permission
             'Removeabscence' => (string)$Permissions[0]->Removeabscence,
             'Editabscence' => (string)$Permissions[0]->Editabscence
         );
-        return $Permission;
     }
 }

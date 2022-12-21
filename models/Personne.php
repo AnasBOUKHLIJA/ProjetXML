@@ -2,10 +2,10 @@
 
 class Personne
 {
-    static function get($username,$password){
+    static function get($username,$password): array{
         $CadiAyyad = simplexml_load_file('Database/Database.xml');
         $Personnes = $CadiAyyad->xpath('//Personnes/Personne[Username="'.$username.'" and Password="'.$password.'"]');
-        $Personne = array(
+        return array(
             'Username' => (string)$Personnes[0]->Username,
             'Password' => (string)$Personnes[0]->Password,
             'Nom' => (string)$Personnes[0]->Nom,
@@ -17,6 +17,5 @@ class Personne
             'Sexe' => (string)$Personnes[0]->attributes()->Sexe,
             'Code' => (string)$Personnes[0]->attributes()->Code
         );
-        return $Personne;
     }
 }
