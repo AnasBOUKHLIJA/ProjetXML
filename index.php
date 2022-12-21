@@ -17,6 +17,7 @@ if(!$_SESSION){
         $home->index('connexion');
     }
 }else{
+
     if (isset($_GET['page'])) {
         if (in_array($_GET['page'], $pages)) {
             $home->index($_GET['page']);

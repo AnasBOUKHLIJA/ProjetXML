@@ -62,6 +62,26 @@
                 <Telephone>0620202021</Telephone>
                 <Photo></Photo>
             </Personne>
+            <Personne  Sexe="M" Code="P3">
+                <Username>MounirIlham</Username>
+                <Password>MounirIlham</Password>
+                <Nom>Mounir</Nom>
+                <Prenom>Ilham</Prenom>
+                <Cin>M07</Cin>
+                <Email>ilhamounir@gmail.com</Email>
+                <Telephone>0600000000</Telephone>
+                <Photo></Photo>
+            </Personne>
+            <Personne  Sexe="M" Code="P4">
+                <Username>KhadijaArhid</Username>
+                <Password>KhadijaAchid</Password>
+                <Nom>AlaouiFdili</Nom>
+                <Prenom>Othmane</Prenom>
+                <Cin>M011</Cin>
+                <Email>othmane.alaoui.fdili@gmail.com</Email>
+                <Telephone>0600000000</Telephone>
+                <Photo></Photo>
+            </Personne>
             <Personne  Sexe="M" Code="E1">
                 <Username>AnasBoukhlija</Username>
                 <Password>AnasBoukhlija</Password>
@@ -97,11 +117,19 @@
         </AgentScolarites>
         <Professeurs>
             <Professeur Code="P1">
-                <NumeroSomme>C03</NumeroSomme>
+                <NumeroSomme>C01</NumeroSomme>
                 <Departement>GI</Departement>
             </Professeur>
             <Professeur Code="P2">
+                <NumeroSomme>C02</NumeroSomme>
+                <Departement>GI</Departement>
+            </Professeur>
+            <Professeur Code="P3">
                 <NumeroSomme>C03</NumeroSomme>
+                <Departement>GI</Departement>
+            </Professeur>
+            <Professeur Code="P4">
+                <NumeroSomme>C04</NumeroSomme>
                 <Departement>GI</Departement>
             </Professeur>
         </Professeurs>
@@ -176,7 +204,7 @@
                 <Removeabscence>0</Removeabscence>
                 <Editabscence>0</Editabscence>
             </Permission>
-            <Permission Code="P2">
+            <Permission Code="P1">
                 <Addsupperadmin>0</Addsupperadmin>
                 <Removesuperadmin>0</Removesuperadmin>
                 <Editsuperadmin>0</Editsuperadmin>
@@ -257,5 +285,105 @@
                 <Editabscence>0</Editabscence>
             </Permission>
         </Permissions>
+        <Departements>
+            <Departement Chef_departement="P1" Code="Dept1">
+                <Departement>GI</Departement>
+            </Departement>
+            <Departement Chef_departement="P2" Code="Dept2">
+                <Departement>GIM</Departement>
+            </Departement>
+            <Departement Chef_departement="P3" Code="Dept3">
+                <Departement>TIMQ</Departement>
+            </Departement>
+            <Departement Chef_departement="P4" Code="Dept4">
+                <Departement>TM</Departement>
+            </Departement>
+        </Departements>
+        <Filieres>
+            <Filiere Chef_filiere="P1" Departement="Dept1" Code="Fil1">
+                <Intitule>DUT : Administration des systémes réseaux</Intitule>
+            </Filiere>
+            <Filiere Chef_filiere="P2" Departement="Dept1" Code="Fil2">
+                <Intitule>LP : Ingénierie des systèmes d'information et réseaux</Intitule>
+            </Filiere>
+            <Filiere Chef_filiere="P3" Departement="Dept2" Code="Fil3">
+                <Intitule>DUT : génie industriel et maintenance</Intitule>
+            </Filiere>
+            <Filiere Chef_filiere="P4" Departement="Dept2" Code="Fil4">
+                <Intitule>LP : mécatronique</Intitule>
+            </Filiere>
+            <Filiere Chef_filiere="P1" Departement="Dept3" Code="Fil5">
+                <Intitule>DUT : technique instrumentale et management de la qualité</Intitule>
+            </Filiere>
+            <Filiere Chef_filiere="P2" Departement="Dept3" Code="Fil6">
+                <Intitule>LP : Métrologie, qualité, sécurité et environnement</Intitule>
+            </Filiere>
+            <Filiere Chef_filiere="P3" Departement="Dept4" Code="Fil7">
+                <Intitule>DUT : technique de management</Intitule>
+            </Filiere>
+            <Filiere Chef_filiere="P4" Departement="Dept4" Code="Fil8">
+                <Intitule>LP : Gestion comptable et financière</Intitule>
+            </Filiere>
+        </Filieres>
+        <Modules>
+            <Module Coordonateur="P1" Filiere="fil1" Code="MOD1">
+                <Module>Algorithmique et Bases de la Programmation</Module>
+            </Module>
+            <Module Coordonateur="P2" Filiere="fil1" Code="MOD2">
+                <Module>Architecture des Ordinateurs</Module>
+            </Module>
+            <Module Coordonateur="P3" Filiere="fil1" Code="MOD3">
+                <Module>Mathématiques</Module>
+            </Module>
+            <Module Coordonateur="P4" Filiere="fil1" Code="MOD4">
+                <Module>Langues et TEC</Module>
+            </Module>
+            <Module Coordonateur="P1" Filiere="fil1" Code="MOD5">
+                <Module>Systèmes d’Information et Bases de Données</Module>
+            </Module>
+            <Module Coordonateur="P1" Filiere="fil1" Code="MOD8">
+                <Module>Mathématiques Appliquées à l’Informatique</Module>
+            </Module>
+            <Module Coordonateur="P1" Filiere="fil1" Code="MOD7">
+                <Module>Algorithmique et Structures des Données</Module>
+            </Module>
+            <Module Coordonateur="P1" Filiere="fil1" Code="MOD8">
+                <Module>Communication et Gestion de l’Entreprise</Module>
+            </Module>
+            <Module Coordonateur="P1" Filiere="fil1" Code="MOD9">
+                <Module>Programmation Orientée Objet</Module>
+            </Module>
+            <Module Coordonateur="P1" Filiere="fil1" Code="MOD10">
+                <Module>Bases de Données Avancées et Technologie Web</Module>
+            </Module>
+            <Module Coordonateur="P1" Filiere="fil1" Code="MOD11">
+                <Module>Systèmes d’Exploitation</Module>
+            </Module>
+            <Module Coordonateur="P1" Filiere="fil1" Code="MOD12">
+                <Module>Réseaux et Informatiques</Module>
+            </Module>
+            <Module Coordonateur="P1" Filiere="fil1" Code="MOD13">
+                <Module>Administration des Systèmes de Réseaux Informatique</Module>
+            </Module>
+            <Module Coordonateur="P1" Filiere="fil1" Code="MOD14">
+                <Module>Communication et Management</Module>
+            </Module>
+            <Module Coordonateur="P1" Filiere="fil1" Code="MOD15">
+                <Module>Stages en Entreprises</Module>
+            </Module>
+            <Module Coordonateur="P1" Filiere="fil1" Code="MOD16">
+                <Module>Projet de Fin d’Études</Module>
+            </Module>
+        </Modules>
+        <Elements>
+           <Element Module="MOD1" enseignant="P1" code="El1">
+               <Element>Algorithmique</Element>
+               <NombreHeures>36</NombreHeures>
+           </Element>
+            <Element Module="MOD1" enseignant="P1" code="El2">
+                <Element>Langage de programmation</Element>
+                <NombreHeures>54</NombreHeures>
+            </Element>
+        </Elements>
     </Etablissement>
 </CadiAyyad>
