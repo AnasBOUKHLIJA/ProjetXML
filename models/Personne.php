@@ -2,9 +2,9 @@
 
 class Personne
 {
-    static function get($username,$password): array{
+    static function get($code): array{
         $CadiAyyad = simplexml_load_file('Database/Database.xml');
-        $Personnes = $CadiAyyad->xpath('//Personnes/Personne[Username="'.$username.'" and Password="'.$password.'"]');
+        $Personnes = $CadiAyyad->xpath('//Personnes/Personne[@Code="'.$code.'"]');
         return array(
             'Username' => (string)$Personnes[0]->Username,
             'Password' => (string)$Personnes[0]->Password,
@@ -17,5 +17,11 @@ class Personne
             'Sexe' => (string)$Personnes[0]->attributes()->Sexe,
             'Code' => (string)$Personnes[0]->attributes()->Code
         );
+    }
+
+    static function Authenticate($username,$password): array{
+        $CadiAyyad = simplexml_load_file('Database/Database.xml');
+        $Personnes = $CadiAyyad->xpath('//Personnes/Personne[Username="'.$username.'" and Password="'.$password.'"]');
+        return Personne::get($Personnes[0]->attributes()->Code);
     }
 }

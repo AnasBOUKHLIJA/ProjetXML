@@ -15,8 +15,8 @@
             <Personne Sexe="M" Code="A1">
                 <Username>admin</Username>
                 <Password>admin</Password>
-                <Nom>Ahmed</Nom>
-                <Prenom>CHIHAB</Prenom>
+                <Nom>CHIHAB</Nom>
+                <Prenom>Ahmed</Prenom>
                 <Cin>M161616</Cin>
                 <Email>ahmedchihab@gmail.com</Email>
                 <Telephone>0666248157</Telephone>
@@ -135,8 +135,6 @@
                 <Addabscence>0</Addabscence>
                 <Removeabscence>0</Removeabscence>
                 <Editabscence>0</Editabscence>
-
-            
             </Permission>
             <Permission Code="S1">
                 <Addsupperadmin>0</Addsupperadmin>

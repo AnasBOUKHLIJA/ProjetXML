@@ -4,7 +4,7 @@ class AuthentificationController
 {
     static function Authenticate($data){
         if($data['username'] && $data['password']){
-            $personne = Personne::get($data['username'],$data['password']);
+            $personne = Personne::Authenticate($data['username'],$data['password']);
             if($personne){
                 $code = $personne['Code'];
                 $personneCategorieArray = array(
@@ -15,14 +15,8 @@ class AuthentificationController
                     'E'=>'Etudiant',
                 );
                 $personneCategorie = substr($code,0,1);
-                $data = array('data'=>$personne);
+                $data = array('code'=>$code);
                 $data['personneCategorie'] =  $personneCategorieArray[$personneCategorie];
-                if(strtolower($personneCategorie) != strtolower('A')){
-                    $permission = Permission::get($code);
-                    $data['permission'] = $permission;
-                }else {
-                    $data['permission'] = 'SuperAdmin';
-                }
                 $_SESSION = $data;
                 header('location: /ProjetXML/accueil');
             }else{}

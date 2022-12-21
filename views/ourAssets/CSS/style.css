@@ -19,6 +19,9 @@
     --black : #000000;
     --green: #062726;
 }
+#sidebar{
+    background-color: var(--main) !important;
+}
 #body-connexion{
     width: 100%;
     height: 100vh;
