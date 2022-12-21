@@ -326,52 +326,52 @@
             </Filiere>
         </Filieres>
         <Modules>
-            <Module Coordonateur="P1" Filiere="fil1" Code="MOD1">
+            <Module Coordonateur="P1" Filiere="Fil1" Code="MOD1">
                 <Module>Algorithmique et Bases de la Programmation</Module>
             </Module>
-            <Module Coordonateur="P2" Filiere="fil1" Code="MOD2">
+            <Module Coordonateur="P2" Filiere="Fil1" Code="MOD2">
                 <Module>Architecture des Ordinateurs</Module>
             </Module>
-            <Module Coordonateur="P3" Filiere="fil1" Code="MOD3">
+            <Module Coordonateur="P3" Filiere="Fil1" Code="MOD3">
                 <Module>Mathématiques</Module>
             </Module>
-            <Module Coordonateur="P4" Filiere="fil1" Code="MOD4">
+            <Module Coordonateur="P4" Filiere="Fil1" Code="MOD4">
                 <Module>Langues et TEC</Module>
             </Module>
-            <Module Coordonateur="P1" Filiere="fil1" Code="MOD5">
+            <Module Coordonateur="P1" Filiere="Fil1" Code="MOD5">
                 <Module>Systèmes d’Information et Bases de Données</Module>
             </Module>
-            <Module Coordonateur="P1" Filiere="fil1" Code="MOD8">
+            <Module Coordonateur="P1" Filiere="Fil1" Code="MOD8">
                 <Module>Mathématiques Appliquées à l’Informatique</Module>
             </Module>
-            <Module Coordonateur="P1" Filiere="fil1" Code="MOD7">
+            <Module Coordonateur="P1" Filiere="Fil1" Code="MOD7">
                 <Module>Algorithmique et Structures des Données</Module>
             </Module>
-            <Module Coordonateur="P1" Filiere="fil1" Code="MOD8">
+            <Module Coordonateur="P1" Filiere="Fil1" Code="MOD8">
                 <Module>Communication et Gestion de l’Entreprise</Module>
             </Module>
-            <Module Coordonateur="P1" Filiere="fil1" Code="MOD9">
+            <Module Coordonateur="P1" Filiere="Fil1" Code="MOD9">
                 <Module>Programmation Orientée Objet</Module>
             </Module>
-            <Module Coordonateur="P1" Filiere="fil1" Code="MOD10">
+            <Module Coordonateur="P1" Filiere="Fil1" Code="MOD10">
                 <Module>Bases de Données Avancées et Technologie Web</Module>
             </Module>
-            <Module Coordonateur="P1" Filiere="fil1" Code="MOD11">
+            <Module Coordonateur="P1" Filiere="Fil1" Code="MOD11">
                 <Module>Systèmes d’Exploitation</Module>
             </Module>
-            <Module Coordonateur="P1" Filiere="fil1" Code="MOD12">
+            <Module Coordonateur="P1" Filiere="Fil1" Code="MOD12">
                 <Module>Réseaux et Informatiques</Module>
             </Module>
-            <Module Coordonateur="P1" Filiere="fil1" Code="MOD13">
+            <Module Coordonateur="P1" Filiere="Fil1" Code="MOD13">
                 <Module>Administration des Systèmes de Réseaux Informatique</Module>
             </Module>
-            <Module Coordonateur="P1" Filiere="fil1" Code="MOD14">
+            <Module Coordonateur="P1" Filiere="Fil1" Code="MOD14">
                 <Module>Communication et Management</Module>
             </Module>
-            <Module Coordonateur="P1" Filiere="fil1" Code="MOD15">
+            <Module Coordonateur="P1" Filiere="Fil1" Code="MOD15">
                 <Module>Stages en Entreprises</Module>
             </Module>
-            <Module Coordonateur="P1" Filiere="fil1" Code="MOD16">
+            <Module Coordonateur="P1" Filiere="Fil1" Code="MOD16">
                 <Module>Projet de Fin d’Études</Module>
             </Module>
         </Modules>

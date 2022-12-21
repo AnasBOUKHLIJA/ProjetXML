@@ -45,9 +45,9 @@ if($_SESSION['personneCategorie'] == 'Etudiant') {
                             </div>
                         </div>
                         <?php $count=0; foreach (DepartementController::getAll() as $departement){ ?>
-                            <div class="row row-cols-1 row-cols-md-2 mx-auto" style="max-width: 900px;">
+                            <div class="row row-cols-1 row-cols-md-2 mx-auto" style="max-width: 900px;min-height: 300px">
                                 <div class="col <?php if($count%2 == 0) echo "order-md-last" ?> mb-5">
-                                    <img class="rounded img-fluid shadow" src="views/ourAssets/images/departement.jpg">
+                                    <img class="rounded img-fluid shadow" style="height: 100%" src="views/ourAssets/images/departement.png">
                                 </div>
                                 <div class="col d-md-flex align-items-md-end align-items-lg-center mb-5">
                                     <div>
