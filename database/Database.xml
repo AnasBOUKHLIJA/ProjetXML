@@ -118,19 +118,19 @@
         <Professeurs>
             <Professeur Code="P1">
                 <NumeroSomme>C01</NumeroSomme>
-                <Departement>GI</Departement>
+                <Departement>Dept1</Departement>
             </Professeur>
             <Professeur Code="P2">
                 <NumeroSomme>C02</NumeroSomme>
-                <Departement>GI</Departement>
+                <Departement>Dept1</Departement>
             </Professeur>
             <Professeur Code="P3">
                 <NumeroSomme>C03</NumeroSomme>
-                <Departement>GI</Departement>
+                <Departement>Dept1</Departement>
             </Professeur>
             <Professeur Code="P4">
                 <NumeroSomme>C04</NumeroSomme>
-                <Departement>GI</Departement>
+                <Departement>Dept1</Departement>
             </Professeur>
         </Professeurs>
         <Etudiants>

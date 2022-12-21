@@ -44,24 +44,22 @@ if($_SESSION['personneCategorie'] == 'Etudiant') {
                                 <h3 class="fw-bold">Nos departements</h3>
                             </div>
                         </div>
-                        <div class="row row-cols-1 row-cols-md-2 mx-auto" style="max-width: 900px;">
-                            <div class="col mb-5"><img class="rounded img-fluid shadow" src="assets/img/products/1.jpg"></div>
-                            <div class="col d-md-flex align-items-md-end align-items-lg-center mb-5">
-                                <div>
-                                    <h5 class="fw-bold">Lorem ipsum dolor sit&nbsp;</h5>
-                                    <p class="text-muted mb-4">Erat netus est hendrerit, nullam et quis ad cras porttitor iaculis. Bibendum vulputate cras aenean.</p><button class="btn btn-primary shadow" type="button">Learn more</button>
+                        <?php $count=0; foreach (DepartementController::getAll() as $departement){ ?>
+                            <div class="row row-cols-1 row-cols-md-2 mx-auto" style="max-width: 900px;">
+                                <div class="col <?php if($count%2 == 0) echo "order-md-last" ?> mb-5">
+                                    <img class="rounded img-fluid shadow" src="views/ourAssets/images/departement.jpg">
+                                </div>
+                                <div class="col d-md-flex align-items-md-end align-items-lg-center mb-5">
+                                    <div>
+                                        <h5 class="fw-bold"><?php echo $departement->Departement ?>&nbsp;</h5>
+                                        <p class="text-muted mb-2">Chef Departement : <?php echo DepartementController::getChefDepartement($departement->attributes()->Chef_departement) ?></p>
+                                        <p class="text-muted mb-2">Nombre des filiere : <?php echo DepartementController::getNombreFiliere($departement->attributes()->Code) ?></p>
+                                        <p class="text-muted mb-4">Nombre des professeurs : <?php echo DepartementController::getNombreProfesseur($departement->attributes()->Code)  ?></p>
+                                        <button class="btn btn-primary shadow" type="button">Voir les details</button>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="row row-cols-1 row-cols-md-2 mx-auto" style="max-width: 900px;">
-                            <div class="col order-md-last mb-5"><img class="rounded img-fluid shadow" src="assets/img/products/1.jpg"></div>
-                            <div class="col d-md-flex align-items-md-end align-items-lg-center mb-5">
-                                <div>
-                                    <h5 class="fw-bold">Lorem ipsum dolor sit&nbsp;</h5>
-                                    <p class="text-muted mb-4">Erat netus est hendrerit, nullam et quis ad cras porttitor iaculis. Bibendum vulputate cras aenean.</p><button class="btn btn-primary shadow" type="button">Learn more</button>
-                                </div>
-                            </div>
-                        </div>
+                        <?php $count++;} ?>
                     </div>
                 </section>
             </div>
