@@ -19,4 +19,18 @@ class Departement
     static function getNombreProfesseur($dept){
         return Professeur::getByDepartement($dept);
     }
+    static function add($data){
+        $file = 'Database/Database.xml';
+        $xml = simplexml_load_file($file);
+        $Departements = $xml->Etablissement->Departements;
+        $Departement = $Departements->addChild('Departement');
+        $Departement->addAttribute('Chef_departement', $data['chef_departement']);
+        $Departement->addAttribute('Code', $data['Code']);
+        $Departement->addChild('Departement', $data['departement']);
+        $dom = new DOMDocument('1.0');
+        $dom->preserveWhiteSpace = false;
+        $dom->formatOutput = true;
+        $dom->loadXML($xml->asXML());
+        $dom->save($file);
+    }
 }

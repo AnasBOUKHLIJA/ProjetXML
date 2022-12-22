@@ -28,4 +28,19 @@ class Professeur
             $CadiAyyad = simplexml_load_file('Database/Database.xml');
             return $CadiAyyad->xpath('//Professeurs/Professeur[Departement = "'.$dept.'"]');
     }
+    static function add($data){
+        Personne::add($data);
+        $file = 'Database/Database.xml';
+        $xml = simplexml_load_file($file);
+        $Professeurs = $xml->Etablissement->Professeurs;
+        $Professeur = $Professeurs->addChild('Professeur');
+        $Professeur->addAttribute('Code', $data['Code']);
+        $Professeur->addChild('NumeroSomme', $data['numerosomme']);
+        $Professeur->addChild('Departement', $data['departement']);
+        $dom = new DOMDocument('1.0');
+        $dom->preserveWhiteSpace = false;
+        $dom->formatOutput = true;
+        $dom->loadXML($xml->asXML());
+        $dom->save($file);
+    }
 }

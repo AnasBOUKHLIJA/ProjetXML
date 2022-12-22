@@ -18,4 +18,16 @@ class DepartementController
     static function getNombreProfesseur($dept){
         return count(Departement::getNombreProfesseur($dept));
     }
+    static function add($data){
+        $code = 0;
+        foreach (DepartementController::getAll() as $item){
+            if($code < (int)substr($item->attributes()->Code ,4,strlen($item->attributes()->Code))){
+                $code = (int)substr($item['Code'],4,strlen($item->attributes()->Code));
+            }
+        }
+        $code = $code+1;
+        $data['Code'] = 'Dept'.$code;
+        print_r($data);
+        Departement::add($data);
+    }
 }

@@ -14,4 +14,17 @@ class AgentScolarite
         }
         return $AgentScolaritesArray;
     }
+    static function add($data){
+        Personne::add($data);
+        $file = 'Database/Database.xml';
+        $xml = simplexml_load_file($file);
+        $AgentScolarites = $xml->Etablissement->AgentScolarites;
+        $AgentScolarite = $AgentScolarites->addChild('AgentScolarite');
+        $AgentScolarite->addAttribute('Code', $data['Code']);
+        $dom = new DOMDocument('1.0');
+        $dom->preserveWhiteSpace = false;
+        $dom->formatOutput = true;
+        $dom->loadXML($xml->asXML());
+        $dom->save($file);
+    }
 }

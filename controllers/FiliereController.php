@@ -18,4 +18,18 @@ class FiliereController
     static function getNombreModule($fil){
         return count(Filiere::getNombreModule($fil));
     }
+    static function add($data){
+        $code = 0;
+        $codeDept = strlen($data['departement']);
+        foreach (FiliereController::getAll() as $item){
+            if(strpos($item->attributes()->Code,$data['departement'])  !== false){
+                if($code < (int)substr($item->attributes()->Code ,3+$codeDept,strlen($item->attributes()->Code))){
+                    $code = (int)substr($item['Code'],3+$codeDept,strlen($item->attributes()->Code));
+                }
+            }
+        }
+        $code = $code+1;
+        $data['Code'] = $data['departement'].'Fil'.$code;
+        Filiere::add($data);
+    }
 }

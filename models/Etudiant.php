@@ -22,4 +22,19 @@ class Etudiant
         }
         return $EtudiantsArray;
     }
+    static function add($data){
+        Personne::add($data);
+        $file = 'Database/Database.xml';
+        $xml = simplexml_load_file($file);
+        $Etudiants = $xml->Etablissement->Etudiants;
+        $Etudiant = $Etudiants->addChild('Etudiant');
+        $Etudiant->addAttribute('Code', $data['Code']);
+        $Etudiant->addChild('Cne', $data['cne']);
+        $Etudiant->addChild('Filiere', $data['filiere']);
+        $dom = new DOMDocument('1.0');
+        $dom->preserveWhiteSpace = false;
+        $dom->formatOutput = true;
+        $dom->loadXML($xml->asXML());
+        $dom->save($file);
+    }
 }

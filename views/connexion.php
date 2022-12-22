@@ -1,6 +1,8 @@
 <?php
     if(isset($_POST['submit'])){
         AuthentificationController::Authenticate($_POST);
+    }elseif (isset($_GET['dept'])){
+        session_destroy();
     }
 ?>
 <!DOCTYPE html>
@@ -13,13 +15,13 @@
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <!-- box icons link -->
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-    <link rel="stylesheet" href="views/ourAssets/CSS/style.css">
+    <link rel="stylesheet" href="/ProjetXML/views/ourAssets/CSS/style.css">
     <title>Connexion</title>
 </head>
 <body id="body-connexion">
     <div id="container-form">
     <!-- bienvenue dans votre espace de gestion des absences -->
-    <div id="container-user-img"><img src="views/ourAssets/images/icon-unlock.png" alt=""></div>
+    <div id="container-user-img"><img src="/ProjetXML/views/ourAssets/images/icon-unlock.png" alt=""></div>
         <form method="POST" action="">
             <div class="group-input-field">
                 <label>Username</label>
@@ -38,6 +40,6 @@
             <button type="submit" name="submit">Se connecter</button>
         </form>
     </div>
-    <img src="views/ourAssets/images/wave.svg" id="wave" />
+    <img src="/ProjetXML/views/ourAssets/images/wave.svg" id="wave" />
     </body>
     </html>

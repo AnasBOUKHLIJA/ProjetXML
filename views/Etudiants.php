@@ -1,16 +1,26 @@
 <?php
-$data = null;
-if($_SESSION['personneCategorie'] == 'Etudiant') {
-    $data = EtudiantController::get($_SESSION['code']);
-}elseif($_SESSION['personneCategorie'] == 'Directeur') {
-    $data = DirecteurController::get($_SESSION['code']);
-}elseif($_SESSION['personneCategorie'] == 'AgentScolarite') {
-    $data = AgentScolariteController::get($_SESSION['code']);
-}elseif($_SESSION['personneCategorie'] == 'Professeur') {
-    $data = ProfesseurController::get($_SESSION['code']);
-}elseif($_SESSION['personneCategorie'] == 'SuperAdmin') {
-    $data = SuperAdminController::get($_SESSION['code']);
-}
+        $data = null;
+        if($_SESSION['personneCategorie'] == 'Etudiant') {
+            $data = EtudiantController::get($_SESSION['code']);
+            $data['defaultImage'] = 'views/ourAssets/images/etudiant.png';
+            $data['defaultImage-file'] = 'views/ourAssets/images/etudiant-file.png';
+        }elseif($_SESSION['personneCategorie'] == 'Directeur') {
+            $data = DirecteurController::get($_SESSION['code']);
+            $data['defaultImage'] = 'views/ourAssets/images/prof.png';
+            $data['defaultImage-file'] = 'views/ourAssets/images/prof-file.png';
+        }elseif($_SESSION['personneCategorie'] == 'AgentScolarite') {
+            $data = AgentScolariteController::get($_SESSION['code']);
+            $data['defaultImage'] = 'views/ourAssets/images/agent.png';
+            $data['defaultImage-file'] = 'views/ourAssets/images/agent-file.png';
+        }elseif($_SESSION['personneCategorie'] == 'Professeur') {
+            $data = ProfesseurController::get($_SESSION['code']);
+            $data['defaultImage'] = 'views/ourAssets/images/prof.png';
+            $data['defaultImage-file'] = 'views/ourAssets/images/prof-file.png';
+        }elseif($_SESSION['personneCategorie'] == 'SuperAdmin') {
+            $data = SuperAdminController::get($_SESSION['code']);
+            $data['defaultImage'] = 'views/ourAssets/images/prof.png';
+            $data['defaultImage-file'] = 'views/ourAssets/images/prof-file.png';
+        }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -54,7 +64,14 @@ if($_SESSION['personneCategorie'] == 'Etudiant') {
                                <?php foreach (EtudiantController::getAll() as $etudiant){ ?>
                                 <tr>
                                     <td>
-                                        <img class="rounded-circle me-2" width="30" height="30" src="views/ourAssets/images/etudiant.png">
+                                        <?php if(!empty($etudiant['Photo']) && is_file($etudiant['Photo'])){ ?>
+                                            <img class="rounded-circle me-2" width="30" height="30" src="<?php echo $etudiant['Photo'];?>">
+                                        <?php }elseif($etudiant['Sexe'] == 'M'){ ?>
+                                            <img class="rounded-circle me-2" width="30" height="30" src="views/ourAssets/images/etudiant.png">
+                                        <?php }else{ ?>
+                                            <img class="rounded-circle me-2" width="30" height="30" src="views/ourAssets/images/etudiant-file.png">
+                                        <?php }?>
+
                                         <?php echo $etudiant['Nom'].' '.$etudiant['Prenom'] ?>
                                     </td>
                                     <td><?php echo $etudiant['Cin'] ?></td>

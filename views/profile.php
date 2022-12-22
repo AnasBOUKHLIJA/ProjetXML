@@ -46,11 +46,11 @@
                 <h3 class="text-dark mb-4">Mon profil</h3>
                 <div class="card shadow flex-row flex-wrap justify-content-evenly" style="margin: 80px 0;padding-top: 100px; ">
                     <?php if(!empty($data['Photo']) && is_file($data['Photo'])){ ?>
-                        <img src="<?php echo $data['Photo']; ?>" class="position-absolute top-0 start-50 translate-middle" style="width: 200px;height: 200px"/>
+                        <img src="<?php echo $data['Photo']; ?>" class="position-absolute shadow top-0 start-50 translate-middle" style="width: 200px;height: 200px;border-radius: 50%;"/>
                     <?php }elseif($data['Sexe'] == 'M'){?>
-                        <img src="<?php echo $data['defaultImage'] ?>" class="position-absolute top-0 start-50 translate-middle" style="width: 200px;height: 200px"/>
+                        <img src="<?php echo $data['defaultImage'] ?>" class="position-absolute shadow top-0 start-50 translate-middle" style="width: 200px;height: 200px;border-radius: 50%;"/>
                     <?php }else{ ?>
-                        <img src="<?php echo $data['defaultImage-file'] ?>" class="position-absolute top-0 start-50 translate-middle" style="width: 200px;height: 200px"/>
+                        <img src="<?php echo $data['defaultImage-file'] ?>" class="position-absolute shadow top-0 start-50 translate-middle" style="width: 200px;height: 200px;border-radius: 50%;"/>
                     <?php }?>
                     <?php if($_SESSION['personneCategorie'] == 'Professeur'){ ?>
                         <div class="m-3" style="width: 44%;">
