@@ -4,7 +4,7 @@ require_once 'autoload.php';
 
 $home = new HomeController();
 
-$pages = array('connexion','accueil','profile','agentScolarites','departements','filieres','professeurs','etudiants','filieres','DepartementDetails','filieresDetails','moduleDetails','ajoutDepartement','ajoutFiliere','ajoutAgentScolarite','ajoutProfesseur','ajoutEtudiant');
+$pages = array('connexion','accueil','profile','agentScolarites','departements','filieres','professeurs','etudiants','filieres','DepartementDetails','filieresDetails','moduleDetails','ajoutDepartement','ajoutFiliere','ajoutAgentScolarite','ajoutProfesseur','ajoutEtudiant','ElementDetails');
 
 if(!$_SESSION){
     if (isset($_GET['page']) && $_GET['page'] != 'connexion') {

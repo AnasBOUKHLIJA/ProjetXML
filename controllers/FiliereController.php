@@ -24,7 +24,7 @@ class FiliereController
         foreach (FiliereController::getAll() as $item){
             if(strpos($item->attributes()->Code,$data['departement'])  !== false){
                 if($code < (int)substr($item->attributes()->Code ,3+$codeDept,strlen($item->attributes()->Code))){
-                    $code = (int)substr($item['Code'],3+$codeDept,strlen($item->attributes()->Code));
+                    $code = (int)substr($item->attributes()->Code,3+$codeDept,strlen($item->attributes()->Code));
                 }
             }
         }

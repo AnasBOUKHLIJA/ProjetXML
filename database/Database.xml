@@ -171,7 +171,7 @@
     <Etudiants>
       <Etudiant Code="E1">
         <Cne>K130000000</Cne>
-        <Filiere>Dept1Fil1</Filiere>
+        <Filiere>Dept1Fil2</Filiere>
       </Etudiant>
       <Etudiant Code="E2">
         <Cne>K130000000</Cne>
@@ -386,13 +386,13 @@
       <Module Coordonateur="P1" Filiere="Dept1Fil1" Code="Dept1Fil1MOD5">
         <Module>Systèmes d’Information et Bases de Données</Module>
       </Module>
-      <Module Coordonateur="P1" Filiere="Dept1Fil1" Code="Dept1Fil1MOD8">
+      <Module Coordonateur="P4" Filiere="Dept1Fil1" Code="Dept1Fil1MOD8">
         <Module>Mathématiques Appliquées à l’Informatique</Module>
       </Module>
       <Module Coordonateur="P1" Filiere="Dept1Fil1" Code="Dept1Fil1MOD7">
         <Module>Algorithmique et Structures des Données</Module>
       </Module>
-      <Module Coordonateur="P1" Filiere="Dept1Fil1" Code="Dept1Fil1MOD8">
+      <Module Coordonateur="P3" Filiere="Dept1Fil1" Code="Dept1Fil1MOD8">
         <Module>Communication et Gestion de l’Entreprise</Module>
       </Module>
       <Module Coordonateur="P1" Filiere="Dept1Fil1" Code="Dept1Fil1MOD9">
@@ -401,7 +401,7 @@
       <Module Coordonateur="P1" Filiere="Dept1Fil1" Code="Dept1Fil1MOD10">
         <Module>Bases de Données Avancées et Technologie Web</Module>
       </Module>
-      <Module Coordonateur="P1" Filiere="Dept1Fil1" Code="Dept1Fil1MOD11">
+      <Module Coordonateur="P2" Filiere="Dept1Fil1" Code="Dept1Fil1MOD11">
         <Module>Systèmes d’Exploitation</Module>
       </Module>
       <Module Coordonateur="P1" Filiere="Dept1Fil1" Code="Dept1Fil1MOD12">
@@ -419,16 +419,81 @@
       <Module Coordonateur="P1" Filiere="Dept1Fil1" Code="Dept1Fil1MOD16">
         <Module>Projet de Fin d’Études</Module>
       </Module>
+      <Module Coordonateur="P1" Filiere="Dept1Fil2" Code="Dept1Fil2MOD1">
+        <Module>Java</Module>
+      </Module>
+      <Module Coordonateur="P1" Filiere="Dept1Fil2" Code="Dept1Fil2MOD2">
+        <Module>Web</Module>
+      </Module>
     </Modules>
     <Elements>
-      <Element Module="Dept1Fil1MOD1" Enseignant="P1" Code="El1">
+      <Element Module="Dept1Fil1MOD1" Enseignant="P1" Code="Dept1Fil1MOD1ElE1">
         <Element>Algorithmique</Element>
         <NombreHeures>36</NombreHeures>
       </Element>
-      <Element Module="Dept1Fil1MOD1" Enseignant="P1" Code="El2">
+      <Element Module="Dept1Fil1MOD1" Enseignant="P1" Code="Dept1Fil1MOD1ElE2">
         <Element>Langage de programmation</Element>
         <NombreHeures>54</NombreHeures>
       </Element>
+      <Element Module="Dept1Fil2MOD1" Enseignant="P1" Code="Dept1Fil2MOD1ELE1">
+        <Element>Java</Element>
+        <NombreHeures>50</NombreHeures>
+      </Element>
+      <Element Module="Dept1Fil2MOD2" Enseignant="P1" Code="Dept1Fil2MOD2ELE1">
+        <Element>php</Element>
+        <NombreHeures>40</NombreHeures>
+      </Element>
+      <Element Module="Dept1Fil2MOD2" Enseignant="P1" Code="Dept1Fil2MOD2ELE2">
+        <Element>XML</Element>
+        <NombreHeures>50</NombreHeures>
+      </Element>
     </Elements>
+    <Salles>
+      <Salle Code="Sal1">
+        <Numero>1</Numero>
+        <Categorie>Cours</Categorie>
+      </Salle>
+      <Salle Code="Sal2">
+        <Numero>2</Numero>
+        <Categorie>Cours</Categorie>
+      </Salle>
+      <Salle Code="Sal3">
+        <Numero>3</Numero>
+        <Categorie>Cours</Categorie>
+      </Salle>
+      <Salle Code="Sal4">
+        <Numero>4</Numero>
+        <Categorie>Cours</Categorie>
+      </Salle>
+      <Salle Code="Sal35">
+        <Numero>35</Numero>
+        <Categorie>Cours</Categorie>
+      </Salle>
+      <Salle Code="Sal43">
+        <Numero>Amphi A</Numero>
+        <Categorie>Cours</Categorie>
+      </Salle>
+      <Salle Code="Sal44">
+        <Numero>Amphi B</Numero>
+        <Categorie>Cours</Categorie>
+      </Salle>
+    </Salles>
+    <Seances>
+      <Seance Element="Dept1Fil2MOD2ELE1" Salle="Sal2" Code="Dept1Fil2MOD2ELE1Sean1">
+        <Jour>Lundi</Jour>
+        <DateDebut>08:30</DateDebut>
+        <DateFin>08:30</DateFin>
+      </Seance>
+      <Seance Element="Dept1Fil2MOD2ELE2" Salle="Sal35" Code="Dept1Fil2MOD2ELE2Sean1">
+        <Jour>Mercredi</Jour>
+        <DateDebut>08:30</DateDebut>
+        <DateFin>12:30</DateFin>
+      </Seance>
+      <Seance Element="Dept1Fil2MOD2ELE2" Salle="Sal2" Code="Dept1Fil2MOD2ELE2Sean1">
+        <Jour>Vendredi</Jour>
+        <DateDebut>14:30</DateDebut>
+        <DateFin>18:30</DateFin>
+      </Seance>
+    </Seances>
   </Etablissement>
 </CadiAyyad>
