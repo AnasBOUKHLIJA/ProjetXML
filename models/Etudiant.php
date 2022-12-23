@@ -22,6 +22,17 @@ class Etudiant
         }
         return $EtudiantsArray;
     }
+    static function getByFiliere($fil){
+        $CadiAyyad = simplexml_load_file('Database/Database.xml');
+        $Etudiants = $CadiAyyad->xpath('//Etudiants/Etudiant[Filiere="'.$fil.'"]');
+        $EtudiantsArray = array();
+        for($i = 0 ; $i < count($Etudiants) ; $i++){
+            $EtudiantsArray[$i] = Personne::get($Etudiants[$i]->attributes()->Code);
+            $EtudiantsArray[$i]['Cne'] = $Etudiants[$i]->Cne;
+            $EtudiantsArray[$i]['Filiere'] = $Etudiants[$i]->Filiere;
+        }
+        return $EtudiantsArray;
+    }
     static function add($data){
         Personne::add($data);
         $file = 'Database/Database.xml';

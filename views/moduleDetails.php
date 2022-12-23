@@ -49,7 +49,7 @@ if(isset($_POST['submit'])){
                 <?php include_once 'views/includes/header.php' ?>
                 <div class="container-fluid">
                     <div class="d-sm-flex justify-content-center align-items-center mb-4">
-                        <h1 class="text-dark mb-0 align-content-center ">Module : <?php echo ModuleController::get($_GET['dept']) ?></h1>
+                        <h1 class="text-dark mb-0 align-content-center ">Module : <?php echo ModuleController::get($_GET['dept'])->Module ?></h1>
                     </div>
                     <div class="row d-flex justify-content-center">
                         <div class="col-md-6 col-xl-4 w-100 mb-5">

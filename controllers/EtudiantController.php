@@ -8,6 +8,9 @@ class EtudiantController
     static function getAll(){
         return Etudiant::getAll();
     }
+    static function getByFiliere($fil){
+        return Etudiant::getByFiliere($fil);
+    }
     static function add($data){
         if(!Personne::verifyUsernameIfExist($data['username'])){
             $code = 0;

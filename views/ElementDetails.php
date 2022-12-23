@@ -24,8 +24,7 @@ if ($_SESSION['personneCategorie'] == 'Etudiant') {
     $data['defaultImage-file'] = 'views/ourAssets/images/prof-file.png';
 }
 if (isset($_POST['submit'])) {
-    $_POST['element'] = $_GET['dept'];
-    SeanceController::add($_POST);
+    AbsenceController::add($_POST);
 }
 ?>
 <!DOCTYPE html>
@@ -118,12 +117,51 @@ if (isset($_POST['submit'])) {
                                             <td class="text-center align-middle" style="width: 20%"><?php echo $seance->DateDebut ?></td>
                                             <td class="text-center align-middle" style="width: 20%"><?php echo $seance->DateFin ?></td>
                                             <td class="text-center align-middle" style="width: 20%"><?php echo SalleController::get($seance->attributes()->Salle)->Numero ?></td>
-                                            <td class="text-center align-middle" style="width: 20%"><button class="btn btn-primary btn-absence" style="font-size: 10">Noter l'absences</button></td>
+                                            <td class="text-center align-middle" style="width: 20%"><button class="btn btn-primary btn-absence" style="font-size: 15px">Noter l'absences</button></td>
                                         </tr>
                                         <div class="popup-modal-1">
-                                            <div class="popup-window-1 bg-white">
-                                                <h1><?php echo $seance->Jour.' '.$seance->DateDebut.' '.$seance->DateFin ?></h1>
-                                               
+                                            <div class="popup-window-1 bg-white shadow w-75 rounded-1 overflow-hidden">
+                                                <h5 class="d-flex align-content-center justify-content-between bg-dark text-white p-3">
+                                                    <div>
+                                                        <?php echo FiliereController::get(
+                                                            ModuleController::get(
+                                                                ElementController::get(
+                                                                    $_GET['dept']
+                                                                )->attributes()->Module
+                                                            )->attributes()->Filiere
+                                                        )->Intitule ?>
+                                                    </div>
+                                                    <div>
+                                                        <?php echo $seance->Jour.' '.$seance->DateDebut.' '.$seance->DateFin ?>
+                                                    </div>
+                                                </h5>
+                                                <form method="POST" action="">
+                                                <?php foreach (EtudiantController::getByFiliere(
+                                                    ModuleController::get(
+                                                        ElementController::get(
+                                                            $_GET['dept']
+                                                        )->attributes()->Module
+                                                    )->attributes()->Filiere
+                                                ) as $etudiant){ ?>
+
+                                                    <div class="d-flex align-content-center justify-content-around">
+                                                        <?php if(!empty($etudiant['Photo']) && is_file($etudiant['Photo'])){ ?>
+                                                            <img class="rounded-circle me-2" width="30" height="30" src="<?php echo "/ProjetXML/".$etudiant['Photo'];?>">
+                                                        <?php }elseif($etudiant['Sexe'] == 'M'){ ?>
+                                                            <img class="rounded-circle me-2" width="30" height="30" src="/ProjetXML/views/ourAssets/images/etudiant.png">
+                                                        <?php }else{ ?>
+                                                            <img class="rounded-circle me-2" width="30" height="30" src="/ProjetXML/views/ourAssets/images/etudiant-file.png">
+                                                        <?php }?>
+                                                        <span style="width: 20%"><?php echo $etudiant['Cne'] ?></span>
+                                                        <span style="width: 20%"><?php echo $etudiant['Nom'] ?></span>
+                                                        <span style="width: 20%;"><?php echo $etudiant['Prenom'] ?></span>
+                                                        <input style="width: 20px" name="check_list[]" type="checkbox" value="<?php echo $etudiant['Code']?>" <?php if(AbsenceController::get($etudiant['Code'],$seance->attributes()->Code)){ echo "checked";} ?>>
+                                                        <input name="seance" value="<?php echo $seance->attributes()->Code ?>" hidden>
+                                                    </div>
+
+                                                <?php } ?>
+                                                    <button class="btn btn-primary btn-danger bg-danger w-50 " style="margin: 25px 25%;" type="submit" name="submit">Enregistrer</button>
+                                                </form>
                                             </div>
                                         </div>
                                     <?php } ?>

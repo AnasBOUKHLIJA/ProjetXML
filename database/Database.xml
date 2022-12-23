@@ -125,7 +125,7 @@
       <Personne Sexe="M" Code="E3">
         <Username>anasbk22</Username>
         <Password>anasbk22</Password>
-        <Nom>BOUKHLIJA</Nom>
+        <Nom>Kotbi</Nom>
         <Prenom>Anas</Prenom>
         <Cin>MD26101</Cin>
         <Email>anasboukhlija0@gmail.com</Email>
@@ -340,6 +340,9 @@
       <Departement Code="Dept5" Chef_departement="P2">
         <Departement>Testt</Departement>
       </Departement>
+      <Departement Chef_departement="P1" Code="Dept6">
+        <Departement>Testtttttttttt</Departement>
+      </Departement>
     </Departements>
     <Filieres>
       <Filiere Chef_filiere="P1" Departement="Dept1" Code="Dept1Fil1">
@@ -368,6 +371,9 @@
       </Filiere>
       <Filiere Chef_filiere="P2" Departement="Dept2" Code="Dept2Fil3">
         <Intitule>Testttt</Intitule>
+      </Filiere>
+      <Filiere Chef_filiere="P3" Departement="Dept6" Code="Dept6Fil1">
+        <Intitule>Test</Intitule>
       </Filiere>
     </Filieres>
     <Modules>
@@ -425,6 +431,12 @@
       <Module Coordonateur="P1" Filiere="Dept1Fil2" Code="Dept1Fil2MOD2">
         <Module>Web</Module>
       </Module>
+      <Module Coordonateur="P1" Filiere="Dept2Fil1" Code="Dept2Fil1MOD1">
+        <Module>Test</Module>
+      </Module>
+      <Module Coordonateur="P1" Filiere="Dept2Fil3" Code="Dept2Fil3MOD1">
+        <Module>Test</Module>
+      </Module>
     </Modules>
     <Elements>
       <Element Module="Dept1Fil1MOD1" Enseignant="P1" Code="Dept1Fil1MOD1ElE1">
@@ -445,6 +457,14 @@
       </Element>
       <Element Module="Dept1Fil2MOD2" Enseignant="P1" Code="Dept1Fil2MOD2ELE2">
         <Element>XML</Element>
+        <NombreHeures>50</NombreHeures>
+      </Element>
+      <Element Module="Dept2Fil1MOD1" Enseignant="P1" Code="Dept2Fil1MOD1ELE1">
+        <Element>Test2</Element>
+        <NombreHeures>50</NombreHeures>
+      </Element>
+      <Element Module="Dept2Fil3MOD1" Enseignant="P3" Code="Dept2Fil3MOD1ELE1">
+        <Element>Test</Element>
         <NombreHeures>50</NombreHeures>
       </Element>
     </Elements>
@@ -489,11 +509,23 @@
         <DateDebut>08:30</DateDebut>
         <DateFin>12:30</DateFin>
       </Seance>
-      <Seance Element="Dept1Fil2MOD2ELE2" Salle="Sal2" Code="Dept1Fil2MOD2ELE2Sean1">
+      <Seance Element="Dept1Fil2MOD2ELE2" Salle="Sal2" Code="Dept1Fil2MOD2ELE2Sean2">
         <Jour>Vendredi</Jour>
         <DateDebut>14:30</DateDebut>
         <DateFin>18:30</DateFin>
       </Seance>
+      <Seance Element="Dept2Fil3MOD1ELE1" Salle="Sal43" Code="Dept2Fil3MOD1ELE1Sean2">
+        <Jour>Lundi</Jour>
+        <DateDebut>08:30</DateDebut>
+        <DateFin>12:30</DateFin>
+      </Seance>
     </Seances>
+    <Absences>
+      <Absence Etudiant="E1" Seance="Dept1Fil2MOD2ELE2Sean1"/>
+      <Absence Etudiant="E2" Seance="Dept1Fil2MOD2ELE2Sean1"/>
+      <Absence Etudiant="E2" Seance="Dept1Fil2MOD2ELE2Sean2"/>
+      <Absence Etudiant="E3" Seance="Dept1Fil2MOD2ELE2Sean2"/>
+      <Absence Etudiant="E1" Seance="Dept1Fil2MOD2ELE2Sean2"/>
+    </Absences>
   </Etablissement>
 </CadiAyyad>

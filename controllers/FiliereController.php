@@ -5,8 +5,8 @@ class FiliereController
     static function getAll(){
         return Filiere::getAll();
     }
-    static function get($fil): string{
-        return (string)Filiere::get($fil)[0]->Intitule;
+    static function get($fil){
+        return Filiere::get($fil)[0];
     }
     static function getByDepartement($dept){
         return Filiere::getByDepartement($dept);

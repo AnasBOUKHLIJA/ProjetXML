@@ -2,8 +2,8 @@
 
 class ModuleController
 {
-    static function get($mod): string{
-        return (string)Module::get($mod)[0]->Module;
+    static function get($mod){
+        return Module::get($mod)[0];
     }
     static function getByFiliere($fil){
         return Module::getByFiliere($fil);

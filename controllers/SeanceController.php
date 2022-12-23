@@ -12,8 +12,8 @@ class SeanceController
         $codeFil = strlen($data['element']);
         foreach (SeanceController::getAll($data['element']) as $item){
             if(strpos($item->attributes()->Code,$data['element'])  !== false){
-                if($code < (int)substr($item->attributes()->Code ,3+$codeFil,strlen($item->attributes()->Code))){
-                    $code = (int)substr($item->attributes()->Code,3+$codeFil,strlen($item->attributes()->Code));
+                if($code < (int)substr($item->attributes()->Code ,4+$codeFil,strlen($item->attributes()->Code))){
+                    $code = (int)substr($item->attributes()->Code,4+$codeFil,strlen($item->attributes()->Code));
                 }
             }
         }
