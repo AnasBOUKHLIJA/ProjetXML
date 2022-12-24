@@ -44,8 +44,10 @@
         <div id="content">
             <?php include_once 'views/includes/header.php' ?>
             <div class="container-fluid">
-                <div class="d-sm-flex justify-content-center align-items-center mb-4">
-                    <h1 class="text-dark mb-0 align-content-center "><?php echo DepartementController::get($_GET['dept'])?></h1>
+                <div class="row">
+                    <div class="col-md-8 col-xl-6 text-center mx-auto m-5">
+                        <h1 class="fst-italic fw-bold">Departement : <?php echo DepartementController::get($_GET['dept'])?></h1>
+                    </div>
                 </div>
                 <?php $count=0; foreach (FiliereController::getByDepartement($_GET['dept']) as $filiere){ ?>
                     <div class="row row-cols-1 row-cols-md-2 mx-auto" style="max-width: 900px;">

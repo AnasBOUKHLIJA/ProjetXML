@@ -45,14 +45,14 @@
             <?php include_once 'views/includes/header.php' ?>
             <div class="container-fluid">
                 <section class="py-5">
-                    <div class="container py-5">
-                        <div class="row mb-4 mb-lg-5">
+                    <div class="container">
+                        <div class="row">
                             <div class="col-md-8 col-xl-6 text-center mx-auto">
-                                <h3 class="fw-bold">Nos departements</h3>
+                                <h1 class="fst-italic fw-bold">Nos departements</h1>
                             </div>
                         </div>
                         <?php $count=0; foreach (DepartementController::getAll() as $departement){ ?>
-                            <div class="row row-cols-1 row-cols-md-2 mx-auto shadow rounded mb-5" style="max-width: 900px;min-height: 300px">
+                            <div class="row mx-auto rounded mb-5" style="max-width: 900px;min-height: 300px">
                                 <div class="col <?php if($count%2 == 0) echo "order-md-last" ?>">
                                     <img class="rounded img-fluid align-middle" style="height: 100%;" src="views/ourAssets/images/departement.png">
                                 </div>

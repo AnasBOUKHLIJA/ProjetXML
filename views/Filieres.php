@@ -43,9 +43,11 @@ if($_SESSION['personneCategorie'] == 'Etudiant') {
     <div class="d-flex flex-column" id="content-wrapper">
         <div id="content">
             <?php include_once 'views/includes/header.php' ?>
-            <div class="container-fluid">
-                <div class="d-sm-flex justify-content-between align-items-center mb-4">
-                    <h3 class="text-dark mb-0">Filieres</h3>
+            <div class="container-fluid py-5">
+                <div class="row">
+                    <div class="col-md-8 col-xl-6 text-center mx-auto mb-5">
+                        <h1 class="fst-italic fw-bold">Nos Filieres</h1>
+                    </div>
                 </div>
                 <?php $count=0; foreach (FiliereController::getAll() as $filiere){ ?>
                     <div class="row row-cols-1 row-cols-md-2 mx-auto" style="max-width: 900px;">
