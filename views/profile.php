@@ -68,7 +68,7 @@
                         </div>
                         <div class="m-3" style="width: 44%;">
                             <label for="Filiere" class="text-dark">Filiere</label>
-                            <input class="form-control" id="Filiere"  value="<?php echo FiliereController::get($data['Filiere']) ?>" disabled>
+                            <input class="form-control" id="Filiere"  value="<?php echo FiliereController::get($data['Filiere'])->Intitule ?>" disabled>
                         </div>
                     <?php } ?>
                         <div class="m-3" style="width: 44%;">

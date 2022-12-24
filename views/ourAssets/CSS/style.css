@@ -19,6 +19,15 @@
     --black : #000000;
     --green: #062726;
 }
+
+.btn{
+    background-color: var(--third);
+    border-color:var(--third);
+}
+.btn:hover{
+    background-color: var(--main);
+    border-color:var(--main);
+}
 #sidebar{
     background-color: var(--main) !important;
 }
@@ -138,7 +147,7 @@
     align-content: center;
     width: 35%;
     height: 60%;
-    background-color: var(--bg-color);
+    background-color: var(--third);
     border-radius: 0.5rem;
     text-align: center;
     padding: 20px;
@@ -152,7 +161,7 @@
     margin-bottom: 20px;
   }
   .popup-window i {
-    color: var(--text-color);
+    color: var(--main);
   }
   .action {
     display: flex;
@@ -161,17 +170,17 @@
     align-content: center;
   }
   .action1 {
-    border-bottom: var(--text-color) solid 1px;
+    border-bottom: var(--main) solid 1px;
     padding: 1rem 0.3rem 0 1.5rem;
     position: relative;
   }
   .action2 {
-    border-bottom: var(--text-color) solid 1px;
+    border-bottom: var(--main) solid 1px;
     padding: 1rem 1.5rem 0 0.3rem;
     position: relative;
   }
   .action a {
-    color: var(--text-color);
+    color: var(--main);
     text-decoration: none;
     font-size: 1.1rem;
   }
@@ -184,7 +193,7 @@
     transition: .2s ease;
   }
   .action1 i {
-    color: var(--text-color);
+    color: var(--main);
     font-size: 1.2rem;
     position: absolute;
     left: 0;
@@ -192,7 +201,7 @@
     font-size: 1.3rem;
   }
   .action2 i {
-    color: var(--text-color);
+    color: var(--main);
     font-size: 1.2rem;
     position: absolute;
     right: 0;

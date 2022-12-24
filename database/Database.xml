@@ -337,12 +337,6 @@
       <Departement Chef_departement="P4" Code="Dept4">
         <Departement>TM</Departement>
       </Departement>
-      <Departement Code="Dept5" Chef_departement="P2">
-        <Departement>Testt</Departement>
-      </Departement>
-      <Departement Chef_departement="P1" Code="Dept6">
-        <Departement>Testtttttttttt</Departement>
-      </Departement>
     </Departements>
     <Filieres>
       <Filiere Chef_filiere="P1" Departement="Dept1" Code="Dept1Fil1">
@@ -371,9 +365,6 @@
       </Filiere>
       <Filiere Chef_filiere="P2" Departement="Dept2" Code="Dept2Fil3">
         <Intitule>Testttt</Intitule>
-      </Filiere>
-      <Filiere Chef_filiere="P3" Departement="Dept6" Code="Dept6Fil1">
-        <Intitule>Test</Intitule>
       </Filiere>
     </Filieres>
     <Modules>
@@ -521,11 +512,11 @@
       </Seance>
     </Seances>
     <Absences>
-      <Absence Etudiant="E1" Seance="Dept1Fil2MOD2ELE2Sean1"/>
-      <Absence Etudiant="E2" Seance="Dept1Fil2MOD2ELE2Sean1"/>
+      <Absence Etudiant="E1" Seance="Dept1Fil2MOD2ELE2Sean2"/>
       <Absence Etudiant="E2" Seance="Dept1Fil2MOD2ELE2Sean2"/>
       <Absence Etudiant="E3" Seance="Dept1Fil2MOD2ELE2Sean2"/>
-      <Absence Etudiant="E1" Seance="Dept1Fil2MOD2ELE2Sean2"/>
+      <Absence Etudiant="E1" Seance="Dept1Fil2MOD2ELE2Sean1"/>
+      <Absence Etudiant="E2" Seance="Dept1Fil2MOD2ELE2Sean1"/>
     </Absences>
   </Etablissement>
 </CadiAyyad>

@@ -11,7 +11,7 @@
                         </span>
                         <?php if(!empty($data['Photo'])) { ?>
                             <img class="border rounded-circle img-profile"
-                                 src="<?php echo $data['Photo'] ?>">
+                                 src="<?php echo "/ProjetXML/".$data['Photo'] ?>">
                         <?php }else{ ?>
                             <img class="border rounded-circle img-profile"
                                  src="/ProjetXML/views/ourAssets/images/icon-unlock.png">

@@ -78,7 +78,7 @@
                                     <td><?php echo $etudiant['Email'] ?></td>
                                     <td><?php echo $etudiant['Telephone'] ?></td>
                                     <td><?php echo $etudiant['Cne'] ?></td>
-                                    <td><?php echo FiliereController::get($etudiant['Filiere']) ?></td>
+                                    <td><?php echo FiliereController::get($etudiant['Filiere'])->Intitule ?></td>
                                 </tr>
                                 <?php } ?>
                                 </tbody>

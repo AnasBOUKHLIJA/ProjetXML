@@ -44,9 +44,6 @@
         <div id="content">
             <?php include_once 'views/includes/header.php' ?>
             <div class="container-fluid">
-                <div class="d-sm-flex justify-content-between align-items-center mb-4">
-                    <h3 class="text-dark mb-0">Departements</h3>
-                </div>
                 <section class="py-5">
                     <div class="container py-5">
                         <div class="row mb-4 mb-lg-5">
@@ -55,11 +52,11 @@
                             </div>
                         </div>
                         <?php $count=0; foreach (DepartementController::getAll() as $departement){ ?>
-                            <div class="row row-cols-1 row-cols-md-2 mx-auto" style="max-width: 900px;min-height: 300px">
-                                <div class="col <?php if($count%2 == 0) echo "order-md-last" ?> mb-5">
-                                    <img class="rounded img-fluid shadow" style="height: 100%" src="views/ourAssets/images/departement.png">
+                            <div class="row row-cols-1 row-cols-md-2 mx-auto shadow rounded mb-5" style="max-width: 900px;min-height: 300px">
+                                <div class="col <?php if($count%2 == 0) echo "order-md-last" ?>">
+                                    <img class="rounded img-fluid align-middle" style="height: 100%;" src="views/ourAssets/images/departement.png">
                                 </div>
-                                <div class="col d-md-flex align-items-md-end align-items-lg-center mb-5">
+                                <div class="col d-md-flex align-items-md-end align-items-lg-center">
                                     <div>
                                         <h5 class="fw-bold"><?php echo $departement->Departement ?>&nbsp;</h5>
                                         <p class="text-muted mb-2">Chef Departement : <?php echo DepartementController::getChefDepartement($departement->attributes()->Chef_departement) ?></p>
