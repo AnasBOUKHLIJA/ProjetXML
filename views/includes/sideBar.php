@@ -11,6 +11,13 @@
             <li class="nav-item"><a class="nav-link text-white" href="/ProjetXML/accueil"><i class="fas fa-home text-white"></i><span>Accueil</span></a></li>
             <li class="nav-item"><a class="nav-link text-white" href="/ProjetXML/profile"><i class="fas fa-user text-white"></i><span>Profile</span></a></li>
             <li class="nav-item">
+                <?php if($_SESSION['personneCategorie'] == 'SuperAdmin'){?>
+                    <a class="nav-link text-white" href="/ProjetXML/Permission">
+                        <i class="fas fa-box text-white"></i><span>Permission</span>
+                    </a>
+                <?php } ?>
+            </li>
+            <li class="nav-item">
                 <?php if($permission['Departement'] == 1){?>
                 <a class="nav-link text-white" href="/ProjetXML/departements">
                     <i class="fas fa-list-alt text-white"></i><span>Departements</span>

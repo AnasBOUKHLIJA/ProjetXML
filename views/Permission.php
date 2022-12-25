@@ -82,7 +82,7 @@ if(isset($_POST['submit'])){
                                                     $permission = PermissionController::get($personne->attributes()->Code);
                                                     ?>
                                                     <form method="POST" action="" >
-                                                        <div class="container" style="text-align: center">
+                                                        <div class="container overflow-scroll" style="text-align: center">
                                                             <input name="personne" value="<?php echo $personne->attributes()->Code ?>" hidden>
                                                             <label  style="width: 20%;text-align: left" >Supperadmin <input type="checkbox"  name="Supperadmin" <?php if ($permission['Supperadmin'] == 1) echo "checked" ?>></label>
                                                             <label  style="width: 20%;text-align: left" >Addsupperadmin <input type="checkbox"  name="Addsupperadmin" <?php if ($permission['Addsupperadmin'] == 1) echo "checked" ?>></label>
