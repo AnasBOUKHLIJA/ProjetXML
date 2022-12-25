@@ -61,6 +61,7 @@ if (isset($_POST['submit'])) {
                     </div>
                     <div class="row d-flex justify-content-center">
                         <div class="col-md-6 col-xl-4 w-100 mb-5">
+                            <?php if(PermissionController::get($_SESSION['code'])['Addseance'] == 1){ ?>
                             <div class="card shadow">
                                 <div class="card-body text-center d-flex flex-column align-items-center">
                                     <div class="bs-icon-xl bs-icon-circle bs-icon-primary shadow bs-icon my-4">
@@ -103,6 +104,7 @@ if (isset($_POST['submit'])) {
                                     </form>
                                 </div>
                             </div>
+                            <?php } ?>
                         </div>
                     </div>
                     <div class="card shadow m-5">
@@ -114,7 +116,9 @@ if (isset($_POST['submit'])) {
                                         <th class="text-center align-middle">DateDebut</th>
                                         <th class="text-center align-middle">DateFin</th>
                                         <th class="text-center align-middle">Salle</th>
-                                        <th class="text-center align-middle">Action</th>
+                                        <?php if(PermissionController::get($_SESSION['code'])['Abscence'] == 1){ ?>
+                                            <th class="text-center align-middle">Action</th>
+                                        <?php } ?>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -124,8 +128,11 @@ if (isset($_POST['submit'])) {
                                             <td class="text-center align-middle" style="width: 20%"><?php echo $seance->DateDebut ?></td>
                                             <td class="text-center align-middle" style="width: 20%"><?php echo $seance->DateFin ?></td>
                                             <td class="text-center align-middle" style="width: 20%"><?php echo SalleController::get($seance->attributes()->Salle)->Numero ?></td>
+                                            <?php if(PermissionController::get($_SESSION['code'])['Abscence'] == 1){ ?>
                                             <td class="text-center align-middle" style="width: 20%"><button class="btn btn-primary btn-absence" style="font-size: 15px">Noter l'absences</button></td>
+                                            <?php } ?>
                                         </tr>
+                                    <?php if(PermissionController::get($_SESSION['code'])['Abscence'] == 1){ ?>
                                         <div class="popup-modal-1">
                                             <div class="popup-window-1 bg-white shadow w-75 rounded-1 overflow-hidden">
                                                 <h5 class="d-flex align-content-center justify-content-between bg-dark text-white p-3">
@@ -165,12 +172,14 @@ if (isset($_POST['submit'])) {
                                                         <input style="width: 20px" name="check_list[]" type="checkbox" value="<?php echo $etudiant['Code']?>" <?php if(AbsenceController::get($etudiant['Code'],$seance->attributes()->Code)){ echo "checked";} ?>>
                                                         <input name="seance" value="<?php echo $seance->attributes()->Code ?>" hidden>
                                                     </div>
-
                                                 <?php } ?>
+                                        <?php if(PermissionController::get($_SESSION['code'])['Addabscence'] == 1){ ?>
                                                     <button class="btn btn-primary btn-danger bg-danger w-50 " style="margin: 25px 25%;" type="submit" name="submit">Enregistrer</button>
+                                        <?php } ?>
                                                 </form>
                                             </div>
                                         </div>
+                                        <?php } ?>
                                     <?php } ?>
                                 </tbody>
                             </table>

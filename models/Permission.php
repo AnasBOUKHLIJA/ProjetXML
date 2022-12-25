@@ -62,16 +62,16 @@ class Permission
         $Permission->addChild('Addsupperadmin', $permission['Addsupperadmin']);
         $Permission->addChild('Removesuperadmin', $permission['Removesuperadmin']);
         $Permission->addChild('Editsuperadmin', $permission['Editsuperadmin']);
-        $Permission->addChild('Addprofesseur', $permission['Addprofesseur']);
         $Permission->addChild('Professeur', $permission['Professeur']);
+        $Permission->addChild('Addprofesseur', $permission['Addprofesseur']);
         $Permission->addChild('Removeprofesseur', $permission['Removeprofesseur']);
         $Permission->addChild('Editprofesseur', $permission['Editprofesseur']);
         $Permission->addChild('Agentscolarite', $permission['Agentscolarite']);
         $Permission->addChild('Addagentscolarite', $permission['Addagentscolarite']);
         $Permission->addChild('Removeagentscolarite', $permission['Removeagentscolarite']);
         $Permission->addChild('Editagentscolarite', $permission['Editagentscolarite']);
-        $Permission->addChild('Adddirecteur', $permission['Adddirecteur']);
         $Permission->addChild('Directeur', $permission['Directeur']);
+        $Permission->addChild('Adddirecteur', $permission['Adddirecteur']);
         $Permission->addChild('Removedirecteur', $permission['Removedirecteur']);
         $Permission->addChild('Editdirecteur', $permission['Editdirecteur']);
         $Permission->addChild('Etudiant', $permission['Etudiant']);
@@ -90,6 +90,10 @@ class Permission
         $Permission->addChild('Addfiliere', $permission['Addfiliere']);
         $Permission->addChild('Removefiliere', $permission['Removefiliere']);
         $Permission->addChild('Editfiliere', $permission['Editfiliere']);
+        $Permission->addChild('Module', $permission['Module']);
+        $Permission->addChild('Addmodule', $permission['Addmodule']);
+        $Permission->addChild('Removemodule', $permission['Removemodule']);
+        $Permission->addChild('Editmodule', $permission['Editmodule']);
         $Permission->addChild('Element', $permission['Element']);
         $Permission->addChild('Addelement', $permission['Addelement']);
         $Permission->addChild('Removeelement', $permission['Removeelement']);
@@ -103,5 +107,20 @@ class Permission
         $dom->formatOutput = true;
         $dom->loadXML($CadiAyyad->asXML());
         $dom->save($file);
+    }
+    static function modify($code,$permission){
+        $file = 'Database/Database.xml';
+        $CadiAyyad  = simplexml_load_file($file);
+        $target =  $CadiAyyad ->xpath('//Permissions/Permission[@Code="'.$code.'"]');
+        if ($target) {
+            $domRef = dom_import_simplexml($target[0]);
+            $domRef->parentNode->removeChild($domRef);
+            $dom = new DOMDocument('1.0');
+            $dom->preserveWhiteSpace = false;
+            $dom->formatOutput = true;
+            $dom->loadXML( $CadiAyyad ->asXML());
+            $dom->save($file);
+        }
+        Permission::add($code,$permission);
     }
 }

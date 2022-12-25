@@ -2,6 +2,10 @@
 
 class Personne
 {
+    static function getAll(){
+        $CadiAyyad = simplexml_load_file('Database/Database.xml');
+        return $CadiAyyad->xpath('//Personnes/Personne');
+    }
     static function get($code): array{
         $CadiAyyad = simplexml_load_file('Database/Database.xml');
         $Personnes = $CadiAyyad->xpath('//Personnes/Personne[@Code="'.$code.'"]');

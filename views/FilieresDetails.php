@@ -57,6 +57,7 @@ if(isset($_POST['submit'])){
                 </div>
                 <div class="row d-flex justify-content-center">
                         <div class="col-md-6 col-xl-4 w-100 mb-5">
+                            <?php if(PermissionController::get($_SESSION['code'])['Addmodule'] == 1){ ?>
                             <div class="card shadow">
                                 <div class="card-body text-center d-flex flex-column align-items-center">
                                     <div class="bs-icon-xl bs-icon-circle bs-icon-primary shadow bs-icon my-4">
@@ -82,6 +83,7 @@ if(isset($_POST['submit'])){
                                     </form>
                                 </div>
                             </div>
+                            <?php } ?>
                         </div>
                     </div>
                 <div class="row row-cols-1 row-cols-md-2 mx-auto" style="max-width: 1000px;">
