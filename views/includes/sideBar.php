@@ -11,41 +11,61 @@
             <li class="nav-item"><a class="nav-link text-white" href="/ProjetXML/accueil"><i class="fas fa-home text-white"></i><span>Accueil</span></a></li>
             <li class="nav-item"><a class="nav-link text-white" href="/ProjetXML/profile"><i class="fas fa-user text-white"></i><span>Profile</span></a></li>
             <li class="nav-item">
+                <?php if($permission['Departement'] == 1){?>
                 <a class="nav-link text-white" href="/ProjetXML/departements">
                     <i class="fas fa-list-alt text-white"></i><span>Departements</span>
                 </a>
+                <?php } ?>
+                <?php if($permission['Adddepartement'] == 1){?>
                 <div class="sous-link">
                     <a class="nav-link" href="/ProjetXML/ajoutDepartement"><i class="fas fa-plus"></i><span>Ajouter un departement</span></a>
-                </div>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-white" href="/ProjetXML/filieres">
-                    <i class="fas fa-list text-white"></i><span>Filieres</span>
-                </a>
-                <div class="sous-link">
-                    <a class="nav-link" href="/ProjetXML/ajoutFiliere"><i class="fas fa-plus"></i><span>Ajouter une filiere</span></a>
-                </div>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-white" href="/ProjetXML/agentScolarites">
-                    <i class="fas fa-people-carry text-white"></i><span>Agents scolarité</span>
-                </a>
-                <div class="sous-link">
-                    <a class="nav-link" href="/ProjetXML/ajoutAgentScolarite"><i class="fas fa-plus"></i><span>Ajouter un Agent scolarité</span></a>
-                </div>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-white" href="/ProjetXML/professeurs">
-                    <i class="fas fa-chalkboard-teacher text-white"></i><span>Professeurs</span>
-                </a>
-                <?php if($permission['Addprofesseur'] == 1){?>
-                <div class="sous-link">
-                    <a class="nav-link" href="/ProjetXML/ajoutProfesseur"><i class="fas fa-plus"></i><span>Ajouter un Professeur</span></a>
                 </div>
                 <?php } ?>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white" href="/ProjetXML/etudiants"><i class="fas fa-user-friends text-white"></i><span>Etudiants</span></a>
+                <?php if($permission['Filiere'] == 1){?>
+                <a class="nav-link text-white" href="/ProjetXML/filieres">
+                    <i class="fas fa-list text-white"></i><span>Filieres</span>
+                </a>
+                <?php } ?>
+                <?php if($permission['Addfiliere'] == 1){?>
+                <div class="sous-link">
+                    <a class="nav-link" href="/ProjetXML/ajoutFiliere"><i class="fas fa-plus"></i><span>Ajouter une filiere</span></a>
+                </div>
+                <?php } ?>
+            </li>
+            <li class="nav-item">
+                <?php if($permission['Agentscolarite'] == 1){?>
+                <a class="nav-link text-white" href="/ProjetXML/agentScolarites">
+                    <i class="fas fa-people-carry text-white"></i><span>Agents scolarité</span>
+                </a>
+                <?php } ?>
+                <?php if($permission['Addagentscolarite'] == 1){?>
+                <div class="sous-link">
+                    <a class="nav-link" href="/ProjetXML/ajoutAgentScolarite"><i class="fas fa-plus"></i><span>Ajouter un Agent scolarité</span></a>
+                </div>
+                <?php } ?>
+            </li>
+            <li class="nav-item">
+                <?php if($permission['Professeur'] == 1){?>
+                <a class="nav-link text-white" href="/ProjetXML/professeurs">
+                    <i class="fas fa-chalkboard-teacher text-white"></i><span>Professeurs</span>
+                </a>
+                <?php } ?>
+                <?php if($permission['Addprofesseur'] == 1){?>
+                <div class="sous-link">
+                    <a class="nav-link" href="/ProjetXML/ajoutProfesseur">
+                        <i class="fas fa-plus"></i><span>Ajouter un Professeur</span>
+                    </a>
+                </div>
+                <?php } ?>
+            </li>
+            <li class="nav-item">
+                <?php if($permission['Etudiant'] == 1){?>
+                <a class="nav-link text-white" href="/ProjetXML/etudiants">
+                    <i class="fas fa-user-friends text-white"></i><span>Etudiants</span>
+                </a>
+                <?php } ?>
                 <?php if($permission['Addetudiant'] == 1){?>
                 <div class="sous-link">
                     <a class="nav-link" href="/ProjetXML/ajoutEtudiant"><i class="fas fa-plus"></i><span>Ajouter un etudiant</span></a>

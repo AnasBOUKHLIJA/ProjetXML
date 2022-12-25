@@ -1,4 +1,7 @@
 <?php
+if (PermissionController::get($_SESSION['code'])['Addfiliere'] == 0){
+    header('location: /ProjetXML/accesRefuse');
+}
         $data = null;
         if($_SESSION['personneCategorie'] == 'Etudiant') {
             $data = EtudiantController::get($_SESSION['code']);

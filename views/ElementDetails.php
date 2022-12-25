@@ -1,4 +1,8 @@
 <?php
+
+if (PermissionController::get($_SESSION['code'])['Element'] == 0){
+    header('location: /ProjetXML/accesRefuse');
+}
 $element = Element::get($_GET['dept']);
 
 $data = null;
