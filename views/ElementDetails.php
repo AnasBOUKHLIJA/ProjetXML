@@ -25,6 +25,9 @@ if ($_SESSION['personneCategorie'] == 'Etudiant') {
 }
 if (isset($_POST['submit'])) {
     AbsenceController::add($_POST);
+}elseif(isset($_POST['submitAdd'])) {
+    $_POST['element'] = $_GET['dept'];
+    SeanceController::add($_POST);
 }
 ?>
 <!DOCTYPE html>
@@ -91,7 +94,7 @@ if (isset($_POST['submit'])) {
                                             <input class="form-control" type="time" id="datefin" name="datefin" placeholder="date fin">
                                         </div>
                                         <div class="mb-3 m-lg-5" style="width: 50%">
-                                            <button class="btn btn-primary shadow d-block w-100" type="submit" name="submit">Ajouter</button>
+                                            <button class="btn btn-primary shadow d-block w-100" type="submit" name="submitAdd">Ajouter</button>
                                         </div>
                                     </form>
                                 </div>

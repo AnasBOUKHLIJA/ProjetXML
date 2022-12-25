@@ -187,7 +187,7 @@
         <Addsupperadmin>0</Addsupperadmin>
         <Removesuperadmin>0</Removesuperadmin>
         <Editsuperadmin>0</Editsuperadmin>
-        <Addprofesseur>1</Addprofesseur>
+        <Addprofesseur>0</Addprofesseur>
         <Removeprofesseur>1</Removeprofesseur>
         <Editprofesseur>1</Editprofesseur>
         <Addagentscolarite>1</Addagentscolarite>
@@ -509,6 +509,11 @@
         <Jour>Lundi</Jour>
         <DateDebut>08:30</DateDebut>
         <DateFin>12:30</DateFin>
+      </Seance>
+      <Seance Element="Dept1Fil2MOD2ELE2" Salle="Sal1" Code="Dept1Fil2MOD2ELE2Sean3">
+        <Jour>Lundi</Jour>
+        <DateDebut>11:11</DateDebut>
+        <DateFin>11:11</DateFin>
       </Seance>
     </Seances>
     <Absences>

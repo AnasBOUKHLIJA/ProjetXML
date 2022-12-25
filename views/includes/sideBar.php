@@ -1,3 +1,6 @@
+<?php
+    $permission = PermissionController::get($_SESSION['code']);
+?>
 <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0" id="sidebar" style="background: var(--bs-black);">
     <div class="container-fluid d-flex flex-column p-0"><a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#">
             <div class="sidebar-brand-icon rotate-n-15"><i class="fas fa-database"></i></div>
@@ -35,15 +38,19 @@
                 <a class="nav-link text-white" href="/ProjetXML/professeurs">
                     <i class="fas fa-chalkboard-teacher text-white"></i><span>Professeurs</span>
                 </a>
+                <?php if($permission['Addprofesseur'] == 1){?>
                 <div class="sous-link">
                     <a class="nav-link" href="/ProjetXML/ajoutProfesseur"><i class="fas fa-plus"></i><span>Ajouter un Professeur</span></a>
                 </div>
+                <?php } ?>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-white" href="/ProjetXML/etudiants"><i class="fas fa-user-friends text-white"></i><span>Etudiants</span></a>
+                <?php if($permission['Addetudiant'] == 1){?>
                 <div class="sous-link">
                     <a class="nav-link" href="/ProjetXML/ajoutEtudiant"><i class="fas fa-plus"></i><span>Ajouter un etudiant</span></a>
                 </div>
+                <?php } ?>
             </li>
         </ul>
         <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div>
