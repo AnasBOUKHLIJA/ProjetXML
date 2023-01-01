@@ -53,6 +53,7 @@
                 <div class="d-sm-flex justify-content-between align-items-center mb-4">
                     <h3 class="text-dark mb-0">Dashboard</h3>
                 </div>
+                <?php if($_SESSION['personneCategorie'] == 'Etudiant'){ ?>
                 <div class="row">
                     <div class="col-lg-7 col-xl-8">
                         <div class="card shadow mb-4">
@@ -104,6 +105,9 @@
                         </div>
                     </div>
                 </div>
+                <?php }else{
+                        echo "<h5 class='w-100 h-100 text-capitalize text-center'>nous travaillons à créer un tableau de bord pour vous, soyez patient et bonne journée</h5>";
+                } ?>
             </div>
         </div>
     </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
