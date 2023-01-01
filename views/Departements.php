@@ -78,6 +78,7 @@ if (PermissionController::get($_SESSION['code'])['Departement'] == 0){
 </div>
 <script src="views/assetsAdminPanel/bootstrap/js/bootstrap.min.js"></script>
 <script src="views/assetsAdminPanel/js/theme.js"></script>
+<script src="views/ourAssets/JS/Langue.js"></script>
 </body>
 
 </html>

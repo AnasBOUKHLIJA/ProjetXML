@@ -18,8 +18,14 @@ class AuthentificationController
                 $data = array('code'=>$code);
                 $data['personneCategorie'] =  $personneCategorieArray[$personneCategorie];
                 $_SESSION = $data;
+                setcookie("langue", "Francais", time() + (86400 * 30), "/");// 86400 = 1 day
                 header('location: /ProjetXML/accueil');
             }else{}
         }
+    }
+    static function changeLangue($lang,$href){
+        setcookie('langue', '', time() - 3600, '/');
+        setcookie("langue", $lang, time() + (86400 * 30), "/");
+        header('location: '.$href);
     }
 }

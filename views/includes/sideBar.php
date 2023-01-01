@@ -8,61 +8,61 @@
         </a>
         <hr class="sidebar-divider my-0">
         <ul class="navbar-nav text-light" id="accordionSidebar">
-            <li class="nav-item"><a class="nav-link text-white" href="/ProjetXML/accueil"><i class="fas fa-home text-white"></i><span>Accueil</span></a></li>
-            <li class="nav-item"><a class="nav-link text-white" href="/ProjetXML/profile"><i class="fas fa-user text-white"></i><span>Profile</span></a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="/ProjetXML/accueil"><i class="fas fa-home text-white"></i><span><?php echo LangueController::get($_COOKIE['langue'],'sidebar')[0] ?></span></a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="/ProjetXML/profile"><i class="fas fa-user text-white"></i><span><?php echo LangueController::get($_COOKIE['langue'],'sidebar')[1] ?></span></a></li>
             <li class="nav-item">
                 <?php if($_SESSION['personneCategorie'] == 'SuperAdmin'){?>
                     <a class="nav-link text-white" href="/ProjetXML/Permission">
-                        <i class="fas fa-box text-white"></i><span>Permission</span>
+                        <i class="fas fa-box text-white"></i><span><?php echo LangueController::get($_COOKIE['langue'],'sidebar')[2] ?></span>
                     </a>
                 <?php } ?>
             </li>
             <li class="nav-item">
                 <?php if($permission['Departement'] == 1){?>
                 <a class="nav-link text-white" href="/ProjetXML/departements">
-                    <i class="fas fa-list-alt text-white"></i><span>Departements</span>
+                    <i class="fas fa-list-alt text-white"></i><span><?php echo LangueController::get($_COOKIE['langue'],'sidebar')[3] ?></span>
                 </a>
                 <?php } ?>
                 <?php if($permission['Adddepartement'] == 1){?>
                 <div class="sous-link">
-                    <a class="nav-link" href="/ProjetXML/ajoutDepartement"><i class="fas fa-plus"></i><span>Ajouter un departement</span></a>
+                    <a class="nav-link" href="/ProjetXML/ajoutDepartement"><i class="fas fa-plus"></i><span><?php echo LangueController::get($_COOKIE['langue'],'sidebar')[4] ?></span></a>
                 </div>
                 <?php } ?>
             </li>
             <li class="nav-item">
                 <?php if($permission['Filiere'] == 1){?>
                 <a class="nav-link text-white" href="/ProjetXML/filieres">
-                    <i class="fas fa-list text-white"></i><span>Filieres</span>
+                    <i class="fas fa-list text-white"></i><span><?php echo LangueController::get($_COOKIE['langue'],'sidebar')[5] ?></span>
                 </a>
                 <?php } ?>
                 <?php if($permission['Addfiliere'] == 1){?>
                 <div class="sous-link">
-                    <a class="nav-link" href="/ProjetXML/ajoutFiliere"><i class="fas fa-plus"></i><span>Ajouter une filiere</span></a>
+                    <a class="nav-link" href="/ProjetXML/ajoutFiliere"><i class="fas fa-plus"></i><span><?php echo LangueController::get($_COOKIE['langue'],'sidebar')[6] ?></span></a>
                 </div>
                 <?php } ?>
             </li>
             <li class="nav-item">
                 <?php if($permission['Agentscolarite'] == 1){?>
                 <a class="nav-link text-white" href="/ProjetXML/agentScolarites">
-                    <i class="fas fa-people-carry text-white"></i><span>Agents scolarité</span>
+                    <i class="fas fa-people-carry text-white"></i><span><?php echo LangueController::get($_COOKIE['langue'],'sidebar')[7] ?></span>
                 </a>
                 <?php } ?>
                 <?php if($permission['Addagentscolarite'] == 1){?>
                 <div class="sous-link">
-                    <a class="nav-link" href="/ProjetXML/ajoutAgentScolarite"><i class="fas fa-plus"></i><span>Ajouter un Agent scolarité</span></a>
+                    <a class="nav-link" href="/ProjetXML/ajoutAgentScolarite"><i class="fas fa-plus"></i><span><?php echo LangueController::get($_COOKIE['langue'],'sidebar')[8] ?></span></a>
                 </div>
                 <?php } ?>
             </li>
             <li class="nav-item">
                 <?php if($permission['Professeur'] == 1){?>
                 <a class="nav-link text-white" href="/ProjetXML/professeurs">
-                    <i class="fas fa-chalkboard-teacher text-white"></i><span>Professeurs</span>
+                    <i class="fas fa-chalkboard-teacher text-white"></i><span><?php echo LangueController::get($_COOKIE['langue'],'sidebar')[9] ?></span>
                 </a>
                 <?php } ?>
                 <?php if($permission['Addprofesseur'] == 1){?>
                 <div class="sous-link">
                     <a class="nav-link" href="/ProjetXML/ajoutProfesseur">
-                        <i class="fas fa-plus"></i><span>Ajouter un Professeur</span>
+                        <i class="fas fa-plus"></i><span><?php echo LangueController::get($_COOKIE['langue'],'sidebar')[10] ?></span>
                     </a>
                 </div>
                 <?php } ?>
@@ -70,12 +70,12 @@
             <li class="nav-item">
                 <?php if($permission['Etudiant'] == 1){?>
                 <a class="nav-link text-white" href="/ProjetXML/etudiants">
-                    <i class="fas fa-user-friends text-white"></i><span>Etudiants</span>
+                    <i class="fas fa-user-friends text-white"></i><span><?php echo LangueController::get($_COOKIE['langue'],'sidebar')[11] ?></span>
                 </a>
                 <?php } ?>
                 <?php if($permission['Addetudiant'] == 1){?>
                 <div class="sous-link">
-                    <a class="nav-link" href="/ProjetXML/ajoutEtudiant"><i class="fas fa-plus"></i><span>Ajouter un etudiant</span></a>
+                    <a class="nav-link" href="/ProjetXML/ajoutEtudiant"><i class="fas fa-plus"></i><span><?php echo LangueController::get($_COOKIE['langue'],'sidebar')[12] ?></span></a>
                 </div>
                 <?php } ?>
             </li>
