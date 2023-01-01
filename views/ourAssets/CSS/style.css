@@ -215,3 +215,48 @@
   .action2:hover i {
     color: #ffb411;
   }
+ .accueil-filiere{
+     color: #fff;
+     border-radius: 5px;
+     margin: 10px 5px;
+     overflow: hidden;
+ }
+.accueil-filiere h5{
+    background-color: var(--main);
+    padding: 5px;
+    margin: 0;
+}
+.accueil-module{
+    padding: 0;
+    margin: 0;
+}
+.accueil-module h6{
+    background-color: #DCDCDC;
+    color: #000;
+    padding: 5px 5px 5px 20px;
+    margin: 0;
+}
+.accueil-absence{
+    width: 100%;
+    margin: 5px 2px;
+
+}
+.accueil-element{
+    background-color: var(--gray);
+    color: #000;
+}
+.accueil-element p{
+    padding: 5px 5px 5px 40px;
+    margin: 0;
+}
+.accueil-absence-element{
+    background-color: red;
+    color: #fff;
+    padding: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.accueil-absence-details{
+    background-color: var(--gray);
+    padding: 5px;
+}

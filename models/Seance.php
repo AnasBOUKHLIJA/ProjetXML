@@ -2,6 +2,10 @@
 
 class Seance
 {
+    static  function get($code){
+        $CadiAyyad = simplexml_load_file('Database/Database.xml');
+        return $CadiAyyad->xpath('//Seances/Seance[@Code= "'.$code.'"]')[0];
+    }
     static function getAll($Ele): array{
         $CadiAyyad = simplexml_load_file('Database/Database.xml');
         return $CadiAyyad->xpath('//Seances/Seance[@Element= "'.$Ele.'"]');

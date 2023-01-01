@@ -2,11 +2,15 @@
 
 class SeanceController
 {
+
+    static  function get($code){
+        return Seance::get($code);
+    }
+
     static function getAll($Ele){
         return Seance::getAll($Ele);
     }
 
- 
     static function add($data){
         $code = 0;
         $codeFil = strlen($data['element']);
