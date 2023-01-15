@@ -25,7 +25,9 @@ class SeanceController
         $data['Code'] = $data['element'].'Sean'.$code;
         Seance::add($data);
     }
-
+    static function delete($code){
+       Seance::delete($code);
+    }
 }
 // $daysOfWeek = array(
 //     'Monday' => 'Lundi',

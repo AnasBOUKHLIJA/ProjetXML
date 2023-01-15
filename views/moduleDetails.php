@@ -92,7 +92,12 @@ if(isset($_POST['submit'])){
                     </div>
                     <div class="row row-cols-1 row-cols-md-2 mx-auto" style="max-width: 1000px;">
                         <?php foreach (ElementController::getByModule($_GET['dept']) as $element) { ?>
-                            <div class="col mb-4 shadow">
+                            <div class="col mb-4 shadow card-element">
+                                <?php if(PermissionController::get($_SESSION['code'])['Removeseance'] == 1){?>
+                                    <button class="btn p-2 bg-danger-btn border-0 btn-supp" onclick="supprimer('element','<?php echo $element->attributes()->Code; ?>')">
+                                        <img width="30" height="30" src="/ProjetXML/views/ourAssets/images/icon-delete.png">
+                                    </button>
+                                <?php } ?>
                                 <div><a href="#"><img class="rounded img-fluid shadow w-100 fit-cover" src="/ProjetXML/views/ourAssets/images/element.jpg" style="height: 250px;"></a>
                                     <div class="py-4"><span class="badge bg-primary mb-2"><?php echo ElementController::getEnseignant($element->attributes()->Enseignant); ?></span>
                                         <h4 class="fw-bold" style="height: 60px"><?php echo $element->Element ?></h4>
@@ -109,6 +114,7 @@ if(isset($_POST['submit'])){
     <script src="/ProjetXML/views/assetsAdminPanel/bootstrap/js/bootstrap.min.js"></script>
     <script src="/ProjetXML/views/assetsAdminPanel/js/theme.js"></script>
     <script src="/ProjetXML/views/ourAssets/JS/Langue.js"></script>
+    <script src="/ProjetXML/views/ourAssets/JS/Suppression.js"></script>
 </body>
 
 </html>

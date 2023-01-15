@@ -436,98 +436,6 @@
         <Removeseance>0</Removeseance>
         <Editseance>0</Editseance>
       </Permission>
-      <Permission Code="D1">
-        <Supperadmin>1</Supperadmin>
-        <Addsupperadmin>0</Addsupperadmin>
-        <Removesuperadmin>0</Removesuperadmin>
-        <Editsuperadmin>0</Editsuperadmin>
-        <Professeur>0</Professeur>
-        <Addprofesseur>0</Addprofesseur>
-        <Removeprofesseur>1</Removeprofesseur>
-        <Editprofesseur>1</Editprofesseur>
-        <Agentscolarite>0</Agentscolarite>
-        <Addagentscolarite>1</Addagentscolarite>
-        <Removeagentscolarite>1</Removeagentscolarite>
-        <Editagentscolarite>1</Editagentscolarite>
-        <Directeur>0</Directeur>
-        <Adddirecteur>0</Adddirecteur>
-        <Removedirecteur>0</Removedirecteur>
-        <Editdirecteur>0</Editdirecteur>
-        <Etudiant>0</Etudiant>
-        <Addetudiant>0</Addetudiant>
-        <Removeetudiant>0</Removeetudiant>
-        <Editetudiant>0</Editetudiant>
-        <Abscence>0</Abscence>
-        <Addabscence>0</Addabscence>
-        <Removeabscence>0</Removeabscence>
-        <Editabscence>0</Editabscence>
-        <Departement>0</Departement>
-        <Adddepartement>0</Adddepartement>
-        <Removedepartement>0</Removedepartement>
-        <Editdepartement>0</Editdepartement>
-        <Filiere>0</Filiere>
-        <Addfiliere>0</Addfiliere>
-        <Removefiliere>0</Removefiliere>
-        <Editfiliere>0</Editfiliere>
-        <Module>0</Module>
-        <Addmodule>0</Addmodule>
-        <Removemodule>0</Removemodule>
-        <Editmodule>0</Editmodule>
-        <Element>0</Element>
-        <Addelement>0</Addelement>
-        <Removeelement>0</Removeelement>
-        <Editelement>0</Editelement>
-        <Seance>0</Seance>
-        <Addseance>0</Addseance>
-        <Removeseance>0</Removeseance>
-        <Editseance>0</Editseance>
-      </Permission>
-      <Permission Code="A1">
-        <Supperadmin>1</Supperadmin>
-        <Addsupperadmin>1</Addsupperadmin>
-        <Removesuperadmin>1</Removesuperadmin>
-        <Editsuperadmin>1</Editsuperadmin>
-        <Professeur>1</Professeur>
-        <Addprofesseur>1</Addprofesseur>
-        <Removeprofesseur>1</Removeprofesseur>
-        <Editprofesseur>1</Editprofesseur>
-        <Agentscolarite>1</Agentscolarite>
-        <Addagentscolarite>1</Addagentscolarite>
-        <Removeagentscolarite>1</Removeagentscolarite>
-        <Editagentscolarite>1</Editagentscolarite>
-        <Directeur>1</Directeur>
-        <Adddirecteur>1</Adddirecteur>
-        <Removedirecteur>1</Removedirecteur>
-        <Editdirecteur>1</Editdirecteur>
-        <Etudiant>1</Etudiant>
-        <Addetudiant>1</Addetudiant>
-        <Removeetudiant>1</Removeetudiant>
-        <Editetudiant>1</Editetudiant>
-        <Abscence>1</Abscence>
-        <Addabscence>1</Addabscence>
-        <Removeabscence>1</Removeabscence>
-        <Editabscence>1</Editabscence>
-        <Departement>1</Departement>
-        <Adddepartement>1</Adddepartement>
-        <Removedepartement>1</Removedepartement>
-        <Editdepartement>1</Editdepartement>
-        <Filiere>1</Filiere>
-        <Addfiliere>1</Addfiliere>
-        <Removefiliere>1</Removefiliere>
-        <Editfiliere>1</Editfiliere>
-        <Module>1</Module>
-        <Addmodule>1</Addmodule>
-        <Removemodule>1</Removemodule>
-        <Editmodule>1</Editmodule>
-        <Element>1</Element>
-        <Addelement>1</Addelement>
-        <Removeelement>1</Removeelement>
-        <Editelement>1</Editelement>
-        <Seance>1</Seance>
-        <Addseance>1</Addseance>
-        <Removeseance>1</Removeseance>
-        <Editseance>1</Editseance>
-      </Permission>
       <Permission Code="P2">
         <Supperadmin>0</Supperadmin>
         <Addsupperadmin>0</Addsupperadmin>
@@ -804,6 +712,98 @@
         <Removeseance>0</Removeseance>
         <Editseance>0</Editseance>
       </Permission>
+      <Permission Code="D1">
+        <Supperadmin>1</Supperadmin>
+        <Addsupperadmin>0</Addsupperadmin>
+        <Removesuperadmin>0</Removesuperadmin>
+        <Editsuperadmin>0</Editsuperadmin>
+        <Professeur>0</Professeur>
+        <Addprofesseur>0</Addprofesseur>
+        <Removeprofesseur>1</Removeprofesseur>
+        <Editprofesseur>1</Editprofesseur>
+        <Agentscolarite>0</Agentscolarite>
+        <Addagentscolarite>1</Addagentscolarite>
+        <Removeagentscolarite>1</Removeagentscolarite>
+        <Editagentscolarite>1</Editagentscolarite>
+        <Directeur>0</Directeur>
+        <Adddirecteur>0</Adddirecteur>
+        <Removedirecteur>0</Removedirecteur>
+        <Editdirecteur>0</Editdirecteur>
+        <Etudiant>0</Etudiant>
+        <Addetudiant>0</Addetudiant>
+        <Removeetudiant>0</Removeetudiant>
+        <Editetudiant>0</Editetudiant>
+        <Abscence>0</Abscence>
+        <Addabscence>0</Addabscence>
+        <Removeabscence>0</Removeabscence>
+        <Editabscence>0</Editabscence>
+        <Departement>0</Departement>
+        <Adddepartement>0</Adddepartement>
+        <Removedepartement>0</Removedepartement>
+        <Editdepartement>0</Editdepartement>
+        <Filiere>0</Filiere>
+        <Addfiliere>0</Addfiliere>
+        <Removefiliere>0</Removefiliere>
+        <Editfiliere>0</Editfiliere>
+        <Module>0</Module>
+        <Addmodule>0</Addmodule>
+        <Removemodule>0</Removemodule>
+        <Editmodule>0</Editmodule>
+        <Element>0</Element>
+        <Addelement>0</Addelement>
+        <Removeelement>0</Removeelement>
+        <Editelement>0</Editelement>
+        <Seance>0</Seance>
+        <Addseance>0</Addseance>
+        <Removeseance>0</Removeseance>
+        <Editseance>0</Editseance>
+      </Permission>
+      <Permission Code="A1">
+        <Supperadmin>1</Supperadmin>
+        <Addsupperadmin>1</Addsupperadmin>
+        <Removesuperadmin>1</Removesuperadmin>
+        <Editsuperadmin>1</Editsuperadmin>
+        <Professeur>1</Professeur>
+        <Addprofesseur>1</Addprofesseur>
+        <Removeprofesseur>1</Removeprofesseur>
+        <Editprofesseur>1</Editprofesseur>
+        <Agentscolarite>1</Agentscolarite>
+        <Addagentscolarite>1</Addagentscolarite>
+        <Removeagentscolarite>1</Removeagentscolarite>
+        <Editagentscolarite>1</Editagentscolarite>
+        <Directeur>1</Directeur>
+        <Adddirecteur>1</Adddirecteur>
+        <Removedirecteur>1</Removedirecteur>
+        <Editdirecteur>1</Editdirecteur>
+        <Etudiant>1</Etudiant>
+        <Addetudiant>1</Addetudiant>
+        <Removeetudiant>1</Removeetudiant>
+        <Editetudiant>1</Editetudiant>
+        <Abscence>1</Abscence>
+        <Addabscence>1</Addabscence>
+        <Removeabscence>1</Removeabscence>
+        <Editabscence>1</Editabscence>
+        <Departement>1</Departement>
+        <Adddepartement>1</Adddepartement>
+        <Removedepartement>1</Removedepartement>
+        <Editdepartement>1</Editdepartement>
+        <Filiere>1</Filiere>
+        <Addfiliere>1</Addfiliere>
+        <Removefiliere>1</Removefiliere>
+        <Editfiliere>1</Editfiliere>
+        <Module>1</Module>
+        <Addmodule>1</Addmodule>
+        <Removemodule>1</Removemodule>
+        <Editmodule>1</Editmodule>
+        <Element>1</Element>
+        <Addelement>1</Addelement>
+        <Removeelement>1</Removeelement>
+        <Editelement>1</Editelement>
+        <Seance>1</Seance>
+        <Addseance>1</Addseance>
+        <Removeseance>1</Removeseance>
+        <Editseance>1</Editseance>
+      </Permission>
     </Permissions>
     <Departements>
       <Departement Chef_departement="P1" Code="Dept1">
@@ -844,57 +844,54 @@
       <Filiere Chef_filiere="P4" Departement="Dept4" Code="Dept4Fil2">
         <Intitule>LP : Gestion comptable et financière</Intitule>
       </Filiere>
-      <Filiere Chef_filiere="P2" Departement="Dept2" Code="Dept2Fil3">
-        <Intitule>Testttt</Intitule>
-      </Filiere>
     </Filieres>
     <Modules>
-      <Module Coordonateur="P1" Filiere="Dept1Fil1" Code="Dept1Fil1MOD1">
+      <Module Coordonateur="P1" Filiere="Dept1Fil1" Code="Dept1Fil1MOD1" Hide="0">
         <Module>Algorithmique et Bases de la Programmation</Module>
       </Module>
-      <Module Coordonateur="P2" Filiere="Dept1Fil1" Code="Dept1Fil1MOD2">
+      <Module Coordonateur="P2" Filiere="Dept1Fil1" Code="Dept1Fil1MOD2" Hide="0">
         <Module>Architecture des Ordinateurs</Module>
       </Module>
-      <Module Coordonateur="P3" Filiere="Dept1Fil1" Code="Dept1Fil1MOD3">
+      <Module Coordonateur="P3" Filiere="Dept1Fil1" Code="Dept1Fil1MOD3" Hide="0">
         <Module>Mathématiques</Module>
       </Module>
-      <Module Coordonateur="P4" Filiere="Dept1Fil1" Code="Dept1Fil1MOD4">
+      <Module Coordonateur="P4" Filiere="Dept1Fil1" Code="Dept1Fil1MOD4" Hide="0">
         <Module>Langues et TEC</Module>
       </Module>
-      <Module Coordonateur="P1" Filiere="Dept1Fil1" Code="Dept1Fil1MOD5">
+      <Module Coordonateur="P1" Filiere="Dept1Fil1" Code="Dept1Fil1MOD5" Hide="0">
         <Module>Systèmes d’Information et Bases de Données</Module>
       </Module>
-      <Module Coordonateur="P4" Filiere="Dept1Fil1" Code="Dept1Fil1MOD8">
-        <Module>Mathématiques Appliquées à l’Informatique</Module>
-      </Module>
-      <Module Coordonateur="P1" Filiere="Dept1Fil1" Code="Dept1Fil1MOD7">
-        <Module>Algorithmique et Structures des Données</Module>
-      </Module>
-      <Module Coordonateur="P3" Filiere="Dept1Fil1" Code="Dept1Fil1MOD8">
+      <Module Coordonateur="P3" Filiere="Dept1Fil1" Code="Dept1Fil1MOD6" Hide="0">
         <Module>Communication et Gestion de l’Entreprise</Module>
       </Module>
-      <Module Coordonateur="P1" Filiere="Dept1Fil1" Code="Dept1Fil1MOD9">
+      <Module Coordonateur="P1" Filiere="Dept1Fil1" Code="Dept1Fil1MOD7" Hide="0">
+        <Module>Algorithmique et Structures des Données</Module>
+      </Module>
+      <Module Coordonateur="P3" Filiere="Dept1Fil1" Code="Dept1Fil1MOD8" Hide="0">
+        <Module>Communication et Gestion de l’Entreprise</Module>
+      </Module>
+      <Module Coordonateur="P1" Filiere="Dept1Fil1" Code="Dept1Fil1MOD9" Hide="0">
         <Module>Programmation Orientée Objet</Module>
       </Module>
-      <Module Coordonateur="P1" Filiere="Dept1Fil1" Code="Dept1Fil1MOD10">
+      <Module Coordonateur="P1" Filiere="Dept1Fil1" Code="Dept1Fil1MOD10" Hide="0">
         <Module>Bases de Données Avancées et Technologie Web</Module>
       </Module>
-      <Module Coordonateur="P2" Filiere="Dept1Fil1" Code="Dept1Fil1MOD11">
+      <Module Coordonateur="P2" Filiere="Dept1Fil1" Code="Dept1Fil1MOD11" Hide="0">
         <Module>Systèmes d’Exploitation</Module>
       </Module>
-      <Module Coordonateur="P1" Filiere="Dept1Fil1" Code="Dept1Fil1MOD12">
+      <Module Coordonateur="P1" Filiere="Dept1Fil1" Code="Dept1Fil1MOD12" Hide="0">
         <Module>Réseaux et Informatiques</Module>
       </Module>
-      <Module Coordonateur="P1" Filiere="Dept1Fil1" Code="Dept1Fil1MOD13">
+      <Module Coordonateur="P1" Filiere="Dept1Fil1" Code="Dept1Fil1MOD13" Hide="0">
         <Module>Administration des Systèmes de Réseaux Informatique</Module>
       </Module>
-      <Module Coordonateur="P1" Filiere="Dept1Fil1" Code="Dept1Fil1MOD14">
+      <Module Coordonateur="P1" Filiere="Dept1Fil1" Code="Dept1Fil1MOD14" Hide="0">
         <Module>Communication et Management</Module>
       </Module>
-      <Module Coordonateur="P1" Filiere="Dept1Fil1" Code="Dept1Fil1MOD15">
+      <Module Coordonateur="P1" Filiere="Dept1Fil1" Code="Dept1Fil1MOD15" Hide="0">
         <Module>Stages en Entreprises</Module>
       </Module>
-      <Module Coordonateur="P1" Filiere="Dept1Fil1" Code="Dept1Fil1MOD16">
+      <Module Coordonateur="P1" Filiere="Dept1Fil1" Code="Dept1Fil1MOD16" Hide="0">
         <Module>Projet de Fin d’Études</Module>
       </Module>
       <Module Coordonateur="P1" Filiere="Dept1Fil2" Code="Dept1Fil2MOD1">
@@ -904,9 +901,6 @@
         <Module>Web</Module>
       </Module>
       <Module Coordonateur="P1" Filiere="Dept2Fil1" Code="Dept2Fil1MOD1">
-        <Module>Test</Module>
-      </Module>
-      <Module Coordonateur="P1" Filiere="Dept2Fil3" Code="Dept2Fil3MOD1">
         <Module>Test</Module>
       </Module>
     </Modules>
@@ -923,21 +917,17 @@
         <Element>Java</Element>
         <NombreHeures>50</NombreHeures>
       </Element>
-      <Element Module="Dept1Fil2MOD2" Enseignant="P1" Code="Dept1Fil2MOD2ELE1">
-        <Element>php</Element>
-        <NombreHeures>40</NombreHeures>
-      </Element>
-      <Element Module="Dept1Fil2MOD2" Enseignant="P1" Code="Dept1Fil2MOD2ELE2">
-        <Element>XML</Element>
-        <NombreHeures>50</NombreHeures>
-      </Element>
       <Element Module="Dept2Fil1MOD1" Enseignant="P1" Code="Dept2Fil1MOD1ELE1">
         <Element>Test2</Element>
         <NombreHeures>50</NombreHeures>
       </Element>
-      <Element Module="Dept2Fil3MOD1" Enseignant="P3" Code="Dept2Fil3MOD1ELE1">
-        <Element>Test</Element>
-        <NombreHeures>50</NombreHeures>
+      <Element Module="Dept1Fil2MOD2" Enseignant="P1" Code="Dept1Fil2MOD2ELE1">
+        <Element>Php</Element>
+        <NombreHeures>40</NombreHeures>
+      </Element>
+      <Element Module="Dept1Fil2MOD2" Enseignant="P1" Code="Dept1Fil2MOD2ELE2">
+        <Element>XML</Element>
+        <NombreHeures>40</NombreHeures>
       </Element>
     </Elements>
     <Salles>
@@ -971,56 +961,16 @@
       </Salle>
     </Salles>
     <Seances>
-      <Seance Element="Dept1Fil2MOD2ELE1" Salle="Sal2" Code="Dept1Fil2MOD2ELE1Sean1">
-        <Jour>Lundi</Jour>
-        <DateDebut>08:30</DateDebut>
-        <DateFin>08:30</DateFin>
-      </Seance>
-      <Seance Element="Dept1Fil2MOD2ELE2" Salle="Sal35" Code="Dept1Fil2MOD2ELE2Sean1">
-        <Jour>Mercredi</Jour>
-        <DateDebut>08:30</DateDebut>
-        <DateFin>12:30</DateFin>
-      </Seance>
-      <Seance Element="Dept1Fil2MOD2ELE2" Salle="Sal2" Code="Dept1Fil2MOD2ELE2Sean2">
-        <Jour>Vendredi</Jour>
-        <DateDebut>14:30</DateDebut>
-        <DateFin>18:30</DateFin>
-      </Seance>
-      <Seance Element="Dept2Fil3MOD1ELE1" Salle="Sal43" Code="Dept2Fil3MOD1ELE1Sean2">
-        <Jour>Lundi</Jour>
-        <DateDebut>08:30</DateDebut>
-        <DateFin>12:30</DateFin>
-      </Seance>
-      <Seance Element="Dept1Fil2MOD2ELE2" Salle="Sal1" Code="Dept1Fil2MOD2ELE2Sean3">
-        <Jour>Lundi</Jour>
-        <DateDebut>11:11</DateDebut>
-        <DateFin>11:11</DateFin>
-      </Seance>
-      <Seance Element="Dept1Fil1MOD1ElE1" Salle="Sal1" Code="Dept1Fil1MOD1ElE1Sean1">
-        <Jour>Lundi</Jour>
-        <DateDebut>11:11</DateDebut>
-        <DateFin>11:11</DateFin>
-      </Seance>
-      <Seance Element="Dept1Fil1MOD1ElE2" Salle="Sal1" Code="Dept1Fil1MOD1ElE2Sean1">
+      <Seance Element="Dept1Fil1MOD1ElE2" Salle="Sal2" Code="Dept1Fil1MOD1ElE2Sean1">
         <Jour>Mardi</Jour>
-        <DateDebut>14:30</DateDebut>
-        <DateFin>18:30</DateFin>
-      </Seance>
-      <Seance Element="Dept1Fil1MOD1ElE2" Salle="Sal3" Code="Dept1Fil1MOD1ElE2Sean2">
-        <Jour>Jeudi</Jour>
-        <DateDebut>08:30</DateDebut>
-        <DateFin>12:30</DateFin>
+        <DateDebut>14:00</DateDebut>
+        <DateFin>16:30</DateFin>
+        <Semestre>Semestre 6</Semestre>
+        <Semaine>1</Semaine>
       </Seance>
     </Seances>
     <Absences>
-      <Absence Etudiant="E1" Seance="Dept1Fil2MOD2ELE2Sean2"/>
-      <Absence Etudiant="E2" Seance="Dept1Fil2MOD2ELE2Sean2"/>
-      <Absence Etudiant="E3" Seance="Dept1Fil2MOD2ELE2Sean2"/>
-      <Absence Etudiant="E1" Seance="Dept1Fil2MOD2ELE2Sean1"/>
-      <Absence Etudiant="E2" Seance="Dept1Fil2MOD2ELE2Sean1"/>
-      <Absence Etudiant="E5" Seance="Dept1Fil1MOD1ElE1Sean1"/>
       <Absence Etudiant="E5" Seance="Dept1Fil1MOD1ElE2Sean1"/>
-      <Absence Etudiant="E5" Seance="Dept1Fil1MOD1ElE2Sean2"/>
     </Absences>
   </Etablissement>
 </CadiAyyad>

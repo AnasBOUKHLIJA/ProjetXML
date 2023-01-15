@@ -87,8 +87,28 @@ if(isset($_POST['submit'])){
                         </div>
                     </div>
                 <div class="row row-cols-1 row-cols-md-2 mx-auto" style="max-width: 1000px;">
-                    <?php foreach (ModuleController::getByFiliere($_GET['dept']) as $module){ ?>
-                        <div class="col mb-4 shadow">
+                    <?php foreach (ModuleController::getByFiliere($_GET['dept']) as $module){ 
+                        if($module->attributes()->Hide != "1" || PermissionController::get($_SESSION['code'])['Editmodule'] == 1){
+                        ?>
+                        
+                        <div class="col mb-4 shadow card-module">
+                                <?php if(PermissionController::get($_SESSION['code'])['Removemodule'] == 1){?>
+                                    <button class="btn p-2 bg-danger-btn border-0 btn-supp" onclick="supprimer('module','<?php echo $module->attributes()->Code; ?>')">
+                                        <img width="30" height="30" src="/ProjetXML/views/ourAssets/images/icon-delete.png">
+                                    </button>
+                                <?php } ?>
+                                <?php if(PermissionController::get($_SESSION['code'])['Editmodule'] == 1){?>
+                                    <?php if ($module->attributes()->Hide == "1") { ?>
+                                        <button class="btn p-2 bg-edit-btn border-0 btn-edit" onclick="hide('module','<?php echo $module->attributes()->Code; ?>',0)">
+                                            <img width="30" height="30" src="/ProjetXML/views/ourAssets/images/icon-show.png">
+                                        </button>
+                                    <?php } else { ?>
+                                        <button class="btn p-2 bg-edit-btn border-0 btn-edit" onclick="hide('module','<?php echo $module->attributes()->Code; ?>',1)">
+                                            <img width="30" height="30" src="/ProjetXML/views/ourAssets/images/icon-hide.png">
+                                        </button>
+                                    <?php } ?>
+                                    
+                                <?php } ?>
                             <div><a href="#"><img class="rounded img-fluid shadow w-100 fit-cover" src="/ProjetXML/views/ourAssets/images/module.jpg" style="height: 250px;"></a>
                                 <div class="py-4"><span class="badge bg-primary mb-2"><?php echo ModuleController::getCoordonateur($module->attributes()->Coordonateur); ?></span>
                                     <h4 class="fw-bold" style="height: 60px"><?php echo $module->Module ?></h4>
@@ -96,7 +116,9 @@ if(isset($_POST['submit'])){
                                 </div>
                             </div>
                         </div>
-                    <?php } ?>
+                    <?php } 
+                        }
+                    ?>
                 </div>
             </div>
         </div>
@@ -105,6 +127,7 @@ if(isset($_POST['submit'])){
 <script src="/ProjetXML/views/assetsAdminPanel/bootstrap/js/bootstrap.min.js"></script>
 <script src="/ProjetXML/views/assetsAdminPanel/js/theme.js"></script>
 <script src="/ProjetXML/views/ourAssets/JS/Langue.js"></script>
+<script src="/ProjetXML/views/ourAssets/JS/Suppression.js"></script>
 </body>
 
 </html>

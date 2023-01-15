@@ -4,9 +4,10 @@ require_once 'autoload.php';
 
 $home = new HomeController();
 
-$pages = array('connexion','accueil','profile','agentScolarites','departements','filieres','professeurs','etudiants','filieres','DepartementDetails','filieresDetails','moduleDetails','ajoutDepartement','ajoutFiliere','ajoutAgentScolarite','ajoutProfesseur','ajoutEtudiant','ElementDetails','accesRefuse','Permission');
+$pages = array('connexion','accueil','profile','agentScolarites','departements','filieres','professeurs','etudiants','filieres','DepartementDetails','filieresDetails','moduleDetails','ajoutDepartement','ajoutFiliere','ajoutAgentScolarite','ajoutProfesseur','ajoutEtudiant','ElementDetails','accesRefuse','Permission','Suppression','Cache');
 
 if(!$_SESSION){
+
     if (isset($_GET['page']) && $_GET['page'] != 'connexion') {
         if (in_array($_GET['page'], $pages)) {
             header('location: /ProjetXML/connexion');

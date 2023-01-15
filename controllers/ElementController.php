@@ -30,4 +30,7 @@ class ElementController
         $data['Code'] = $data['module'].'ELE'.$code;
         Element::add($data);
     }
+    static function delete($code){
+        Element::delete($code);
+    }
 }

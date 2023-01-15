@@ -66,10 +66,41 @@ if (isset($_POST['submit'])) {
                                 <div class="card-body text-center d-flex flex-column align-items-center">
                                     <div class="bs-icon-xl bs-icon-circle bs-icon-primary shadow bs-icon my-4">
                                         <img src="/ProjetXML/views/ourAssets/images/timer.gif" class="rounded" style="width: 150%;height: 150%">
-
                                     </div>
                                     <h1 class="text-dark mb-0 align-content-center ">Ajouter une Seance</h1>
                                     <form method="post" enctype="multipart/form-data" action="" class="w-100 d-flex flex-row flex-wrap justify-content-evenly">
+                                        <div class="m-2 d-flex flex-wrap justify-content-start" style="width: 46%">
+                                            <label for="Semestre">Semestre</label>
+                                            <select class="form-control" id="Semestre" name="semestre">
+                                                <option value="Semestre 1">Semestre 1</option>
+                                                <option value="Semestre 2">Semestre 2</option>
+                                                <option value="Semestre 3">Semestre 3</option>
+                                                <option value="Semestre 4">Semestre 4</option>
+                                                <option value="Semestre 5">Semestre 5</option>
+                                                <option value="Semestre 6">Semestre 6</option>
+                                            </select>
+                                        </div>
+                                        <div class="m-2 d-flex flex-wrap justify-content-start" style="width: 46%">
+                                            <label for="Semaine">Semaine</label>
+                                            <select class="form-control" id="Semaine" name="semaine">
+                                                <option value="1">Semaine 1</option>
+                                                <option value="1">Semaine 2</option>
+                                                <option value="1">Semaine 3</option>
+                                                <option value="1">Semaine 4</option>
+                                                <option value="1">Semaine 5</option>
+                                                <option value="1">Semaine 6</option>
+                                                <option value="1">Semaine 7</option>
+                                                <option value="1">Semaine 8</option>
+                                                <option value="1">Semaine 9</option>
+                                                <option value="1">Semaine 10</option>
+                                                <option value="1">Semaine 11</option>
+                                                <option value="1">Semaine 12</option>
+                                                <option value="1">Semaine 13</option>
+                                                <option value="1">Semaine 14</option>
+                                                <option value="1">Semaine 15</option>
+                                                <option value="1">Semaine 16</option>
+                                            </select>
+                                        </div>
                                         <div class="m-2 d-flex flex-wrap justify-content-start" style="width: 46%">
                                             <label for="Jour">Jour</label>
                                             <select class="form-control" id="Jour" name="jour">
@@ -112,6 +143,8 @@ if (isset($_POST['submit'])) {
                             <table class="table my-0" id="dataTable">
                                 <thead>
                                     <tr>
+                                        <th class="text-center align-middle">Semestre</th>
+                                        <th class="text-center align-middle">Semaine</th>
                                         <th class="text-center align-middle">Jour</th>
                                         <th class="text-center align-middle">DateDebut</th>
                                         <th class="text-center align-middle">DateFin</th>
@@ -124,12 +157,21 @@ if (isset($_POST['submit'])) {
                                 <tbody>
                                     <?php foreach (SeanceController::getAll($_GET['dept']) as $seance) { ?>
                                         <tr>
-                                            <td class="text-center align-middle" style="width: 20%"><?php echo $seance->Jour ?></td>
-                                            <td class="text-center align-middle" style="width: 20%"><?php echo $seance->DateDebut ?></td>
-                                            <td class="text-center align-middle" style="width: 20%"><?php echo $seance->DateFin ?></td>
-                                            <td class="text-center align-middle" style="width: 20%"><?php echo SalleController::get($seance->attributes()->Salle)->Numero ?></td>
+                                            <td class="text-center align-middle" style="width: 13.6%"><?php echo $seance->Semestre ?></td>
+                                            <td class="text-center align-middle" style="width: 8%"><?php echo $seance->Semaine ?></td>
+                                            <td class="text-center align-middle" style="width: 13.6%"><?php echo $seance->Jour ?></td>
+                                            <td class="text-center align-middle" style="width: 13.6%"><?php echo $seance->DateDebut ?></td>
+                                            <td class="text-center align-middle" style="width: 13.6%"><?php echo $seance->DateFin ?></td>
+                                            <td class="text-center align-middle" style="width: 13.6%"><?php echo SalleController::get($seance->attributes()->Salle)->Numero ?></td>
                                             <?php if(PermissionController::get($_SESSION['code'])['Abscence'] == 1){ ?>
-                                            <td class="text-center align-middle" style="width: 20%"><button class="btn btn-primary btn-absence" style="font-size: 15px">Noter l'absences</button></td>
+                                            <td class="justify-content-evenly text-center align-middle position-relative" style="width: 32%">
+                                                <button class="btn btn-primary btn-absence p-2" style="font-size: 15px;width: 70% !important;">Noter l'absences</button>
+                                                <?php if(PermissionController::get($_SESSION['code'])['Removeseance'] == 1){?>
+                                                    <button class="btn p-2 bg-danger-btn border-0" onclick="supprimer('seance','<?php echo $seance->attributes()->Code; ?>')">
+                                                        <img width="30" height="30" src="/ProjetXML/views/ourAssets/images/icon-delete.png">
+                                                    </button>
+                                                <?php } ?>
+                                            </td>
                                             <?php } ?>
                                         </tr>
                                     <?php if(PermissionController::get($_SESSION['code'])['Abscence'] == 1){ ?>
@@ -146,7 +188,7 @@ if (isset($_POST['submit'])) {
                                                         )->Intitule ?>
                                                     </div>
                                                     <div>
-                                                        <?php echo $seance->Jour.' '.$seance->DateDebut.' '.$seance->DateFin ?>
+                                                        <?php echo $seance->Semestre.' | Semaine '.$seance->Semaine.' | '.$seance->Jour.' | '.$seance->DateDebut.' <=> '.$seance->DateFin ?>
                                                     </div>
                                                 </h5>
                                                 <form method="POST" action="">
@@ -193,6 +235,7 @@ if (isset($_POST['submit'])) {
     <script src="/ProjetXML/views/assetsAdminPanel/js/theme.js"></script>
     <script src="/ProjetXML/views/OurAssets/js/popupWindow.js"></script>
     <script src="/ProjetXML/views/ourAssets/JS/Langue.js"></script>
+    <script src="/ProjetXML/views/ourAssets/JS/Suppression.js"></script>
 </body>
 
 </html>

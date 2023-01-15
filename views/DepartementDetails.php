@@ -1,30 +1,30 @@
 <?php
 
-if (PermissionController::get($_SESSION['code'])['Departement'] == 0){
+if (PermissionController::get($_SESSION['code'])['Departement'] == 0) {
     header('location: /ProjetXML/accesRefuse');
 }
-        $data = null;
-        if($_SESSION['personneCategorie'] == 'Etudiant') {
-            $data = EtudiantController::get($_SESSION['code']);
-            $data['defaultImage'] = 'views/ourAssets/images/etudiant.png';
-            $data['defaultImage-file'] = 'views/ourAssets/images/etudiant-file.png';
-        }elseif($_SESSION['personneCategorie'] == 'Directeur') {
-            $data = DirecteurController::get($_SESSION['code']);
-            $data['defaultImage'] = 'views/ourAssets/images/prof.png';
-            $data['defaultImage-file'] = 'views/ourAssets/images/prof-file.png';
-        }elseif($_SESSION['personneCategorie'] == 'AgentScolarite') {
-            $data = AgentScolariteController::get($_SESSION['code']);
-            $data['defaultImage'] = 'views/ourAssets/images/agent.png';
-            $data['defaultImage-file'] = 'views/ourAssets/images/agent-file.png';
-        }elseif($_SESSION['personneCategorie'] == 'Professeur') {
-            $data = ProfesseurController::get($_SESSION['code']);
-            $data['defaultImage'] = 'views/ourAssets/images/prof.png';
-            $data['defaultImage-file'] = 'views/ourAssets/images/prof-file.png';
-        }elseif($_SESSION['personneCategorie'] == 'SuperAdmin') {
-            $data = SuperAdminController::get($_SESSION['code']);
-            $data['defaultImage'] = 'views/ourAssets/images/prof.png';
-            $data['defaultImage-file'] = 'views/ourAssets/images/prof-file.png';
-        }
+$data = null;
+if ($_SESSION['personneCategorie'] == 'Etudiant') {
+    $data = EtudiantController::get($_SESSION['code']);
+    $data['defaultImage'] = 'views/ourAssets/images/etudiant.png';
+    $data['defaultImage-file'] = 'views/ourAssets/images/etudiant-file.png';
+} elseif ($_SESSION['personneCategorie'] == 'Directeur') {
+    $data = DirecteurController::get($_SESSION['code']);
+    $data['defaultImage'] = 'views/ourAssets/images/prof.png';
+    $data['defaultImage-file'] = 'views/ourAssets/images/prof-file.png';
+} elseif ($_SESSION['personneCategorie'] == 'AgentScolarite') {
+    $data = AgentScolariteController::get($_SESSION['code']);
+    $data['defaultImage'] = 'views/ourAssets/images/agent.png';
+    $data['defaultImage-file'] = 'views/ourAssets/images/agent-file.png';
+} elseif ($_SESSION['personneCategorie'] == 'Professeur') {
+    $data = ProfesseurController::get($_SESSION['code']);
+    $data['defaultImage'] = 'views/ourAssets/images/prof.png';
+    $data['defaultImage-file'] = 'views/ourAssets/images/prof-file.png';
+} elseif ($_SESSION['personneCategorie'] == 'SuperAdmin') {
+    $data = SuperAdminController::get($_SESSION['code']);
+    $data['defaultImage'] = 'views/ourAssets/images/prof.png';
+    $data['defaultImage-file'] = 'views/ourAssets/images/prof-file.png';
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -42,39 +42,47 @@ if (PermissionController::get($_SESSION['code'])['Departement'] == 0){
 </head>
 
 <body id="page-top">
-<div id="wrapper">
-    <?php include 'views/includes/sideBar.php'?>
-    <div class="d-flex flex-column" id="content-wrapper">
-        <div id="content">
-            <?php include_once 'views/includes/header.php' ?>
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-8 col-xl-6 text-center mx-auto m-5">
-                        <h1 class="fst-italic fw-bold">Departement : <?php echo DepartementController::get($_GET['dept'])?></h1>
-                    </div>
-                </div>
-                <?php $count=0; foreach (FiliereController::getByDepartement($_GET['dept']) as $filiere){ ?>
-                    <div class="row row-cols-1 row-cols-md-2 mx-auto" style="max-width: 900px;">
-                        <div class="col <?php if($count%2 == 0) echo "order-md-last" ?> mb-5">
-                            <img class="rounded img-fluid shadow" src="/ProjetXML/views/ourAssets/images/filiere.jpg">
+    <div id="wrapper">
+        <?php include 'views/includes/sideBar.php' ?>
+        <div class="d-flex flex-column" id="content-wrapper">
+            <div id="content">
+                <?php include_once 'views/includes/header.php' ?>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-8 col-xl-6 text-center mx-auto m-5">
+                            <h1 class="fst-italic fw-bold">Departement : <?php echo DepartementController::get($_GET['dept']) ?></h1>
                         </div>
-                        <div class="col d-md-flex align-items-md-end align-items-lg-center mb-5">
-                            <div>
-                                <h5 class="fw-bold"><?php echo $filiere->Intitule ?>&nbsp;</h5>
-                                <p class="text-muted mb-2">Chef Filiere : <?php echo FiliereController::getChefFiliere($filiere->attributes()->Chef_filiere) ?></p>
-                                <p class="text-muted mb-2">Nombre des Module : <?php echo FiliereController::getNombreModule($filiere->attributes()->Code)?></p>
-                                <a href="/ProjetXML/filieresDetails/<?php echo $filiere->attributes()->Code ?>" class="btn btn-primary shadow" type="button">Voir les details</a>
+                    </div>
+                    <?php $count = 0;
+                    foreach (FiliereController::getByDepartement($_GET['dept']) as $filiere) { ?>
+                        <div class="row row-cols-1 row-cols-md-2 mx-auto card-filiere" style="max-width: 900px;">
+                            <div class="col <?php if ($count % 2 == 0) echo "order-md-last" ?> mb-5">
+                                <img class="rounded img-fluid shadow" src="/ProjetXML/views/ourAssets/images/filiere.jpg">
+                            </div>
+                            <div class="col d-md-flex align-items-md-end align-items-lg-center mb-5">
+                                <div>
+                                    <h5 class="fw-bold"><?php echo $filiere->Intitule ?>&nbsp;</h5>
+                                    <p class="text-muted mb-2">Chef Filiere : <?php echo FiliereController::getChefFiliere($filiere->attributes()->Chef_filiere) ?></p>
+                                    <p class="text-muted mb-2">Nombre des Module : <?php echo FiliereController::getNombreModule($filiere->attributes()->Code) ?></p>
+                                    <a href="/ProjetXML/filieresDetails/<?php echo $filiere->attributes()->Code ?>" class="btn btn-primary shadow" type="button">Voir les details</a>
+                                    <?php if (PermissionController::get($_SESSION['code'])['Removedepartement'] == 1) { ?>
+                                        <button class="btn p-2 bg-danger-btn border-0 btn-supp-filiere" onclick="supprimer('filiere','<?php echo $filiere->attributes()->Code; ?>')">
+                                            <img width="30" height="30" src="/ProjetXML/views/ourAssets/images/icon-delete.png">
+                                        </button>
+                                    <?php } ?>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <?php $count++;} ?>
+                    <?php $count++;
+                    } ?>
+                </div>
             </div>
-        </div>
-    </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
-</div>
-<script src="/ProjetXML/views/assetsAdminPanel/bootstrap/js/bootstrap.min.js"></script>
-<script src="/ProjetXML/views/assetsAdminPanel/js/theme.js"></script>
-<script src="views/ourAssets/JS/Langue.js"></script>
+        </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
+    </div>
+    <script src="/ProjetXML/views/assetsAdminPanel/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/ProjetXML/views/assetsAdminPanel/js/theme.js"></script>
+    <script src="/ProjetXML/views/ourAssets/JS/Langue.js"></script>
+<script src="/ProjetXML/views/ourAssets/JS/Suppression.js"></script>
 </body>
 
 </html>

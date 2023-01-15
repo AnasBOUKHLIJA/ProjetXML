@@ -26,4 +26,10 @@ class ModuleController
         $data['Code'] = $data['filiere'].'MOD'.$code;
         Module::add($data);
     }
+    static function delete($code){
+        Module::delete($code);
+    }
+    static function hide($code,$value){
+        Module::hide($code,$value);
+    }
 }

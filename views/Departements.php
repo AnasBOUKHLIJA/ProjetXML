@@ -66,6 +66,11 @@ if (PermissionController::get($_SESSION['code'])['Departement'] == 0){
                                         <p class="text-muted mb-2">Nombre des filiere : <?php echo DepartementController::getNombreFiliere($departement->attributes()->Code) ?></p>
                                         <p class="text-muted mb-4">Nombre des professeurs : <?php echo DepartementController::getNombreProfesseur($departement->attributes()->Code)  ?></p>
                                         <a href="/ProjetXML/DepartementDetails/<?php echo $departement->attributes()->Code ?>" class="btn btn-primary shadow" type="button">Voir les details</a>
+                                        <?php if (PermissionController::get($_SESSION['code'])['Removedepartement'] == 1) { ?>
+                                        <button class="btn p-2 bg-danger-btn border-0 btn-supp-filiere" onclick="supprimer('departement','<?php echo $departement->attributes()->Code; ?>')">
+                                            <img width="30" height="30" src="/ProjetXML/views/ourAssets/images/icon-delete.png">
+                                        </button>
+                                    <?php } ?>
                                     </div>
                                 </div>
                             </div>
@@ -79,6 +84,7 @@ if (PermissionController::get($_SESSION['code'])['Departement'] == 0){
 <script src="views/assetsAdminPanel/bootstrap/js/bootstrap.min.js"></script>
 <script src="views/assetsAdminPanel/js/theme.js"></script>
 <script src="views/ourAssets/JS/Langue.js"></script>
+<script src="/ProjetXML/views/ourAssets/JS/Suppression.js"></script>
 </body>
 
 </html>

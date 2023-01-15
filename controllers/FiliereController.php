@@ -32,4 +32,7 @@ class FiliereController
         $data['Code'] = $data['departement'].'Fil'.$code;
         Filiere::add($data);
     }
+    static function delete($code){
+        Filiere::delete($code);
+    }
 }

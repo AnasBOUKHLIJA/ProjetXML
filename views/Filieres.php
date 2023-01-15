@@ -63,6 +63,11 @@ if($_SESSION['personneCategorie'] == 'Etudiant') {
                                 <p class="text-muted mb-2">Chef Filiere : <?php echo FiliereController::getChefFiliere($filiere->attributes()->Chef_filiere) ?></p>
                                 <p class="text-muted mb-2">Nombre des Module : <?php echo FiliereController::getNombreModule($filiere->attributes()->Code)?></p>
                                 <a href="/ProjetXML/filieresDetails/<?php echo $filiere->attributes()->Code ?>" class="btn btn-primary shadow" type="button">Voir les details</a>
+                                <?php if (PermissionController::get($_SESSION['code'])['Removedepartement'] == 1) { ?>
+                                        <button class="btn p-2 bg-danger-btn border-0 btn-supp-filiere" onclick="supprimer('filiere','<?php echo $filiere->attributes()->Code; ?>')">
+                                            <img width="30" height="30" src="/ProjetXML/views/ourAssets/images/icon-delete.png">
+                                        </button>
+                                    <?php } ?>
                             </div>
                         </div>
                     </div>
@@ -74,6 +79,7 @@ if($_SESSION['personneCategorie'] == 'Etudiant') {
 <script src="views/assetsAdminPanel/bootstrap/js/bootstrap.min.js"></script>
 <script src="views/assetsAdminPanel/js/theme.js"></script>
 <script src="views/ourAssets/JS/Langue.js"></script>
+<script src="/ProjetXML/views/ourAssets/JS/Suppression.js"></script>
 </body>
 
 </html>

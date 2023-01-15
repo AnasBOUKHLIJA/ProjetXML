@@ -21,6 +21,7 @@ class LangueController
         ),
         'anglais' => array(
             'sidebar' => array(
+                'Home',
                 'Profile',
                 'Permission',
                 'Departments',
@@ -36,7 +37,10 @@ class LangueController
             )
         )
     );
-    static public function get( $lan,$target){
-        return LangueController::$langue[strtolower($lan)][$target];
+    static public function get($lan,$target){
+        if($lan){
+            return LangueController::$langue[strtolower($lan)][$target];
+        }
+        return LangueController::$langue['francais'][$target];
     }
 }

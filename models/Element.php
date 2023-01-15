@@ -33,4 +33,24 @@ class Element
         $dom->loadXML($xml->asXML());
         $dom->save($file);
     }
+    static function delete($code){
+        $file = 'Database/Database.xml';
+        $CadiAyyad  = simplexml_load_file($file);        
+        foreach (SeanceController::getAll(Element::get($code)->attributes()->Code) as $seance){
+            $targetSeance =  $CadiAyyad ->xpath('//Seances/Seance[@Code= "'.$seance->attributes()->Code.'"]');
+            $domRefSeance = dom_import_simplexml($targetSeance[0]);
+            $domRefSeance->parentNode->removeChild($domRefSeance);
+            // SeanceController::delete($seance->attributes()->Code);
+        }
+        $target =  $CadiAyyad ->xpath('//Elements/Element[@Code="'.$code.'"]');
+        if ($target) {
+            $domRef = dom_import_simplexml($target[0]);
+            $domRef->parentNode->removeChild($domRef);
+            $dom = new DOMDocument('1.0');
+            $dom->preserveWhiteSpace = false;
+            $dom->formatOutput = true;
+            $dom->loadXML( $CadiAyyad ->asXML());
+            $dom->save($file);
+        }
+    }
 }

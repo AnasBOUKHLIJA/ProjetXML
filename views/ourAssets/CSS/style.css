@@ -145,7 +145,7 @@
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    width: 35%;
+    width: 40%;
     height: 60%;
     background-color: var(--third);
     border-radius: 0.5rem;
@@ -259,4 +259,30 @@
 .accueil-absence-details{
     background-color: var(--gray);
     padding: 5px;
+}
+
+.card-element,.card-module,.card-filiere{
+  position: relative;
+}
+.btn-supp{
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  z-index: 10;
+}
+.btn-edit{
+  position: absolute;
+  left: 20px;
+  top: 10px;
+  z-index: 10;
+}
+.bg-danger-btn{
+  background-color: rgb(255, 14, 14) !important;
+}
+.bg-edit-btn{
+  background-color: var(--second);
+}
+.permission-item{
+  width: 22%;
+  text-align: left;
 }

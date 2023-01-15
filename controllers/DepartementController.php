@@ -30,4 +30,7 @@ class DepartementController
         print_r($data);
         Departement::add($data);
     }
+    static function delete($code){
+        Departement::delete($code);
+    }
 }
