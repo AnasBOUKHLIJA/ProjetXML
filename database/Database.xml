@@ -780,9 +780,9 @@
         <Removeetudiant>0</Removeetudiant>
         <Editetudiant>0</Editetudiant>
         <Abscence>1</Abscence>
-        <Addabscence>0</Addabscence>
+        <Addabscence>1</Addabscence>
         <Removeabscence>0</Removeabscence>
-        <Editabscence>0</Editabscence>
+        <Editabscence>1</Editabscence>
         <Departement>1</Departement>
         <Adddepartement>0</Adddepartement>
         <Removedepartement>0</Removedepartement>
