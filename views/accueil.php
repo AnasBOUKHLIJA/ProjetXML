@@ -69,7 +69,7 @@
                                                     <h6 class="fw-bold">Element: <?php echo $element->Element ?></h6>
                                                     <?php foreach (SeanceController::getAll($element->attributes()->Code) as $seance){ ?>
                                                         <div class="accueil-element">
-                                                            <p class="fw-bold">Seance: <?php echo $seance->Jour.' '.$seance->DateDebut.' '.$seance->DateFin.' Salle: '.SalleController::get($seance->attributes()->Salle)->Numero ?></p>
+                                                            <p class="fw-bold"><?php echo $seance->Semestre.' | S'.$seance->Semaine.' | Seance: '.$seance->Jour.' '.$seance->DateDebut.' '.$seance->DateFin.' Salle: '.SalleController::get($seance->attributes()->Salle)->Numero ?></p>
                                                         </div>
                                                     <?php } ?>
                                             </div>
@@ -93,7 +93,8 @@
                                         </div>
                                         <div class="d-flex justify-content-between accueil-absence-details">
                                         <span>
-                                            <?php echo SeanceController::get($absence->attributes()->Seance)->Jour
+                                            <?php echo 'S'.SeanceController::get($absence->attributes()->Seance)->Semaine
+                                                    ,' | Seance: '.SeanceController::get($absence->attributes()->Seance)->Jour
                                                     ,' '.SeanceController::get($absence->attributes()->Seance)->DateDebut
                                                     ,' <=> '.SeanceController::get($absence->attributes()->Seance)->DateFin; ?>
                                         </span>
