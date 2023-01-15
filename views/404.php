@@ -14,10 +14,10 @@
 </head>
 
 <body>
-<section class="py-5 mt-5">
+<section class="mt-5">
     <div class="container">
         <div class="row row-cols-1 d-flex justify-content-center align-items-center">
-            <div class="col-md-10 text-center"><img class="img-fluid w-100" src="views/assets404/img/illustrations/404.svg"></div>
+            <div class="col-md-10 text-center"><img class="img-fluid w-100 h-75 overflow-hidden" src="views/assets404/img/illustrations/404.svg"></div>
             <div class="col text-center">
                 <h2 class="display-3 fw-bold mb-4">La page web, n'a pas été trouvée</h2>
             </div>
