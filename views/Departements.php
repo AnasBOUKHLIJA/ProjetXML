@@ -51,7 +51,7 @@ if (PermissionController::get($_SESSION['code'])['Departement'] == 0){
                     <div class="container">
                         <div class="row">
                             <div class="col-md-8 col-xl-6 text-center mx-auto">
-                                <h1 class="fst-italic fw-bold">Nos departements</h1>
+                                <h1 class="fst-italic fw-bold"><?php echo LangueController::get($_COOKIE['langue'],'departements')[0] ?></h1>
                             </div>
                         </div>
                         <?php $count=0; foreach (DepartementController::getAll() as $departement){ ?>
@@ -62,10 +62,10 @@ if (PermissionController::get($_SESSION['code'])['Departement'] == 0){
                                 <div class="col d-md-flex align-items-md-end align-items-lg-center">
                                     <div>
                                         <h5 class="fw-bold"><?php echo $departement->Departement ?>&nbsp;</h5>
-                                        <p class="text-muted mb-2">Chef Departement : <?php echo DepartementController::getChefDepartement($departement->attributes()->Chef_departement) ?></p>
-                                        <p class="text-muted mb-2">Nombre des filiere : <?php echo DepartementController::getNombreFiliere($departement->attributes()->Code) ?></p>
-                                        <p class="text-muted mb-4">Nombre des professeurs : <?php echo DepartementController::getNombreProfesseur($departement->attributes()->Code)  ?></p>
-                                        <a href="/ProjetXML/DepartementDetails/<?php echo $departement->attributes()->Code ?>" class="btn btn-primary shadow" type="button">Voir les details</a>
+                                        <p class="text-muted mb-2"><?php echo LangueController::get($_COOKIE['langue'],'departements')[1] ?> : <?php echo DepartementController::getChefDepartement($departement->attributes()->Chef_departement) ?></p>
+                                        <p class="text-muted mb-2"><?php echo LangueController::get($_COOKIE['langue'],'departements')[2] ?> : <?php echo DepartementController::getNombreFiliere($departement->attributes()->Code) ?></p>
+                                        <p class="text-muted mb-4"><?php echo LangueController::get($_COOKIE['langue'],'departements')[3] ?> : <?php echo DepartementController::getNombreProfesseur($departement->attributes()->Code)  ?></p>
+                                        <a href="/ProjetXML/DepartementDetails/<?php echo $departement->attributes()->Code ?>" class="btn btn-primary shadow" type="button"><?php echo LangueController::get($_COOKIE['langue'],'departements')[4] ?></a>
                                         <?php if (PermissionController::get($_SESSION['code'])['Removedepartement'] == 1) { ?>
                                         <button class="btn p-2 bg-danger-btn border-0 btn-supp-filiere" onclick="supprimer('departement','<?php echo $departement->attributes()->Code; ?>')">
                                             <img width="30" height="30" src="/ProjetXML/views/ourAssets/images/icon-delete.png">

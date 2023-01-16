@@ -43,7 +43,7 @@
         <div id="content">
             <?php include_once 'views/includes/header.php' ?>
             <div class="container-fluid">
-                <h3 class="text-dark mb-4">Mon profil</h3>
+                <h3 class="text-dark mb-4"><?php echo LangueController::get($_COOKIE['langue'],'profil')[0] ?></h3>
                 <div class="card shadow flex-row flex-wrap justify-content-evenly" style="margin: 80px 0;padding-top: 100px; ">
                     <?php if(!empty($data['Photo']) && is_file($data['Photo'])){ ?>
                         <img src="<?php echo $data['Photo']; ?>" class="position-absolute shadow top-0 start-50 translate-middle" style="width: 200px;height: 200px;border-radius: 50%;"/>
@@ -54,41 +54,41 @@
                     <?php }?>
                     <?php if($_SESSION['personneCategorie'] == 'Professeur'){ ?>
                         <div class="m-3" style="width: 44%;">
-                            <label for="NumeroSomme" class="text-dark">Numero de Somme</label>
+                            <label for="NumeroSomme" class="text-dark"><?php echo LangueController::get($_COOKIE['langue'],'profil')[1] ?></label>
                             <input class="form-control" id="NumeroSomme" disabled value="<?php echo $data['NumeroSomme']?>">
                         </div>
                         <div class="m-3" style="width: 44%;">
-                            <label for="Departement" class="text-dark">Departement</label>
+                            <label for="Departement" class="text-dark"><?php echo LangueController::get($_COOKIE['langue'],'profil')[2] ?></label>
                             <input class="form-control" id="Departement"  value="<?php echo DepartementController::get($data['Departement']) ?>" disabled>
                         </div>
                     <?php }elseif ($_SESSION['personneCategorie'] == 'Etudiant'){ ?>
                         <div class="m-3" style="width: 44%;">
-                            <label for="Cne" class="text-dark">Cne</label>
+                            <label for="Cne" class="text-dark"><?php echo LangueController::get($_COOKIE['langue'],'profil')[3] ?></label>
                             <input class="form-control" id="Cne" disabled value="<?php echo $data['Cne']?>">
                         </div>
                         <div class="m-3" style="width: 44%;">
-                            <label for="Filiere" class="text-dark">Filiere</label>
+                            <label for="Filiere" class="text-dark"><?php echo LangueController::get($_COOKIE['langue'],'profil')[4] ?></label>
                             <input class="form-control" id="Filiere"  value="<?php echo FiliereController::get($data['Filiere'])->Intitule ?>" disabled>
                         </div>
                     <?php } ?>
                         <div class="m-3" style="width: 44%;">
-                            <label for="nom" class="text-dark">Nom</label>
+                            <label for="nom" class="text-dark"><?php echo LangueController::get($_COOKIE['langue'],'profil')[5] ?></label>
                             <input class="form-control" id="nom" disabled value="<?php echo $data['Nom']?>">
                         </div>
                         <div class="m-3" style="width: 44%;">
-                            <label for="prenom" class="text-dark">Prenom</label>
+                            <label for="prenom" class="text-dark"><?php echo LangueController::get($_COOKIE['langue'],'profil')[6] ?></label>
                             <input class="form-control" id="prenom"  value="<?php echo $data['Prenom']?>" disabled>
                         </div>
                         <div class="m-3" style="width: 44%;">
-                            <label for="cin" class="text-dark">Cin</label>
+                            <label for="cin" class="text-dark"><?php echo LangueController::get($_COOKIE['langue'],'profil')[7] ?></label>
                             <input class="form-control" id="cin"  value="<?php echo $data['Cin']?>" disabled>
                         </div>
                         <div class="m-3" style="width: 44%;">
-                            <label for="email" class="text-dark">Email</label>
+                            <label for="email" class="text-dark"><?php echo LangueController::get($_COOKIE['langue'],'profil')[8] ?></label>
                             <input class="form-control" id="email"  value="<?php echo $data['Email']?>" disabled>
                         </div>
                         <div class="m-3 mb-5" style="width: 44%;">
-                            <label for="tele" class="text-dark">Telephone</label>
+                            <label for="tele" class="text-dark"><?php echo LangueController::get($_COOKIE['langue'],'profil')[9] ?></label>
                             <input class="form-control" id="tele"  value="<?php echo $data['Telephone']?>" disabled>
                         </div>
                 </div>

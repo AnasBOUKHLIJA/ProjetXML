@@ -17,7 +17,27 @@ class LangueController
                 'Ajouter un Professeur',
                 'Etudiants',
                 'Ajouter un etudiant',
-            )
+            ),
+            'profil' => array(
+                'Mon profil',
+                'Numéro de Somme',
+                'Departement',
+                'Cne',
+                'Filiere',
+                'Nom',
+                'Prenom',
+                'Cin',
+                'Email',
+                'Telephone'
+            ),
+            'departements' => array(
+                'Nos departements',
+                'Chef Departement',
+                'Nombre des filiere',
+                'Nombre des professeurs',
+                'voire les details',
+            ),
+            ''=>array(),
         ),
         'anglais' => array(
             'sidebar' => array(
@@ -34,7 +54,26 @@ class LangueController
                 'Add a Teacher',
                 'Students',
                 'Add a student',
-            )
+            ),
+            'profil' => array(
+                'My profile',
+                'Sum number',
+                'Department',
+                'Cne',
+                'Sector',
+                'Last name',
+                'First name',
+                'Cin',
+                'E-mail',
+                'Phone number'
+            ),
+            'departements' => array(
+                'Our departments',
+                'Department boss',
+                'Number of channels',
+                'Number of teachers',
+                'see the details',
+            ),
         )
     );
     static public function get($lan,$target){
