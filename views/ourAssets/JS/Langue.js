@@ -11,5 +11,4 @@ const changeLangue = (lang) => {
         console.log(window.location.href);
         window.location.reload();
     }
-
 }

@@ -6,7 +6,10 @@
                 <div class="nav-item dropdown no-arrow">
                     <a class="dropdown-toggle nav-link text-black" aria-expanded="false"
                        data-bs-toggle="dropdown" href="#">
-                        <?php if(isset($_COOKIE['langue'])) {echo $_COOKIE['langue'];} ?>
+                        <?php if(isset($_COOKIE['langue'])) {
+                            if($_COOKIE['langue'] == "Francais") echo "Français";
+                            else echo $_COOKIE['langue'];
+                        } ?>
                     </a>
                     <div class="dropdown-menu shadow dropdown-menu-end animated--grow-in">
                         <a class="dropdown-item" onclick="changeLangue('Francais')"><i class="fas fa-language"></i>&nbsp;Français</a>
