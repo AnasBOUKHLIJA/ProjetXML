@@ -162,16 +162,6 @@
         <Telephone>22222222222</Telephone>
         <Photo/>
       </Personne>
-      <Personne Sexe="F" Code="S5">
-        <Username>1515</Username>
-        <Password/>
-        <Nom/>
-        <Prenom/>
-        <Cin/>
-        <Email/>
-        <Telephone/>
-        <Photo/>
-      </Personne>
     </Personnes>
     <Directeur Code="D1">
         </Directeur>
@@ -186,7 +176,6 @@
             </AgentScolarite>
       <AgentScolarite Code="S3"/>
       <AgentScolarite Code="S4"/>
-      <AgentScolarite Code="S5"/>
     </AgentScolarites>
     <Professeurs>
       <Professeur Code="P1">
@@ -1075,52 +1064,6 @@
         <Removeseance>0</Removeseance>
         <Editseance>0</Editseance>
       </Permission>
-      <Permission Code="S5">
-        <Supperadmin>0</Supperadmin>
-        <Addsupperadmin>0</Addsupperadmin>
-        <Removesuperadmin>0</Removesuperadmin>
-        <Editsuperadmin>0</Editsuperadmin>
-        <Professeur>1</Professeur>
-        <Addprofesseur>0</Addprofesseur>
-        <Removeprofesseur>0</Removeprofesseur>
-        <Editprofesseur>0</Editprofesseur>
-        <Agentscolarite>1</Agentscolarite>
-        <Addagentscolarite>1</Addagentscolarite>
-        <Removeagentscolarite>1</Removeagentscolarite>
-        <Editagentscolarite>1</Editagentscolarite>
-        <Directeur>0</Directeur>
-        <Adddirecteur>0</Adddirecteur>
-        <Removedirecteur>0</Removedirecteur>
-        <Editdirecteur>0</Editdirecteur>
-        <Etudiant>1</Etudiant>
-        <Addetudiant>1</Addetudiant>
-        <Removeetudiant>1</Removeetudiant>
-        <Editetudiant>1</Editetudiant>
-        <Abscence>1</Abscence>
-        <Addabscence>0</Addabscence>
-        <Removeabscence>0</Removeabscence>
-        <Editabscence>0</Editabscence>
-        <Departement>1</Departement>
-        <Adddepartement>0</Adddepartement>
-        <Removedepartement>0</Removedepartement>
-        <Editdepartement>0</Editdepartement>
-        <Filiere>0</Filiere>
-        <Addfiliere>0</Addfiliere>
-        <Removefiliere>0</Removefiliere>
-        <Editfiliere>0</Editfiliere>
-        <Module>0</Module>
-        <Addmodule>0</Addmodule>
-        <Removemodule>0</Removemodule>
-        <Editmodule>0</Editmodule>
-        <Element>0</Element>
-        <Addelement>0</Addelement>
-        <Removeelement>0</Removeelement>
-        <Editelement>0</Editelement>
-        <Seance>0</Seance>
-        <Addseance>0</Addseance>
-        <Removeseance>0</Removeseance>
-        <Editseance>0</Editseance>
-      </Permission>
       <Permission Code="S6">
         <Supperadmin>0</Supperadmin>
         <Addsupperadmin>0</Addsupperadmin>
@@ -1485,10 +1428,10 @@
       </Filiere>
     </Filieres>
     <Modules>
-      <Module Coordonateur="P1" Filiere="Dept1Fil1" Code="Dept1Fil1MOD1" Hide="0">
+      <Module Coordonateur="P1" Filiere="Dept1Fil1" Code="Dept1Fil1MOD1" Hide="1">
         <Module>Algorithmique et Bases de la Programmation</Module>
       </Module>
-      <Module Coordonateur="P2" Filiere="Dept1Fil1" Code="Dept1Fil1MOD2" Hide="0">
+      <Module Coordonateur="P2" Filiere="Dept1Fil1" Code="Dept1Fil1MOD2" Hide="1">
         <Module>Architecture des Ordinateurs</Module>
       </Module>
       <Module Coordonateur="P3" Filiere="Dept1Fil1" Code="Dept1Fil1MOD3">
