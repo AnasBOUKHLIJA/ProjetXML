@@ -5,7 +5,7 @@ class LangueController
         'francais' => array(
             'sidebar' => array(
                 'Accueil',
-                'Profile',
+                'Profil',
                 'Permission',
                 'Departements',
                 'ajouter un departement',
