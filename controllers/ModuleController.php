@@ -25,11 +25,15 @@ class ModuleController
         $code = $code+1;
         $data['Code'] = $data['filiere'].'MOD'.$code;
         Module::add($data);
+        header('location: /ProjetXML/filieresDetails/'.$data['filiere'].'/succes');
     }
     static function delete($code){
+        $filiere = ModuleController::get($code)->attributes()->Filiere;
         Module::delete($code);
+        echo "/ProjetXML/filieresDetails/".$filiere."/attention";
     }
     static function hide($code,$value){
         Module::hide($code,$value);
+        echo "/ProjetXML/filieresDetails/".ModuleController::get($code)->attributes()->Filiere."/info";
     }
 }

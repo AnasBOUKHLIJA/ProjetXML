@@ -49,7 +49,9 @@ if(isset($_POST['submit'])){
         <?php include 'views/includes/sideBar.php' ?>
         <div class="d-flex flex-column" id="content-wrapper">
             <div id="content">
-                <?php include_once 'views/includes/header.php' ?>
+                <?php include_once 'views/includes/header.php';
+                include_once 'views/includes/Toast.php'
+                ?>
                 <div class="container-fluid">
                     <div class="row d-flex justify-content-center">
                         <div class="col-md-6 col-xl-4 w-100 mb-5">
@@ -113,7 +115,7 @@ if(isset($_POST['submit'])){
     </div>
     <script src="/ProjetXML/views/assetsAdminPanel/bootstrap/js/bootstrap.min.js"></script>
     <script src="/ProjetXML/views/assetsAdminPanel/js/theme.js"></script>
-    <script src="views/ourAssets/JS/Langue.js"></script>
+    <script src="/ProjetXML/views/ourAssets/JS/Langue.js"></script>
 </body>
 
 </html>

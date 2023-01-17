@@ -19,8 +19,13 @@ class ProfesseurController
             $code = $code+1;
             $data['Code'] = 'P'.$code;
             Professeur::add($data);
+            header('location: /ProjetXML/ajoutProfesseur/succes');
         }else{
-            echo "Deja exist";
+            header('location: /ProjetXML/ajoutProfesseur/erreur');
         }
+    }
+    static function delete($code){
+        Professeur::delete($code);
+        echo "/ProjetXML/professeurs/attention";
     }
 }

@@ -18,10 +18,10 @@ if(isset($_POST['submit'])){
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Permission</title>
-    <link rel="stylesheet" href="views/assetsAdminPanel/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/ProjetXML/views/assetsAdminPanel/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;display=swap">
-    <link rel="stylesheet" href="views/assetsAdminPanel/fonts/fontawesome-all.min.css">
-    <link rel="stylesheet" href="views/ourAssets/CSS/style.css">
+    <link rel="stylesheet" href="/ProjetXML/views/assetsAdminPanel/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="/ProjetXML/views/ourAssets/CSS/style.css">
 </head>
 
 <body id="page-top">
@@ -29,7 +29,9 @@ if(isset($_POST['submit'])){
     <?php include 'views/includes/sideBar.php' ?>
     <div class="d-flex flex-column" id="content-wrapper">
         <div id="content">
-            <?php include_once 'views/includes/header.php' ?>
+            <?php include_once 'views/includes/header.php';
+            include_once 'views/includes/Toast.php'
+            ?>
             <div class="container-fluid">
                 <div class="card shadow">
                     <div class="card-header py-3">
@@ -54,11 +56,11 @@ if(isset($_POST['submit'])){
                                     <tr>
                                         <td class="text-center align-middle">
                                             <?php if (!empty($personne->Photo) && is_file($personne->Photo)) { ?>
-                                                <img class="rounded-circle me-2" width="30" height="30" src="<?php echo $personne->Photo; ?>">
+                                                <img class="rounded-circle me-2" width="30" height="30" src="<?php echo '/ProjetXML/'.$personne->Photo; ?>">
                                             <?php } elseif ($personne->attributes()->Sexe == 'M') { ?>
-                                                <img class="rounded-circle me-2" width="30" height="30" src="views/ourAssets/images/prof.png">
+                                                <img class="rounded-circle me-2" width="30" height="30" src="/ProjetXML/views/ourAssets/images/prof.png">
                                             <?php } else { ?>
-                                                <img class="rounded-circle me-2" width="30" height="30" src="views/ourAssets/images/prof-file.png">
+                                                <img class="rounded-circle me-2" width="30" height="30" src="/ProjetXML/views/ourAssets/images/prof-file.png">
                                             <?php } ?>
                                         </td>
                                         <td class="text-center align-middle"><?php echo $personne->Nom ?></td>
@@ -142,8 +144,8 @@ if(isset($_POST['submit'])){
             </div>
         </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
     </div>
-    <script src="views/assetsAdminPanel/bootstrap/js/bootstrap.min.js"></script>
-    <script src="views/assetsAdminPanel/js/theme.js"></script>
+    <script src="/ProjetXML/views/assetsAdminPanel/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/ProjetXML/views/assetsAdminPanel/js/theme.js"></script>
     <script src="/ProjetXML/views/OurAssets/js/popupWindow.js"></script>
     <script src="/ProjetXML/views/ourAssets/JS/Langue.js"></script>
 </body>

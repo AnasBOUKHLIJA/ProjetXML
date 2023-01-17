@@ -140,7 +140,7 @@
     align-items: center;
     display: none;
   }
-  .popup-window {
+  .popup-window-1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -154,11 +154,24 @@
     position: relative;
   }
 
-  .popup-window img {
-    margin: 0 auto 15px;
-    width: 26%;
+  .popup-window-1 .img-user {
+    width: 200px;
+    height: 200px;
+    object-fit: fill;
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0 !important;
+    padding: 0 !important;
+      border-radius: 50%;
+    z-index: 1000!important;
   }
-  .popup-window p {
+.popup-window-1 .card-prof{
+    z-index: 1 !important;
+    overflow-y: scroll;
+}
+.popup-window p {
     margin-bottom: 20px;
   }
   .popup-window i {
@@ -285,4 +298,84 @@
 .permission-item{
   width: 22%;
   text-align: left;
+}
+
+
+#toast {
+    position: fixed;
+    top: 14vh;
+    right: 10px;
+    z-index: 10000;
+    background-color: var(--main);
+    color:  #FFFFFF;
+    border-radius: 15px;
+    width: 400px;
+    overflow: hidden;
+    padding: 0;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    opacity: 0;
+    animation: toast 5s;
+}
+@keyframes toast {
+    0% {
+        opacity: 1;
+    }
+    90%{
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+#toast img{
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+}
+#toast div{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 5px;
+}
+
+#toast-error{
+    background-color: 	#cf000f;
+}
+#toast-warning{
+    background-color: #f0541e;
+}
+#toast-info{
+    background-color: #63c0df;
+}
+#toast-success{
+    background-color: #009944;
+}
+
+@media only screen and (max-width: 768px) {
+    #body-connexion{
+        margin: 0;
+        padding: 0;
+    }
+
+    #wave{
+        display: none;
+    }
+
+    #container-form{
+        backdrop-filter: blur(5px) saturate(110%) brightness(120%);
+        width: 90%;
+        height: 60vh;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        position: relative;
+        top: 20vh;
+        right: 5%;
+        left: 5%;
+        text-align: center;
+    }
+    .card-dept{
+        display: flex;
+        flex-direction: column;
+    }
 }

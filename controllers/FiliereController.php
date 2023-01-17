@@ -31,8 +31,10 @@ class FiliereController
         $code = $code+1;
         $data['Code'] = $data['departement'].'Fil'.$code;
         Filiere::add($data);
+        header('location: /ProjetXML/ajoutFiliere/succes');
     }
     static function delete($code){
         Filiere::delete($code);
+        echo "/ProjetXML/filieres/attention";
     }
 }

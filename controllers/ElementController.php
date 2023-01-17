@@ -29,8 +29,11 @@ class ElementController
         $code = $code+1;
         $data['Code'] = $data['module'].'ELE'.$code;
         Element::add($data);
+        header('location: /ProjetXML/moduleDetails/'.$data['module'].'/succes');
     }
     static function delete($code){
+        $module = ElementController::get($code)->attributes()->Module;
         Element::delete($code);
+        echo "/ProjetXML/moduleDetails/".$module."/attention";
     }
 }

@@ -25,6 +25,7 @@ class Module
         $Module->addAttribute('Coordonateur', $data['coordonateur']);
         $Module->addAttribute('Filiere', $data['filiere']);
         $Module->addAttribute('Code', $data['Code']);
+        $Module->addAttribute('Hide', 0);
         $Module->addChild('Module', $data['module']);
         $dom = new DOMDocument('1.0');
         $dom->preserveWhiteSpace = false;
@@ -60,9 +61,9 @@ class Module
         $file = 'Database/Database.xml';
         $CadiAyyad  = simplexml_load_file($file);
         $target =  $CadiAyyad ->xpath('//Modules/Module[@Code="'.$code.'"]');
-        try{
+        /*try{
            $target[0]->addAttribute('Hide',$value); 
-        }catch(Exception $e){}
+        }catch(Exception $e){}*/
         try{
             $target[0]->attributes()->Hide = $value; 
         }catch(Exception $e){}

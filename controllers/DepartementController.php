@@ -29,8 +29,11 @@ class DepartementController
         $data['Code'] = 'Dept'.$code;
         print_r($data);
         Departement::add($data);
+        header('location: /ProjetXML/ajoutDepartement/succes');
     }
     static function delete($code){
         Departement::delete($code);
+        echo "/ProjetXML/departements/attention";
     }
+
 }

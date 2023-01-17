@@ -17,5 +17,6 @@ class AbsenceController
                 Absence::add($item,$data['seance']);
             }
         }
+        header('location: /ProjetXML/ElementDetails/'.SeanceController::get($data['seance'])->attributes()->Element.'/succes');
     }
 }

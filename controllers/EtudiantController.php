@@ -22,8 +22,13 @@ class EtudiantController
             $code = $code+1;
             $data['Code'] = 'E'.$code;
             Etudiant::add($data);
+            header('location: /ProjetXML/ajoutEtudiant/succes');
         }else{
-            echo "Deja exist";
+            header('location: /ProjetXML/ajoutEtudiant/erreur');
         }
+    }
+    static function delete($code){
+        Etudiant::delete($code);
+        echo "/ProjetXML/etudiants/attention";
     }
 }

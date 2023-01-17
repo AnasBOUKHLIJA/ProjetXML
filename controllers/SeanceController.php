@@ -24,9 +24,12 @@ class SeanceController
         $code = $code+1;
         $data['Code'] = $data['element'].'Sean'.$code;
         Seance::add($data);
+        header('location: /ProjetXML/ElementDetails/'.$data['element'].'/succes');
     }
     static function delete($code){
+        $element = SeanceController::get($code)->attributes()->Element;
        Seance::delete($code);
+        echo "/ProjetXML/ElementDetails/".$element."/attention";
     }
 }
 // $daysOfWeek = array(

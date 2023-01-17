@@ -32,7 +32,7 @@ if ($_SESSION['personneCategorie'] == 'Etudiant') {
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Filieres</title>
+    <title>Departement details</title>
     <link rel="stylesheet" href="/ProjetXML/views/assetsAdminPanel/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;display=swap">
     <link rel="stylesheet" href="/ProjetXML/views/assetsAdminPanel/fonts/fontawesome-all.min.css">
@@ -46,7 +46,9 @@ if ($_SESSION['personneCategorie'] == 'Etudiant') {
         <?php include 'views/includes/sideBar.php' ?>
         <div class="d-flex flex-column" id="content-wrapper">
             <div id="content">
-                <?php include_once 'views/includes/header.php' ?>
+                <?php include_once 'views/includes/header.php';
+                include_once 'views/includes/Toast.php'
+                ?>
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-8 col-xl-6 text-center mx-auto m-5">

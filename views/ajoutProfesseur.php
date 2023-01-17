@@ -34,7 +34,7 @@ if(isset($_POST['submit'])){
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Filieres</title>
+    <title>Ajout Professeur</title>
     <link rel="stylesheet" href="/ProjetXML/views/assetsAdminPanel/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;display=swap">
     <link rel="stylesheet" href="/ProjetXML/views/assetsAdminPanel/fonts/fontawesome-all.min.css">
@@ -48,7 +48,9 @@ if(isset($_POST['submit'])){
         <?php include 'views/includes/sideBar.php' ?>
         <div class="d-flex flex-column" id="content-wrapper">
             <div id="content">
-                <?php include_once 'views/includes/header.php' ?>
+                <?php include_once 'views/includes/header.php';
+                include_once 'views/includes/Toast.php'
+                ?>
                 <div class="container-fluid">
                     <div class="row d-flex justify-content-center">
                         <div class="col-md-6 col-xl-4 w-100 mb-5">

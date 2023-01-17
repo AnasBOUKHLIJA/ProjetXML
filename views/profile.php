@@ -29,7 +29,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Profile</title>
+    <title>Profil</title>
     <link rel="stylesheet" href="views/assetsAdminPanel/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;display=swap">
     <link rel="stylesheet" href="views/assetsAdminPanel/fonts/fontawesome-all.min.css">
@@ -41,7 +41,9 @@
     <?php include 'views/includes/sideBar.php'?>
     <div class="d-flex flex-column" id="content-wrapper">
         <div id="content">
-            <?php include_once 'views/includes/header.php' ?>
+            <?php include_once 'views/includes/header.php';
+            include_once 'views/includes/Toast.php'
+            ?>
             <div class="container-fluid">
                 <h3 class="text-dark mb-4"><?php echo LangueController::get($_COOKIE['langue'],'profil')[0] ?></h3>
                 <div class="card shadow flex-row flex-wrap justify-content-evenly" style="margin: 80px 0;padding-top: 100px; ">

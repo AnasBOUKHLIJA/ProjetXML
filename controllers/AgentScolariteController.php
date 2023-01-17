@@ -21,8 +21,14 @@ class AgentScolariteController
             $code = $code+1;
             $data['Code'] = 'S'.$code;
             AgentScolarite::add($data);
+            header('location: /ProjetXML/ajoutAgentScolarite/succes');
         }else{
-            echo "Deja exist";
+            header('location: /ProjetXML/ajoutAgentScolarite/erreur');
         }
+
+    }
+    static function delete($code){
+        AgentScolarite::delete($code);
+        echo "/ProjetXML/agentScolarites/attention";
     }
 }

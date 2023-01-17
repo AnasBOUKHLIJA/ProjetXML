@@ -32,12 +32,12 @@ if (PermissionController::get($_SESSION['code'])['Departement'] == 0){
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Departements</title>
-    <link rel="stylesheet" href="views/assetsAdminPanel/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/ProjetXML/views/assetsAdminPanel/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;display=swap">
-    <link rel="stylesheet" href="views/assetsAdminPanel/fonts/fontawesome-all.min.css">
-    <link rel="stylesheet" href="views/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/ProjetXML/views/assetsAdminPanel/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="/ProjetXML/views/assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
-    <link rel="stylesheet" href="views/ourAssets/CSS/style.css">
+    <link rel="stylesheet" href="/ProjetXML/views/ourAssets/CSS/style.css">
 </head>
 
 <body id="page-top">
@@ -45,7 +45,9 @@ if (PermissionController::get($_SESSION['code'])['Departement'] == 0){
     <?php include 'views/includes/sideBar.php'?>
     <div class="d-flex flex-column" id="content-wrapper">
         <div id="content">
-            <?php include_once 'views/includes/header.php' ?>
+            <?php include_once 'views/includes/header.php';
+            include_once 'views/includes/Toast.php'
+            ?>
             <div class="container-fluid">
                 <section class="py-5">
                     <div class="container">
@@ -55,9 +57,9 @@ if (PermissionController::get($_SESSION['code'])['Departement'] == 0){
                             </div>
                         </div>
                         <?php $count=0; foreach (DepartementController::getAll() as $departement){ ?>
-                            <div class="row mx-auto rounded mb-5" style="max-width: 900px;min-height: 300px">
+                            <div class="row mx-auto rounded mb-5 card-dept" style="max-width: 900px;min-height: 300px">
                                 <div class="col <?php if($count%2 == 0) echo "order-md-last" ?>">
-                                    <img class="rounded img-fluid align-middle" style="height: 100%;" src="views/ourAssets/images/departement.png">
+                                    <img class="rounded img-fluid align-middle" style="height: 100%;" src="/ProjetXML/views/ourAssets/images/departement.png">
                                 </div>
                                 <div class="col d-md-flex align-items-md-end align-items-lg-center">
                                     <div>
@@ -81,9 +83,9 @@ if (PermissionController::get($_SESSION['code'])['Departement'] == 0){
         </div>
     </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
 </div>
-<script src="views/assetsAdminPanel/bootstrap/js/bootstrap.min.js"></script>
-<script src="views/assetsAdminPanel/js/theme.js"></script>
-<script src="views/ourAssets/JS/Langue.js"></script>
+<script src="/ProjetXML/views/assetsAdminPanel/bootstrap/js/bootstrap.min.js"></script>
+<script src="/ProjetXML/views/assetsAdminPanel/js/theme.js"></script>
+<script src="/ProjetXML/views/ourAssets/JS/Langue.js"></script>
 <script src="/ProjetXML/views/ourAssets/JS/Suppression.js"></script>
 </body>
 

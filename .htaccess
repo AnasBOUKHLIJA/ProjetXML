@@ -1,4 +1,12 @@
 RewriteEngine On
 RewriteBase /ProjetXML/
 RewriteRule ^([a-zA-Z0-9]+)$ index.php?page=$1
+RewriteRule ^([a-zA-Z0-9]+)/succes$ index.php?page=$1&succes
+RewriteRule ^([a-zA-Z0-9]+)/info$ index.php?page=$1&info
+RewriteRule ^([a-zA-Z0-9]+)/attention$ index.php?page=$1&attention
+RewriteRule ^([a-zA-Z0-9]+)/erreur$ index.php?page=$1&erreur
 RewriteRule ^([a-zA-Z0-9]+)/([a-zA-Z0-9]+)$ index.php?page=$1&dept=$2
+RewriteRule ^([a-zA-Z0-9]+)/([a-zA-Z0-9]+)/succes$ index.php?page=$1&dept=$2&succes
+RewriteRule ^([a-zA-Z0-9]+)/([a-zA-Z0-9]+)/info$ index.php?page=$1&dept=$2&info
+RewriteRule ^([a-zA-Z0-9]+)/([a-zA-Z0-9]+)/attention$  index.php?page=$1&dept=$2&attention
+RewriteRule ^([a-zA-Z0-9]+)/([a-zA-Z0-9]+)/erreur$ index.php?page=$1&dept=$2&erreur

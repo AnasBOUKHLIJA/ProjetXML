@@ -44,4 +44,24 @@ class Professeur
         $dom->loadXML($xml->asXML());
         $dom->save($file);
     }
+    static function delete($code){
+        $file = 'Database/Database.xml';
+        $CadiAyyad  = simplexml_load_file($file);
+        $targetPersonne =  $CadiAyyad ->xpath('//Personnes/Personne[@Code= "'.$code.'"]');
+        $domRefPersonne = dom_import_simplexml($targetPersonne[0]);
+        $domRefPersonne->parentNode->removeChild($domRefPersonne);
+        $targetPermission =  $CadiAyyad ->xpath('//Permissions/Permission[@Code= "'.$code.'"]');
+        $domRefPermission = dom_import_simplexml($targetPermission[0]);
+        $domRefPermission->parentNode->removeChild($domRefPermission);
+        $target =  $CadiAyyad ->xpath('//Professeurs/Professeur[@Code="'.$code.'"]');
+        if ($target) {
+            $domRef = dom_import_simplexml($target[0]);
+            $domRef->parentNode->removeChild($domRef);
+            $dom = new DOMDocument('1.0');
+            $dom->preserveWhiteSpace = false;
+            $dom->formatOutput = true;
+            $dom->loadXML( $CadiAyyad ->asXML());
+            $dom->save($file);
+        }
+    }
 }

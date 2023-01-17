@@ -8,7 +8,7 @@ const supprimer = (target,code) => {
     }));
     xhr.onload = function() {
         console.log(this.responseText);
-        window.location.reload();
+        location.replace(this.responseText);
     }
 }
 const hide = (target,code,value) => {
@@ -22,6 +22,6 @@ const hide = (target,code,value) => {
     }));
     xhr.onload = function() {
         console.log(this.responseText);
-        window.location.reload();
+        location.replace(this.responseText);
     }
 }

@@ -12,4 +12,10 @@
         FiliereController::delete($code);
     }elseif ($target == "departement"){
         DepartementController::delete($code);
+    }elseif ($target == "agent"){
+        AgentScolariteController::delete($code);
+    }elseif ($target == "professeur"){
+        ProfesseurController::delete($code);
+    }elseif ($target == "etudiant"){
+        EtudiantController::delete($code);
     }

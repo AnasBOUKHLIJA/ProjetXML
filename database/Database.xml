@@ -132,16 +132,6 @@
         <Telephone>0666248157</Telephone>
         <Photo>views/ourAssets/images/upload/IMG-63a3b2ec53c3b7.57636645.jpeg</Photo>
       </Personne>
-      <Personne Sexe="M" Code="S4">
-        <Username>HHH</Username>
-        <Password>HHH</Password>
-        <Nom>TEST</Nom>
-        <Prenom>TEST</Prenom>
-        <Cin>HHH</Cin>
-        <Email>HHH</Email>
-        <Telephone>HHH</Telephone>
-        <Photo>views/ourAssets/images/upload/IMG-63a841a8430a04.20078026.jpeg</Photo>
-      </Personne>
       <Personne Sexe="M" Code="E4">
         <Username>KHOUBACH</Username>
         <Password>KHOUBACH</Password>
@@ -162,6 +152,26 @@
         <Telephone>0600000000</Telephone>
         <Photo>views/ourAssets/images/upload/IMG-63aa0c56e9b053.16508125.jpg</Photo>
       </Personne>
+      <Personne Sexe="F" Code="S4">
+        <Username>222222222222</Username>
+        <Password>2222222222222222222</Password>
+        <Nom>ABOUSSAFI</Nom>
+        <Prenom>22222222</Prenom>
+        <Cin>2222222222</Cin>
+        <Email>2222222222</Email>
+        <Telephone>22222222222</Telephone>
+        <Photo/>
+      </Personne>
+      <Personne Sexe="F" Code="S5">
+        <Username>1515</Username>
+        <Password/>
+        <Nom/>
+        <Prenom/>
+        <Cin/>
+        <Email/>
+        <Telephone/>
+        <Photo/>
+      </Personne>
     </Personnes>
     <Directeur Code="D1">
         </Directeur>
@@ -176,6 +186,7 @@
             </AgentScolarite>
       <AgentScolarite Code="S3"/>
       <AgentScolarite Code="S4"/>
+      <AgentScolarite Code="S5"/>
     </AgentScolarites>
     <Professeurs>
       <Professeur Code="P1">
@@ -222,46 +233,6 @@
       </Etudiant>
     </Etudiants>
     <Permissions>
-      <Permission Code="S1">
-        <Addsupperadmin>0</Addsupperadmin>
-        <Removesuperadmin>0</Removesuperadmin>
-        <Editsuperadmin>0</Editsuperadmin>
-        <Addprofesseur>0</Addprofesseur>
-        <Removeprofesseur>0</Removeprofesseur>
-        <Editprofesseur>0</Editprofesseur>
-        <Addagentscolarite>1</Addagentscolarite>
-        <Removeagentscolarite>1</Removeagentscolarite>
-        <Editagentscolarite>1</Editagentscolarite>
-        <Adddirecteur>0</Adddirecteur>
-        <Removedirecteur>0</Removedirecteur>
-        <Editdirecteur>0</Editdirecteur>
-        <Addetudiant>1</Addetudiant>
-        <Removeetudiant>0</Removeetudiant>
-        <Editetudiant>1</Editetudiant>
-        <Addabscence>0</Addabscence>
-        <Removeabscence>0</Removeabscence>
-        <Editabscence>0</Editabscence>
-      </Permission>
-      <Permission Code="S2">
-        <Addsupperadmin>0</Addsupperadmin>
-        <Removesuperadmin>0</Removesuperadmin>
-        <Editsuperadmin>0</Editsuperadmin>
-        <Addprofesseur>0</Addprofesseur>
-        <Removeprofesseur>0</Removeprofesseur>
-        <Editprofesseur>0</Editprofesseur>
-        <Addagentscolarite>1</Addagentscolarite>
-        <Removeagentscolarite>1</Removeagentscolarite>
-        <Editagentscolarite>1</Editagentscolarite>
-        <Adddirecteur>0</Adddirecteur>
-        <Removedirecteur>0</Removedirecteur>
-        <Editdirecteur>0</Editdirecteur>
-        <Addetudiant>1</Addetudiant>
-        <Removeetudiant>0</Removeetudiant>
-        <Editetudiant>1</Editetudiant>
-        <Addabscence>0</Addabscence>
-        <Removeabscence>0</Removeabscence>
-        <Editabscence>0</Editabscence>
-      </Permission>
       <Permission Code="P2">
         <Addsupperadmin>0</Addsupperadmin>
         <Removesuperadmin>0</Removesuperadmin>
@@ -321,52 +292,6 @@
         <Addabscence>0</Addabscence>
         <Removeabscence>0</Removeabscence>
         <Editabscence>0</Editabscence>
-      </Permission>
-      <Permission Code="A1">
-        <Supperadmin>1</Supperadmin>
-        <Addsupperadmin>1</Addsupperadmin>
-        <Removesuperadmin>1</Removesuperadmin>
-        <Editsuperadmin>1</Editsuperadmin>
-        <Professeur>1</Professeur>
-        <Addprofesseur>1</Addprofesseur>
-        <Removeprofesseur>1</Removeprofesseur>
-        <Editprofesseur>1</Editprofesseur>
-        <Agentscolarite>1</Agentscolarite>
-        <Addagentscolarite>1</Addagentscolarite>
-        <Removeagentscolarite>1</Removeagentscolarite>
-        <Editagentscolarite>1</Editagentscolarite>
-        <Directeur>1</Directeur>
-        <Adddirecteur>1</Adddirecteur>
-        <Removedirecteur>1</Removedirecteur>
-        <Editdirecteur>1</Editdirecteur>
-        <Etudiant>1</Etudiant>
-        <Addetudiant>1</Addetudiant>
-        <Removeetudiant>1</Removeetudiant>
-        <Editetudiant>1</Editetudiant>
-        <Abscence>1</Abscence>
-        <Addabscence>1</Addabscence>
-        <Removeabscence>1</Removeabscence>
-        <Editabscence>1</Editabscence>
-        <Departement>1</Departement>
-        <Adddepartement>1</Adddepartement>
-        <Removedepartement>1</Removedepartement>
-        <Editdepartement>1</Editdepartement>
-        <Filiere>1</Filiere>
-        <Addfiliere>1</Addfiliere>
-        <Removefiliere>1</Removefiliere>
-        <Editfiliere>1</Editfiliere>
-        <Module>1</Module>
-        <Addmodule>1</Addmodule>
-        <Removemodule>1</Removemodule>
-        <Editmodule>1</Editmodule>
-        <Element>1</Element>
-        <Addelement>1</Addelement>
-        <Removeelement>1</Removeelement>
-        <Editelement>1</Editelement>
-        <Seance>1</Seance>
-        <Addseance>1</Addseance>
-        <Removeseance>1</Removeseance>
-        <Editseance>1</Editseance>
       </Permission>
       <Permission Code="P2">
         <Supperadmin>0</Supperadmin>
@@ -828,6 +753,650 @@
         <Removeseance>0</Removeseance>
         <Editseance>0</Editseance>
       </Permission>
+      <Permission Code="S4">
+        <Supperadmin>0</Supperadmin>
+        <Addsupperadmin>0</Addsupperadmin>
+        <Removesuperadmin>0</Removesuperadmin>
+        <Editsuperadmin>0</Editsuperadmin>
+        <Professeur>1</Professeur>
+        <Addprofesseur>0</Addprofesseur>
+        <Removeprofesseur>0</Removeprofesseur>
+        <Editprofesseur>0</Editprofesseur>
+        <Agentscolarite>1</Agentscolarite>
+        <Addagentscolarite>1</Addagentscolarite>
+        <Removeagentscolarite>1</Removeagentscolarite>
+        <Editagentscolarite>1</Editagentscolarite>
+        <Directeur>0</Directeur>
+        <Adddirecteur>0</Adddirecteur>
+        <Removedirecteur>0</Removedirecteur>
+        <Editdirecteur>0</Editdirecteur>
+        <Etudiant>1</Etudiant>
+        <Addetudiant>1</Addetudiant>
+        <Removeetudiant>1</Removeetudiant>
+        <Editetudiant>1</Editetudiant>
+        <Abscence>1</Abscence>
+        <Addabscence>0</Addabscence>
+        <Removeabscence>0</Removeabscence>
+        <Editabscence>0</Editabscence>
+        <Departement>1</Departement>
+        <Adddepartement>0</Adddepartement>
+        <Removedepartement>0</Removedepartement>
+        <Editdepartement>0</Editdepartement>
+        <Filiere>0</Filiere>
+        <Addfiliere>0</Addfiliere>
+        <Removefiliere>0</Removefiliere>
+        <Editfiliere>0</Editfiliere>
+        <Module>0</Module>
+        <Addmodule>0</Addmodule>
+        <Removemodule>0</Removemodule>
+        <Editmodule>0</Editmodule>
+        <Element>0</Element>
+        <Addelement>0</Addelement>
+        <Removeelement>0</Removeelement>
+        <Editelement>0</Editelement>
+        <Seance>0</Seance>
+        <Addseance>0</Addseance>
+        <Removeseance>0</Removeseance>
+        <Editseance>0</Editseance>
+      </Permission>
+      <Permission Code="S4">
+        <Supperadmin>0</Supperadmin>
+        <Addsupperadmin>0</Addsupperadmin>
+        <Removesuperadmin>0</Removesuperadmin>
+        <Editsuperadmin>0</Editsuperadmin>
+        <Professeur>1</Professeur>
+        <Addprofesseur>0</Addprofesseur>
+        <Removeprofesseur>0</Removeprofesseur>
+        <Editprofesseur>0</Editprofesseur>
+        <Agentscolarite>1</Agentscolarite>
+        <Addagentscolarite>1</Addagentscolarite>
+        <Removeagentscolarite>1</Removeagentscolarite>
+        <Editagentscolarite>1</Editagentscolarite>
+        <Directeur>0</Directeur>
+        <Adddirecteur>0</Adddirecteur>
+        <Removedirecteur>0</Removedirecteur>
+        <Editdirecteur>0</Editdirecteur>
+        <Etudiant>1</Etudiant>
+        <Addetudiant>1</Addetudiant>
+        <Removeetudiant>1</Removeetudiant>
+        <Editetudiant>1</Editetudiant>
+        <Abscence>1</Abscence>
+        <Addabscence>0</Addabscence>
+        <Removeabscence>0</Removeabscence>
+        <Editabscence>0</Editabscence>
+        <Departement>1</Departement>
+        <Adddepartement>0</Adddepartement>
+        <Removedepartement>0</Removedepartement>
+        <Editdepartement>0</Editdepartement>
+        <Filiere>0</Filiere>
+        <Addfiliere>0</Addfiliere>
+        <Removefiliere>0</Removefiliere>
+        <Editfiliere>0</Editfiliere>
+        <Module>0</Module>
+        <Addmodule>0</Addmodule>
+        <Removemodule>0</Removemodule>
+        <Editmodule>0</Editmodule>
+        <Element>0</Element>
+        <Addelement>0</Addelement>
+        <Removeelement>0</Removeelement>
+        <Editelement>0</Editelement>
+        <Seance>0</Seance>
+        <Addseance>0</Addseance>
+        <Removeseance>0</Removeseance>
+        <Editseance>0</Editseance>
+      </Permission>
+      <Permission Code="S4">
+        <Supperadmin>0</Supperadmin>
+        <Addsupperadmin>0</Addsupperadmin>
+        <Removesuperadmin>0</Removesuperadmin>
+        <Editsuperadmin>0</Editsuperadmin>
+        <Professeur>1</Professeur>
+        <Addprofesseur>0</Addprofesseur>
+        <Removeprofesseur>0</Removeprofesseur>
+        <Editprofesseur>0</Editprofesseur>
+        <Agentscolarite>1</Agentscolarite>
+        <Addagentscolarite>1</Addagentscolarite>
+        <Removeagentscolarite>1</Removeagentscolarite>
+        <Editagentscolarite>1</Editagentscolarite>
+        <Directeur>0</Directeur>
+        <Adddirecteur>0</Adddirecteur>
+        <Removedirecteur>0</Removedirecteur>
+        <Editdirecteur>0</Editdirecteur>
+        <Etudiant>1</Etudiant>
+        <Addetudiant>1</Addetudiant>
+        <Removeetudiant>1</Removeetudiant>
+        <Editetudiant>1</Editetudiant>
+        <Abscence>1</Abscence>
+        <Addabscence>0</Addabscence>
+        <Removeabscence>0</Removeabscence>
+        <Editabscence>0</Editabscence>
+        <Departement>1</Departement>
+        <Adddepartement>0</Adddepartement>
+        <Removedepartement>0</Removedepartement>
+        <Editdepartement>0</Editdepartement>
+        <Filiere>0</Filiere>
+        <Addfiliere>0</Addfiliere>
+        <Removefiliere>0</Removefiliere>
+        <Editfiliere>0</Editfiliere>
+        <Module>0</Module>
+        <Addmodule>0</Addmodule>
+        <Removemodule>0</Removemodule>
+        <Editmodule>0</Editmodule>
+        <Element>0</Element>
+        <Addelement>0</Addelement>
+        <Removeelement>0</Removeelement>
+        <Editelement>0</Editelement>
+        <Seance>0</Seance>
+        <Addseance>0</Addseance>
+        <Removeseance>0</Removeseance>
+        <Editseance>0</Editseance>
+      </Permission>
+      <Permission Code="S4">
+        <Supperadmin>0</Supperadmin>
+        <Addsupperadmin>0</Addsupperadmin>
+        <Removesuperadmin>0</Removesuperadmin>
+        <Editsuperadmin>0</Editsuperadmin>
+        <Professeur>1</Professeur>
+        <Addprofesseur>0</Addprofesseur>
+        <Removeprofesseur>0</Removeprofesseur>
+        <Editprofesseur>0</Editprofesseur>
+        <Agentscolarite>1</Agentscolarite>
+        <Addagentscolarite>1</Addagentscolarite>
+        <Removeagentscolarite>1</Removeagentscolarite>
+        <Editagentscolarite>1</Editagentscolarite>
+        <Directeur>0</Directeur>
+        <Adddirecteur>0</Adddirecteur>
+        <Removedirecteur>0</Removedirecteur>
+        <Editdirecteur>0</Editdirecteur>
+        <Etudiant>1</Etudiant>
+        <Addetudiant>1</Addetudiant>
+        <Removeetudiant>1</Removeetudiant>
+        <Editetudiant>1</Editetudiant>
+        <Abscence>1</Abscence>
+        <Addabscence>0</Addabscence>
+        <Removeabscence>0</Removeabscence>
+        <Editabscence>0</Editabscence>
+        <Departement>1</Departement>
+        <Adddepartement>0</Adddepartement>
+        <Removedepartement>0</Removedepartement>
+        <Editdepartement>0</Editdepartement>
+        <Filiere>0</Filiere>
+        <Addfiliere>0</Addfiliere>
+        <Removefiliere>0</Removefiliere>
+        <Editfiliere>0</Editfiliere>
+        <Module>0</Module>
+        <Addmodule>0</Addmodule>
+        <Removemodule>0</Removemodule>
+        <Editmodule>0</Editmodule>
+        <Element>0</Element>
+        <Addelement>0</Addelement>
+        <Removeelement>0</Removeelement>
+        <Editelement>0</Editelement>
+        <Seance>0</Seance>
+        <Addseance>0</Addseance>
+        <Removeseance>0</Removeseance>
+        <Editseance>0</Editseance>
+      </Permission>
+      <Permission Code="S4">
+        <Supperadmin>0</Supperadmin>
+        <Addsupperadmin>0</Addsupperadmin>
+        <Removesuperadmin>0</Removesuperadmin>
+        <Editsuperadmin>0</Editsuperadmin>
+        <Professeur>1</Professeur>
+        <Addprofesseur>0</Addprofesseur>
+        <Removeprofesseur>0</Removeprofesseur>
+        <Editprofesseur>0</Editprofesseur>
+        <Agentscolarite>1</Agentscolarite>
+        <Addagentscolarite>1</Addagentscolarite>
+        <Removeagentscolarite>1</Removeagentscolarite>
+        <Editagentscolarite>1</Editagentscolarite>
+        <Directeur>0</Directeur>
+        <Adddirecteur>0</Adddirecteur>
+        <Removedirecteur>0</Removedirecteur>
+        <Editdirecteur>0</Editdirecteur>
+        <Etudiant>1</Etudiant>
+        <Addetudiant>1</Addetudiant>
+        <Removeetudiant>1</Removeetudiant>
+        <Editetudiant>1</Editetudiant>
+        <Abscence>1</Abscence>
+        <Addabscence>0</Addabscence>
+        <Removeabscence>0</Removeabscence>
+        <Editabscence>0</Editabscence>
+        <Departement>1</Departement>
+        <Adddepartement>0</Adddepartement>
+        <Removedepartement>0</Removedepartement>
+        <Editdepartement>0</Editdepartement>
+        <Filiere>0</Filiere>
+        <Addfiliere>0</Addfiliere>
+        <Removefiliere>0</Removefiliere>
+        <Editfiliere>0</Editfiliere>
+        <Module>0</Module>
+        <Addmodule>0</Addmodule>
+        <Removemodule>0</Removemodule>
+        <Editmodule>0</Editmodule>
+        <Element>0</Element>
+        <Addelement>0</Addelement>
+        <Removeelement>0</Removeelement>
+        <Editelement>0</Editelement>
+        <Seance>0</Seance>
+        <Addseance>0</Addseance>
+        <Removeseance>0</Removeseance>
+        <Editseance>0</Editseance>
+      </Permission>
+      <Permission Code="S4">
+        <Supperadmin>0</Supperadmin>
+        <Addsupperadmin>0</Addsupperadmin>
+        <Removesuperadmin>0</Removesuperadmin>
+        <Editsuperadmin>0</Editsuperadmin>
+        <Professeur>1</Professeur>
+        <Addprofesseur>0</Addprofesseur>
+        <Removeprofesseur>0</Removeprofesseur>
+        <Editprofesseur>0</Editprofesseur>
+        <Agentscolarite>1</Agentscolarite>
+        <Addagentscolarite>1</Addagentscolarite>
+        <Removeagentscolarite>1</Removeagentscolarite>
+        <Editagentscolarite>1</Editagentscolarite>
+        <Directeur>0</Directeur>
+        <Adddirecteur>0</Adddirecteur>
+        <Removedirecteur>0</Removedirecteur>
+        <Editdirecteur>0</Editdirecteur>
+        <Etudiant>1</Etudiant>
+        <Addetudiant>1</Addetudiant>
+        <Removeetudiant>1</Removeetudiant>
+        <Editetudiant>1</Editetudiant>
+        <Abscence>1</Abscence>
+        <Addabscence>0</Addabscence>
+        <Removeabscence>0</Removeabscence>
+        <Editabscence>0</Editabscence>
+        <Departement>1</Departement>
+        <Adddepartement>0</Adddepartement>
+        <Removedepartement>0</Removedepartement>
+        <Editdepartement>0</Editdepartement>
+        <Filiere>0</Filiere>
+        <Addfiliere>0</Addfiliere>
+        <Removefiliere>0</Removefiliere>
+        <Editfiliere>0</Editfiliere>
+        <Module>0</Module>
+        <Addmodule>0</Addmodule>
+        <Removemodule>0</Removemodule>
+        <Editmodule>0</Editmodule>
+        <Element>0</Element>
+        <Addelement>0</Addelement>
+        <Removeelement>0</Removeelement>
+        <Editelement>0</Editelement>
+        <Seance>0</Seance>
+        <Addseance>0</Addseance>
+        <Removeseance>0</Removeseance>
+        <Editseance>0</Editseance>
+      </Permission>
+      <Permission Code="S4">
+        <Supperadmin>0</Supperadmin>
+        <Addsupperadmin>0</Addsupperadmin>
+        <Removesuperadmin>0</Removesuperadmin>
+        <Editsuperadmin>0</Editsuperadmin>
+        <Professeur>1</Professeur>
+        <Addprofesseur>0</Addprofesseur>
+        <Removeprofesseur>0</Removeprofesseur>
+        <Editprofesseur>0</Editprofesseur>
+        <Agentscolarite>1</Agentscolarite>
+        <Addagentscolarite>1</Addagentscolarite>
+        <Removeagentscolarite>1</Removeagentscolarite>
+        <Editagentscolarite>1</Editagentscolarite>
+        <Directeur>0</Directeur>
+        <Adddirecteur>0</Adddirecteur>
+        <Removedirecteur>0</Removedirecteur>
+        <Editdirecteur>0</Editdirecteur>
+        <Etudiant>1</Etudiant>
+        <Addetudiant>1</Addetudiant>
+        <Removeetudiant>1</Removeetudiant>
+        <Editetudiant>1</Editetudiant>
+        <Abscence>1</Abscence>
+        <Addabscence>0</Addabscence>
+        <Removeabscence>0</Removeabscence>
+        <Editabscence>0</Editabscence>
+        <Departement>1</Departement>
+        <Adddepartement>0</Adddepartement>
+        <Removedepartement>0</Removedepartement>
+        <Editdepartement>0</Editdepartement>
+        <Filiere>0</Filiere>
+        <Addfiliere>0</Addfiliere>
+        <Removefiliere>0</Removefiliere>
+        <Editfiliere>0</Editfiliere>
+        <Module>0</Module>
+        <Addmodule>0</Addmodule>
+        <Removemodule>0</Removemodule>
+        <Editmodule>0</Editmodule>
+        <Element>0</Element>
+        <Addelement>0</Addelement>
+        <Removeelement>0</Removeelement>
+        <Editelement>0</Editelement>
+        <Seance>0</Seance>
+        <Addseance>0</Addseance>
+        <Removeseance>0</Removeseance>
+        <Editseance>0</Editseance>
+      </Permission>
+      <Permission Code="S5">
+        <Supperadmin>0</Supperadmin>
+        <Addsupperadmin>0</Addsupperadmin>
+        <Removesuperadmin>0</Removesuperadmin>
+        <Editsuperadmin>0</Editsuperadmin>
+        <Professeur>1</Professeur>
+        <Addprofesseur>0</Addprofesseur>
+        <Removeprofesseur>0</Removeprofesseur>
+        <Editprofesseur>0</Editprofesseur>
+        <Agentscolarite>1</Agentscolarite>
+        <Addagentscolarite>1</Addagentscolarite>
+        <Removeagentscolarite>1</Removeagentscolarite>
+        <Editagentscolarite>1</Editagentscolarite>
+        <Directeur>0</Directeur>
+        <Adddirecteur>0</Adddirecteur>
+        <Removedirecteur>0</Removedirecteur>
+        <Editdirecteur>0</Editdirecteur>
+        <Etudiant>1</Etudiant>
+        <Addetudiant>1</Addetudiant>
+        <Removeetudiant>1</Removeetudiant>
+        <Editetudiant>1</Editetudiant>
+        <Abscence>1</Abscence>
+        <Addabscence>0</Addabscence>
+        <Removeabscence>0</Removeabscence>
+        <Editabscence>0</Editabscence>
+        <Departement>1</Departement>
+        <Adddepartement>0</Adddepartement>
+        <Removedepartement>0</Removedepartement>
+        <Editdepartement>0</Editdepartement>
+        <Filiere>0</Filiere>
+        <Addfiliere>0</Addfiliere>
+        <Removefiliere>0</Removefiliere>
+        <Editfiliere>0</Editfiliere>
+        <Module>0</Module>
+        <Addmodule>0</Addmodule>
+        <Removemodule>0</Removemodule>
+        <Editmodule>0</Editmodule>
+        <Element>0</Element>
+        <Addelement>0</Addelement>
+        <Removeelement>0</Removeelement>
+        <Editelement>0</Editelement>
+        <Seance>0</Seance>
+        <Addseance>0</Addseance>
+        <Removeseance>0</Removeseance>
+        <Editseance>0</Editseance>
+      </Permission>
+      <Permission Code="S6">
+        <Supperadmin>0</Supperadmin>
+        <Addsupperadmin>0</Addsupperadmin>
+        <Removesuperadmin>0</Removesuperadmin>
+        <Editsuperadmin>0</Editsuperadmin>
+        <Professeur>1</Professeur>
+        <Addprofesseur>0</Addprofesseur>
+        <Removeprofesseur>0</Removeprofesseur>
+        <Editprofesseur>0</Editprofesseur>
+        <Agentscolarite>1</Agentscolarite>
+        <Addagentscolarite>1</Addagentscolarite>
+        <Removeagentscolarite>1</Removeagentscolarite>
+        <Editagentscolarite>1</Editagentscolarite>
+        <Directeur>0</Directeur>
+        <Adddirecteur>0</Adddirecteur>
+        <Removedirecteur>0</Removedirecteur>
+        <Editdirecteur>0</Editdirecteur>
+        <Etudiant>1</Etudiant>
+        <Addetudiant>1</Addetudiant>
+        <Removeetudiant>1</Removeetudiant>
+        <Editetudiant>1</Editetudiant>
+        <Abscence>1</Abscence>
+        <Addabscence>0</Addabscence>
+        <Removeabscence>0</Removeabscence>
+        <Editabscence>0</Editabscence>
+        <Departement>1</Departement>
+        <Adddepartement>0</Adddepartement>
+        <Removedepartement>0</Removedepartement>
+        <Editdepartement>0</Editdepartement>
+        <Filiere>0</Filiere>
+        <Addfiliere>0</Addfiliere>
+        <Removefiliere>0</Removefiliere>
+        <Editfiliere>0</Editfiliere>
+        <Module>0</Module>
+        <Addmodule>0</Addmodule>
+        <Removemodule>0</Removemodule>
+        <Editmodule>0</Editmodule>
+        <Element>0</Element>
+        <Addelement>0</Addelement>
+        <Removeelement>0</Removeelement>
+        <Editelement>0</Editelement>
+        <Seance>0</Seance>
+        <Addseance>0</Addseance>
+        <Removeseance>0</Removeseance>
+        <Editseance>0</Editseance>
+      </Permission>
+      <Permission Code="S5">
+        <Supperadmin>0</Supperadmin>
+        <Addsupperadmin>0</Addsupperadmin>
+        <Removesuperadmin>0</Removesuperadmin>
+        <Editsuperadmin>0</Editsuperadmin>
+        <Professeur>1</Professeur>
+        <Addprofesseur>0</Addprofesseur>
+        <Removeprofesseur>0</Removeprofesseur>
+        <Editprofesseur>0</Editprofesseur>
+        <Agentscolarite>1</Agentscolarite>
+        <Addagentscolarite>1</Addagentscolarite>
+        <Removeagentscolarite>1</Removeagentscolarite>
+        <Editagentscolarite>1</Editagentscolarite>
+        <Directeur>0</Directeur>
+        <Adddirecteur>0</Adddirecteur>
+        <Removedirecteur>0</Removedirecteur>
+        <Editdirecteur>0</Editdirecteur>
+        <Etudiant>1</Etudiant>
+        <Addetudiant>1</Addetudiant>
+        <Removeetudiant>1</Removeetudiant>
+        <Editetudiant>1</Editetudiant>
+        <Abscence>1</Abscence>
+        <Addabscence>0</Addabscence>
+        <Removeabscence>0</Removeabscence>
+        <Editabscence>0</Editabscence>
+        <Departement>1</Departement>
+        <Adddepartement>0</Adddepartement>
+        <Removedepartement>0</Removedepartement>
+        <Editdepartement>0</Editdepartement>
+        <Filiere>0</Filiere>
+        <Addfiliere>0</Addfiliere>
+        <Removefiliere>0</Removefiliere>
+        <Editfiliere>0</Editfiliere>
+        <Module>0</Module>
+        <Addmodule>0</Addmodule>
+        <Removemodule>0</Removemodule>
+        <Editmodule>0</Editmodule>
+        <Element>0</Element>
+        <Addelement>0</Addelement>
+        <Removeelement>0</Removeelement>
+        <Editelement>0</Editelement>
+        <Seance>0</Seance>
+        <Addseance>0</Addseance>
+        <Removeseance>0</Removeseance>
+        <Editseance>0</Editseance>
+      </Permission>
+      <Permission Code="P6">
+        <Supperadmin>0</Supperadmin>
+        <Addsupperadmin>0</Addsupperadmin>
+        <Removesuperadmin>0</Removesuperadmin>
+        <Editsuperadmin>0</Editsuperadmin>
+        <Professeur>1</Professeur>
+        <Addprofesseur>0</Addprofesseur>
+        <Removeprofesseur>0</Removeprofesseur>
+        <Editprofesseur>0</Editprofesseur>
+        <Agentscolarite>1</Agentscolarite>
+        <Addagentscolarite>0</Addagentscolarite>
+        <Removeagentscolarite>1</Removeagentscolarite>
+        <Editagentscolarite>0</Editagentscolarite>
+        <Directeur>0</Directeur>
+        <Adddirecteur>0</Adddirecteur>
+        <Removedirecteur>0</Removedirecteur>
+        <Editdirecteur>0</Editdirecteur>
+        <Etudiant>1</Etudiant>
+        <Addetudiant>0</Addetudiant>
+        <Removeetudiant>0</Removeetudiant>
+        <Editetudiant>0</Editetudiant>
+        <Abscence>1</Abscence>
+        <Addabscence>1</Addabscence>
+        <Removeabscence>1</Removeabscence>
+        <Editabscence>1</Editabscence>
+        <Departement>1</Departement>
+        <Adddepartement>0</Adddepartement>
+        <Removedepartement>0</Removedepartement>
+        <Editdepartement>0</Editdepartement>
+        <Filiere>1</Filiere>
+        <Addfiliere>0</Addfiliere>
+        <Removefiliere>0</Removefiliere>
+        <Editfiliere>0</Editfiliere>
+        <Module>0</Module>
+        <Addmodule>0</Addmodule>
+        <Removemodule>0</Removemodule>
+        <Editmodule>0</Editmodule>
+        <Element>1</Element>
+        <Addelement>0</Addelement>
+        <Removeelement>0</Removeelement>
+        <Editelement>0</Editelement>
+        <Seance>1</Seance>
+        <Addseance>1</Addseance>
+        <Removeseance>0</Removeseance>
+        <Editseance>0</Editseance>
+      </Permission>
+      <Permission Code="S2">
+        <Supperadmin>0</Supperadmin>
+        <Addsupperadmin>0</Addsupperadmin>
+        <Removesuperadmin>0</Removesuperadmin>
+        <Editsuperadmin>0</Editsuperadmin>
+        <Professeur>0</Professeur>
+        <Addprofesseur>0</Addprofesseur>
+        <Removeprofesseur>0</Removeprofesseur>
+        <Editprofesseur>0</Editprofesseur>
+        <Agentscolarite>0</Agentscolarite>
+        <Addagentscolarite>1</Addagentscolarite>
+        <Removeagentscolarite>1</Removeagentscolarite>
+        <Editagentscolarite>1</Editagentscolarite>
+        <Directeur>0</Directeur>
+        <Adddirecteur>0</Adddirecteur>
+        <Removedirecteur>0</Removedirecteur>
+        <Editdirecteur>0</Editdirecteur>
+        <Etudiant>0</Etudiant>
+        <Addetudiant>1</Addetudiant>
+        <Removeetudiant>0</Removeetudiant>
+        <Editetudiant>1</Editetudiant>
+        <Abscence>0</Abscence>
+        <Addabscence>0</Addabscence>
+        <Removeabscence>0</Removeabscence>
+        <Editabscence>0</Editabscence>
+        <Departement>0</Departement>
+        <Adddepartement>0</Adddepartement>
+        <Removedepartement>0</Removedepartement>
+        <Editdepartement>0</Editdepartement>
+        <Filiere>0</Filiere>
+        <Addfiliere>0</Addfiliere>
+        <Removefiliere>0</Removefiliere>
+        <Editfiliere>0</Editfiliere>
+        <Module>0</Module>
+        <Addmodule>0</Addmodule>
+        <Removemodule>0</Removemodule>
+        <Editmodule>0</Editmodule>
+        <Element>0</Element>
+        <Addelement>0</Addelement>
+        <Removeelement>0</Removeelement>
+        <Editelement>0</Editelement>
+        <Seance>0</Seance>
+        <Addseance>0</Addseance>
+        <Removeseance>0</Removeseance>
+        <Editseance>0</Editseance>
+      </Permission>
+      <Permission Code="A1">
+        <Supperadmin>1</Supperadmin>
+        <Addsupperadmin>1</Addsupperadmin>
+        <Removesuperadmin>1</Removesuperadmin>
+        <Editsuperadmin>1</Editsuperadmin>
+        <Professeur>1</Professeur>
+        <Addprofesseur>1</Addprofesseur>
+        <Removeprofesseur>1</Removeprofesseur>
+        <Editprofesseur>1</Editprofesseur>
+        <Agentscolarite>1</Agentscolarite>
+        <Addagentscolarite>1</Addagentscolarite>
+        <Removeagentscolarite>1</Removeagentscolarite>
+        <Editagentscolarite>1</Editagentscolarite>
+        <Directeur>1</Directeur>
+        <Adddirecteur>1</Adddirecteur>
+        <Removedirecteur>1</Removedirecteur>
+        <Editdirecteur>1</Editdirecteur>
+        <Etudiant>1</Etudiant>
+        <Addetudiant>1</Addetudiant>
+        <Removeetudiant>1</Removeetudiant>
+        <Editetudiant>1</Editetudiant>
+        <Abscence>1</Abscence>
+        <Addabscence>1</Addabscence>
+        <Removeabscence>1</Removeabscence>
+        <Editabscence>1</Editabscence>
+        <Departement>1</Departement>
+        <Adddepartement>1</Adddepartement>
+        <Removedepartement>1</Removedepartement>
+        <Editdepartement>1</Editdepartement>
+        <Filiere>1</Filiere>
+        <Addfiliere>1</Addfiliere>
+        <Removefiliere>1</Removefiliere>
+        <Editfiliere>1</Editfiliere>
+        <Module>1</Module>
+        <Addmodule>1</Addmodule>
+        <Removemodule>1</Removemodule>
+        <Editmodule>1</Editmodule>
+        <Element>1</Element>
+        <Addelement>1</Addelement>
+        <Removeelement>1</Removeelement>
+        <Editelement>1</Editelement>
+        <Seance>1</Seance>
+        <Addseance>1</Addseance>
+        <Removeseance>1</Removeseance>
+        <Editseance>1</Editseance>
+      </Permission>
+      <Permission Code="S1">
+        <Supperadmin>0</Supperadmin>
+        <Addsupperadmin>0</Addsupperadmin>
+        <Removesuperadmin>0</Removesuperadmin>
+        <Editsuperadmin>0</Editsuperadmin>
+        <Professeur>0</Professeur>
+        <Addprofesseur>0</Addprofesseur>
+        <Removeprofesseur>0</Removeprofesseur>
+        <Editprofesseur>0</Editprofesseur>
+        <Agentscolarite>0</Agentscolarite>
+        <Addagentscolarite>1</Addagentscolarite>
+        <Removeagentscolarite>1</Removeagentscolarite>
+        <Editagentscolarite>1</Editagentscolarite>
+        <Directeur>0</Directeur>
+        <Adddirecteur>0</Adddirecteur>
+        <Removedirecteur>0</Removedirecteur>
+        <Editdirecteur>0</Editdirecteur>
+        <Etudiant>0</Etudiant>
+        <Addetudiant>1</Addetudiant>
+        <Removeetudiant>0</Removeetudiant>
+        <Editetudiant>1</Editetudiant>
+        <Abscence>0</Abscence>
+        <Addabscence>0</Addabscence>
+        <Removeabscence>0</Removeabscence>
+        <Editabscence>0</Editabscence>
+        <Departement>0</Departement>
+        <Adddepartement>0</Adddepartement>
+        <Removedepartement>0</Removedepartement>
+        <Editdepartement>0</Editdepartement>
+        <Filiere>0</Filiere>
+        <Addfiliere>0</Addfiliere>
+        <Removefiliere>1</Removefiliere>
+        <Editfiliere>0</Editfiliere>
+        <Module>0</Module>
+        <Addmodule>0</Addmodule>
+        <Removemodule>0</Removemodule>
+        <Editmodule>0</Editmodule>
+        <Element>0</Element>
+        <Addelement>0</Addelement>
+        <Removeelement>0</Removeelement>
+        <Editelement>0</Editelement>
+        <Seance>1</Seance>
+        <Addseance>1</Addseance>
+        <Removeseance>1</Removeseance>
+        <Editseance>1</Editseance>
+      </Permission>
       <Permission Code="D1">
         <Supperadmin>1</Supperadmin>
         <Addsupperadmin>0</Addsupperadmin>
@@ -914,15 +1483,12 @@
       <Filiere Chef_filiere="P4" Departement="Dept4" Code="Dept4Fil2">
         <Intitule>LP : Gestion comptable et financière</Intitule>
       </Filiere>
-      <Filiere Chef_filiere="P2" Departement="Dept2" Code="Dept2Fil3">
-        <Intitule>Testttt</Intitule>
-      </Filiere>
     </Filieres>
     <Modules>
-      <Module Coordonateur="P1" Filiere="Dept1Fil1" Code="Dept1Fil1MOD1">
+      <Module Coordonateur="P1" Filiere="Dept1Fil1" Code="Dept1Fil1MOD1" Hide="0">
         <Module>Algorithmique et Bases de la Programmation</Module>
       </Module>
-      <Module Coordonateur="P2" Filiere="Dept1Fil1" Code="Dept1Fil1MOD2" Hide="1">
+      <Module Coordonateur="P2" Filiere="Dept1Fil1" Code="Dept1Fil1MOD2" Hide="0">
         <Module>Architecture des Ordinateurs</Module>
       </Module>
       <Module Coordonateur="P3" Filiere="Dept1Fil1" Code="Dept1Fil1MOD3">
@@ -976,9 +1542,6 @@
       <Module Coordonateur="P1" Filiere="Dept2Fil1" Code="Dept2Fil1MOD1">
         <Module>Test</Module>
       </Module>
-      <Module Coordonateur="P1" Filiere="Dept2Fil3" Code="Dept2Fil3MOD1">
-        <Module>Test</Module>
-      </Module>
     </Modules>
     <Elements>
       <Element Module="Dept1Fil1MOD1" Enseignant="P1" Code="Dept1Fil1MOD1ElE1">
@@ -1003,10 +1566,6 @@
       </Element>
       <Element Module="Dept2Fil1MOD1" Enseignant="P1" Code="Dept2Fil1MOD1ELE1">
         <Element>Test2</Element>
-        <NombreHeures>50</NombreHeures>
-      </Element>
-      <Element Module="Dept2Fil3MOD1" Enseignant="P3" Code="Dept2Fil3MOD1ELE1">
-        <Element>Test</Element>
         <NombreHeures>50</NombreHeures>
       </Element>
     </Elements>
@@ -1059,13 +1618,6 @@
         <Jour>Vendredi</Jour>
         <DateDebut>14:30</DateDebut>
         <DateFin>18:30</DateFin>
-        <Semestre>Semestre 1</Semestre>
-        <Semaine>1</Semaine>
-      </Seance>
-      <Seance Element="Dept2Fil3MOD1ELE1" Salle="Sal43" Code="Dept2Fil3MOD1ELE1Sean2">
-        <Jour>Lundi</Jour>
-        <DateDebut>08:30</DateDebut>
-        <DateFin>12:30</DateFin>
         <Semestre>Semestre 1</Semestre>
         <Semaine>1</Semaine>
       </Seance>
@@ -1126,6 +1678,9 @@
       <Absence Etudiant="E2" Seance="Dept1Fil1MOD1ElE1Sean1"/>
       <Absence Etudiant="E3" Seance="Dept1Fil1MOD1ElE1Sean1"/>
       <Absence Etudiant="E4" Seance="Dept1Fil1MOD1ElE1Sean1"/>
+      <Absence Etudiant="E1" Seance="Dept1Fil1MOD1ElE1Sean3"/>
+      <Absence Etudiant="E2" Seance="Dept1Fil1MOD1ElE1Sean3"/>
+      <Absence Etudiant="E3" Seance="Dept1Fil1MOD1ElE1Sean3"/>
     </Absences>
   </Etablissement>
 </CadiAyyad>
