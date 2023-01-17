@@ -37,7 +37,12 @@ class LangueController
                 'Nombre de professeurs',
                 'voire les details',
             ),
-            ''=>array(),
+            'toast' => array(
+                '',
+                '',
+                '',
+                ''
+            ),
         ),
         'anglais' => array(
             'sidebar' => array(
@@ -73,6 +78,12 @@ class LangueController
                 'Number of majors',
                 'Number of teachers',
                 'see the details',
+            ),
+            'toast' => array(
+                '',
+                '',
+                '',
+                ''
             ),
         )
     );
