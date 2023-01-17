@@ -3,7 +3,7 @@
         <div id="toast-success">
             <img src="/ProjetXML/views/ourAssets/images/toast-save.png" />
             <span>
-                L'ajout est bien enregistrée
+                L'ajout est effectué avec succés
             </span>
         </div>
     <?php } elseif (isset($_GET['info'])) { ?>
@@ -17,7 +17,7 @@
         <div id="toast-warning">
             <img src="/ProjetXML/views/ourAssets/images/toast-warning.png" />
             <span>
-                La suppression est bien enregistrée
+                La suppression est effectuée avec succés
             </span>
         </div>
     <?php } elseif (isset($_GET['erreur'])) { ?>
