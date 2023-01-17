@@ -38,10 +38,10 @@ class LangueController
                 'voire les details',
             ),
             'toast' => array(
-                '',
-                '',
-                '',
-                ''
+                'L\'ajout est effectué avec succés',
+                'les modifications ont été enregistrés',
+                'La suppression est effectuée avec succés',
+                'Les informations ne sont pas enregistrées'
             ),
         ),
         'anglais' => array(
