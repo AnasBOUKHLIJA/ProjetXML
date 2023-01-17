@@ -80,10 +80,10 @@ class LangueController
                 'see the details',
             ),
             'toast' => array(
-                '',
-                '',
-                '',
-                ''
+                'item added successfully',
+                'changes have been saved',
+                'item deleted successfully',
+                'data not saved'
             ),
         )
     );
