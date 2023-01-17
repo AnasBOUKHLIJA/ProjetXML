@@ -9,7 +9,7 @@
                         <?php if(isset($_COOKIE['langue'])) {echo $_COOKIE['langue'];} ?>
                     </a>
                     <div class="dropdown-menu shadow dropdown-menu-end animated--grow-in">
-                        <a class="dropdown-item" onclick="changeLangue('Francais')"><i class="fas fa-language"></i>&nbsp;Francais</a>
+                        <a class="dropdown-item" onclick="changeLangue('Francais')"><i class="fas fa-language"></i>&nbsp;Français</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" onclick="changeLangue('Anglais')" ><i class="fas fa-language"></i>&nbsp;Anglais</a>
                     </div>
