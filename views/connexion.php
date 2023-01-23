@@ -34,7 +34,7 @@ if(isset($_POST['submit'])){
             <label>Password</label>
             <div class="input-field">
                 <i class="fa-solid fa-lock"></i>
-                <input type="password" name="password" placeholder="Entere votre password">
+                <input type="password" name="password" placeholder="Entrer votre password">
             </div>
         </div>
         <button type="submit" name="submit">Se connecter</button>
